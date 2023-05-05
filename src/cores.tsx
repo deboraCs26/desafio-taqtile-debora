@@ -1,36 +1,27 @@
-const coresBrand = {
+export const brandColors = {
   primary: {
-    Dark: "#031F3D",
-    Medium: "#0C4888",
+    dark: "#031F3D",
+    medium: "#0C4888",
   },
-  ctaMedium: {
-    cta: "#29D6E7",
-  },
+
+  cta: "#29D6E7",
+
   acessory: {
     backgroundSecundario: "#0C4888",
-    backgroundBanner: "#28ADBA",
+    backgroundBanner: "#28ADBA"
   },
 
 };
-const neutral = {
+export const neutralColors = {
   white: "#FFFFFF",
   neutralXLight: "#FDFDFD",
   neutralLight: "#C5C5C5",
   neutralMedium: "#908E8E",
   neutralDark: "#3A3335",
-  neutralXDark: "#484848",
+  neutralXDark: "#484848"
 };
 
-const feedback = {
-  FeedbackSuccess: "#2AC084",
-  FeedbackError: "#EB5E55",
+export const feedbackColors = {
+  feedbackSuccess: "#2AC084",
+  feedbackError: "#EB5E55"
 };
-
-export { }
-
-
-
-
-
-
-
