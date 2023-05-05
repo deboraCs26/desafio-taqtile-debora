@@ -6,7 +6,7 @@ export const brandColors = {
 
   cta: "#29D6E7",
 
-  acessory: {
+  accessory: {
     backgroundSecundario: "#0C4888",
     backgroundBanner: "#28ADBA"
   },
