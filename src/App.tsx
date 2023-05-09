@@ -1,11 +1,14 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-
-function App() {
+import './colors';
+import './typography';
+import { colors } from './colors';
+export default function App() {
   return (
-    <h1>Hello World</h1>
+  <div>
+ <button style={{ backgroundColor: colors.neutral.neutralXDark, color: colors.neutral.white }}>botão</button>
+  </div>
+   
   );
 }
 
-export default App;
+
