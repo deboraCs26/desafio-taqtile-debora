@@ -1,11 +1,7 @@
 import { colors } from './colors';
 export const fontFamily = {
   primary: {
-    primary: "Poppins",
-    weight: "54px",
-    size: 700,
-    height: "80px"
-
+    primary: "Poppins",  
   },
 };
 
