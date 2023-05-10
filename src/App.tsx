@@ -1,13 +1,12 @@
 import './App.css';
 import './colors';
-import './typography';
-import { colors } from './colors';
+import './style/typography';
 export default function App() {
   return (
-  <div>
- <button style={{ backgroundColor: colors.neutral.neutralXDark, color: colors.neutral.white }}>botão</button>
-  </div>
-   
+    <div>
+      <button>botão</button>
+    </div>
+
   );
 }
 
