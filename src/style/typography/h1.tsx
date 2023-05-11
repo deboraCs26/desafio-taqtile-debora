@@ -1,7 +1,7 @@
 import { colors } from '..//colors';
-import { components} from './typography';
+import { components } from './typography';
 
-export const H1= ({ children }:  {children: React.ReactNode}) => {
+export const H1 = ({ children }: { children: React.ReactNode }) => {
   return (
     <h1
       style={{

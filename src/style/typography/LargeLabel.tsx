@@ -1,39 +1,25 @@
 import { colors } from '..//colors'
 import { components } from './typography';
-
-interface labelProps  {
+interface LargeLabelProps {
   children: React.ReactNode;
   weight?: "bold" | "regular" | "semibold";
   color?: "dark" | "white";
   size?: "medium" | "large";
+  fontFamily?: "Poppins";
 };
 
-export const Label = ({ children, weight, color, size }: labelProps) => {
-  let fontWeight = components.fontWeight.regular;
-  let fontColor = colors.brand.primary.dark;
-  const fontSize = size === "large" ? components.fontSize.large : components.fontSize.medium;
-
-  if (weight === "bold") {
-    fontWeight = components.fontWeight.bold;
-  } else if (weight === "semibold") {
-    fontWeight = components.fontWeight.semibold;
-  }
-
-  if (color === "white") {
-    fontColor = colors.neutral.white;
-  }
-
+export const LargeLabel = ({ children, weight, color, size }: LargeLabelProps) => {
   return (
     <label
       style={{
-        fontSize: fontSize,
-        fontWeight: fontWeight,
+        fontFamily: components.family.primary,
+        fontSize: size === "large" ? components.fontSize.medium : components.fontSize.large,
+        fontWeight: weight === "bold" ? components.fontWeight.semibold : components.fontWeight.regular,
         lineHeight: components.lineHeight.large,
-        color: fontColor,
+        color: color === "dark" ? colors.brand.primary.dark : colors.neutral.white,
       }}
     >
       {children}
     </label>
   );
 };
-

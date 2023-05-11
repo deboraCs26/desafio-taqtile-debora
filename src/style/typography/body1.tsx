@@ -5,6 +5,7 @@ export const Body1 = ({ children }: { children: React.ReactNode }) => {
   return (
     <p
       style={{
+        fontFamily: components.family.primary,
         fontSize: components.fontSize.xLarge,
         fontWeight: components.fontWeight.regular,
         lineHeight: components.lineHeight.large,

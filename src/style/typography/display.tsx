@@ -5,7 +5,7 @@ export const Display = ({ children }: { children: React.ReactNode }) => {
   return (
     <h1
       style={{
-        fontFamily:components.family.primary,
+        fontFamily: components.family.primary,
         fontSize: components.fontSize.xxxxLarge,
         fontWeight: components.fontWeight.bold,
         lineHeight: components.lineHeight.large,
