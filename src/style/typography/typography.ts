@@ -13,7 +13,7 @@ export const components = {
     xxxxLarge: "40px",
     xxxLarge: "36px",
     xxLarge: "28px",
-    xLarge: "18px",
+    XLarge: "18px",
     large: "16px",
     medium: "14px",
     small: "12px"
@@ -22,11 +22,9 @@ export const components = {
   fontWeight: {
     extraBold: 800,
     bold: 700,
-    semibold: 600,
+    semiBold: 600,
     medium: 500,
     regular: 400
   },
 
 };
-
-

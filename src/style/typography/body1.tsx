@@ -1,4 +1,4 @@
-import { colors } from '..//colors';
+import { colors } from '../colors';
 import { components } from './typography';
 
 export const Body1 = ({ children }: { children: React.ReactNode }) => {
@@ -6,7 +6,7 @@ export const Body1 = ({ children }: { children: React.ReactNode }) => {
     <p
       style={{
         fontFamily: components.family.primary,
-        fontSize: components.fontSize.xLarge,
+        fontSize: components.fontSize.XLarge,
         fontWeight: components.fontWeight.regular,
         lineHeight: components.lineHeight.large,
         color: colors.neutral.neutralXDark,

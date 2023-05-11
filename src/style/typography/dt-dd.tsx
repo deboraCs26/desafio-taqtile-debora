@@ -1,14 +1,11 @@
-import { colors } from '..//colors';
+import { colors } from '../colors';
 import { components } from './typography';
 interface DTProps {
   children: React.ReactNode;
   weight?: "regular" | "bold";
-  size?: "medium";
-  color?: "neutralXDark";
-  fontFamily?: "Poppins";
 };
 
-export const DT = ({ children, weight, size }: DTProps) => {
+export const DT = ({ children, weight, }: DTProps) => {
   return (
     <p
       style={{

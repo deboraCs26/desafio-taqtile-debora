@@ -1,4 +1,4 @@
-import { colors } from '..//colors';
+import { colors } from '../colors';
 import { components } from './typography';
 
 export const H3 = ({ children }: { children: React.ReactNode }) => {
@@ -6,8 +6,8 @@ export const H3 = ({ children }: { children: React.ReactNode }) => {
     <h3
       style={{
         fontFamily: components.family.primary,
-        fontSize: components.fontSize.xLarge,
-        fontWeight: components.fontWeight.semibold,
+        fontSize: components.fontSize.XLarge,
+        fontWeight: components.fontWeight.semiBold,
         color: colors.neutral.neutralXDark,
       }}
     >

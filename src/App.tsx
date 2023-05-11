@@ -14,128 +14,78 @@ export default function App() {
   return (
     <div>
       <Display>
-        <h1>
-          display
-        </h1>
+        <p>display</p>
       </Display>
 
-      <div>
-        <H1>Headline 1</H1>
-      </div>
+      <H1>Headline 1</H1>
 
-      <div>
-        <H2>
-          Headline 2
-        </H2>
-      </div>
+      <H2>
+        Headline 2
+      </H2>
 
-      <div>
-        <H3>Headline 3</H3>
-      </div>
+      <H3>Headline 3</H3>
 
-      <div>
-        <H4>
-          Headline 4
-        </H4>
-      </div>
+      <H4>
+        Headline 4
+      </H4>
 
-      <div>
-        <Body1>
-          <p>body1</p>
-        </Body1>
-      </div>
+      <Body1>
+        body1
+      </Body1>
 
-      <div>
-        <Body2 fontFamily="Poppins" size="large" weight="regular" color="neutralXDark">
-          <p>body2</p> 
-        </Body2>
-      </div>
-      <div>
-        <Body2  fontFamily="Poppins" size="large" color="neutralXDark" weight="bold">
-          <p>body2</p>
-        </Body2>
-      </div>
-      <div>
-        <Body2 fontFamily="Poppins" size="large" weight="regular" color="neutralXDark">
-          <p>body2</p>
-        </Body2>
-      </div>
+      <Body2 weight="regular">
+        body2
+      </Body2>
 
-      <div>
-        <DT fontFamily="Poppins" size="medium" weight='regular' color='neutralXDark'>
-          <p>
-            Definition of the Term
-          </p>
+      <Body2 weight="bold">
+        body2
+      </Body2>
 
-        </DT>
-      </div>
+      <Body2 weight="regular">
+        body2
+      </Body2>
 
-      <div>
-        <DT fontFamily="Poppins" size="medium" weight='bold' color='neutralXDark'>
-          <p>
-            Definition of the Term
-          </p>
+      <DT weight="regular" >
+        Definition of the Term
+      </DT>
 
-        </DT>
-      </div>
+      <DT weight="bold">
+        Definition of the Term
+      </DT>
 
-      <div>
-        <LargeLabel fontFamily="Poppins" weight='bold' color="dark" size="large">
-          <label>Label large bold</label>
-        </LargeLabel>
-      </div>
-      <div>
-        <LargeLabel fontFamily="Poppins" weight='semibold' color="dark" size="large">
-          <label>Label large Semibold</label>
-        </LargeLabel>
-      </div>
-      <div>
-        <LargeLabel fontFamily="Poppins" weight='regular' color="dark" size="large">
-          <label>Label large regular</label>
-        </LargeLabel>
-      </div>
-      <div>
-        <LargeLabel fontFamily="Poppins" weight='regular' color="white" size="medium">
-          <label>Label large</label>
-        </LargeLabel>
-      </div>
+      <LargeLabel weight="bold" color="dark" size="large">
+        <label>Label large bold</label>
+      </LargeLabel>
 
-      <div>
-        <Caption>
-          <caption>
-            Caption
-          </caption>
-        </Caption>
+      <LargeLabel weight="semiBold" color="dark" size="large">
+        <label>Label large Semibold</label>
+      </LargeLabel>
 
-      </div>
+      <LargeLabel weight="regular" color="dark" size="large">
+        <label>Label large regular</label>
+      </LargeLabel>
 
-      <div>
-        <Price fontFamily="Poppins" size='xxxLarge' color='neutralXDark' weight='bold'>
-          <p>
-          Big Price
-          </p>
-        </Price>
-      </div>
+      <LargeLabel weight="regular" color="white" size="medium">
+        <label>Label large</label>
+      </LargeLabel>
 
-      <div>
-        <Price fontFamily="Poppins" size='xLarge' color='neutralXDark' weight='bold'>
-          <p>
-          Medium Price
-          </p>
-        </Price>
-      </div>
+      <Caption>
+        <p>Caption</p>
+      </Caption>
 
-      <div>
-        <Price fontFamily="Poppins" size='medium' color='neutralXDark' weight='regular'>
-          <p>
-          Small Price
-          </p>
-        </Price>
-      </div>
+      <Price size='xxxLarge' weight='bold'>
+        Big Price
+      </Price>
+
+      <Price size='XLarge' weight='bold'>
+        Medium Price
+      </Price>
+
+      <Price size='medium' weight='regular'>
+        Small Price
+      </Price>
 
     </div>
 
   );
 }
-
-

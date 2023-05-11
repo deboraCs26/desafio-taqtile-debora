@@ -1,9 +1,9 @@
-import { colors } from '..//colors';
+import { colors } from '../colors';
 import { components } from './typography';
 
 export const Display = ({ children }: { children: React.ReactNode }) => {
   return (
-    <h1
+    <p
       style={{
         fontFamily: components.family.primary,
         fontSize: components.fontSize.xxxxLarge,
@@ -13,6 +13,6 @@ export const Display = ({ children }: { children: React.ReactNode }) => {
       }}
     >
       {children}
-    </h1>
+    </p>
   );
 };
