@@ -14,7 +14,7 @@ export default function App() {
   return (
     <div>
       <Display>
-        <p>display</p>
+        display
       </Display>
 
       <H1>Headline 1</H1>
@@ -54,23 +54,23 @@ export default function App() {
       </DT>
 
       <LargeLabel weight="bold" color="dark" size="large">
-        <label>Label large bold</label>
+        Label large bold
       </LargeLabel>
 
       <LargeLabel weight="semiBold" color="dark" size="large">
-        <label>Label large Semibold</label>
+        Label large Semibold
       </LargeLabel>
 
       <LargeLabel weight="regular" color="dark" size="large">
-        <label>Label large regular</label>
+        Label large regular
       </LargeLabel>
 
       <LargeLabel weight="regular" color="white" size="medium">
-        <label>Label large</label>
+        Label large
       </LargeLabel>
 
       <Caption>
-        <p>Caption</p>
+        Caption
       </Caption>
 
       <Price size='xxxLarge' weight='bold'>
