@@ -1,4 +1,4 @@
-import { colors } from '../colors';
+import { colors } from '..//colors';
 import { components } from './typography';
 
 export const Display = ({ children }: { children: React.ReactNode }) => {

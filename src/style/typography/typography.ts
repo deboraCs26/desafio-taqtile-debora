@@ -1,4 +1,4 @@
-import { colors } from '../colors';
+import { colors } from '..//colors';
 
 export const components = {
   family: {
@@ -30,12 +30,5 @@ export const components = {
   },
 
 };
-export const display ={
-  fontFamily:components.family.primary,
-  size: components.fontSize.xxxxLarge,
-  weight: components.fontWeight.bold,
-  lineHeight: components.lineHeight.large,
-  color: colors.brand.primary.medium,
-}
 
 

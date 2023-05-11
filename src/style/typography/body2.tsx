@@ -1,7 +1,12 @@
-import { colors } from '../colors';
+import { colors } from '..//colors';
 import { components } from './typography';
 
-export const Body2 = ({ children }: { children: React.ReactNode }) => {
+interface Body2Props {
+  children: React.ReactNode;
+  weight?: "regular" | "bold";
+};
+export const Body2 = ({ children, weight }: Body2Props) => {
+ const fontWeight = weight ? components.fontWeight.bold : components.fontWeight.regular;
   return (
     <p
       style={{

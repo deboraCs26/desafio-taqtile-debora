@@ -1,4 +1,4 @@
-import { colors } from '../colors';
+import { colors } from '..//colors';
 import { components } from './typography';
 
 export const Body1 = ({ children }: { children: React.ReactNode }) => {
