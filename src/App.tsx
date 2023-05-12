@@ -10,9 +10,17 @@ import { DT } from './style/typography/dt-dd';
 import { LargeLabel } from './style/typography/LargeLabel';
 import { Caption } from './style/typography/caption';
 import { Price } from './style/typography/medium-price';
+import { Button } from '../src/style/button/primary';
+
+
 export default function App() {
   return (
+    
     <div>
+      <Button onClick={() => alert('primário funcionando')} backgroundColor='dark'>
+        label Large
+      </Button>
+      
       <Display>
         display
       </Display>
