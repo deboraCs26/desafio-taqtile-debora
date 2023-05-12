@@ -15,19 +15,18 @@ interface ButtonProps {
   style?: React.CSSProperties;
 
 }
+const buttonConstantStyle = {
+  fontFamily: components.family.primary,
+  fontSize: components.fontSize.large,
+  fontWeight: components.fontWeight.bold,
+  minWidth: styleButton.style.minWidth,
+  alignItems: styleButton.style.alignItems,
+  borderRadius: styleButton.style.borderRadius,
+  borderColor: colors.accessory.banner,
+  cursor: "pointer",
+};
 
 export const Button = ({ variant, children, icon, disabled = false, onClick, compact, alt }: ButtonProps) => {
-
-  const buttonConstantStyle = {
-    fontFamily: components.family.primary,
-    fontSize: components.fontSize.large,
-    fontWeight: components.fontWeight.bold,
-    minWidth: styleButton.style.minWidth,
-    alignItems: styleButton.style.alignItems,
-    borderRadius: styleButton.style.borderRadius,
-    borderColor: colors.accessory.banner,
-    cursor: "pointer",
-  };
 
   let backgroundColor, color, border;
   if (variant === "primary") {
