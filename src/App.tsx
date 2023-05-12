@@ -43,6 +43,9 @@ export default function App() {
       <Display>
         display
       </Display>
+      <H1>Headline 1</H1>
+      
+      <H2>Headline 2</H2>
 
       <H2>Headline 2</H2>
 
