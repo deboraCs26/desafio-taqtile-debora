@@ -19,7 +19,7 @@ export const PrimayButton = ({ children, variant, onClick, height, color }: Butt
         fontSize: components.fontSize.large,
         fontWeight: components.fontWeight.bold,
         borderRadius: styleButton.primary.borderRadius,
-        border: styleButton.primary.border,
+        border: styleButton.style.border,
         padding: styleButton.primary.padding,
         height: height === "default" ? styleButton.height.default: styleButton.height.defaultCompact,
         width: styleButton.primary.width,

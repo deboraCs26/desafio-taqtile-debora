@@ -5,4 +5,4 @@ export const styleButton = {
     minWidth: "143px ",
     border: "none",
   },
-};
+}:
