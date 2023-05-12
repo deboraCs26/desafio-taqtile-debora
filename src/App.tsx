@@ -18,6 +18,7 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 export default function App() {
 
   return (
+
     <div>
       <div>
         <H1>Stylegruide</H1>
