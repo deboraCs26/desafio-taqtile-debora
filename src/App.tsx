@@ -17,7 +17,6 @@ import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 export default function App() {
 
   return (
-
     <div>
       <H1>Formulario</H1>
       <FormField
@@ -51,13 +50,30 @@ export default function App() {
 
       <H3>Headline 3</H3>
 
+      <div>
+        <PrimayButton variant="secondary" height="defaultCompact" color="white">
+          Button Label
+        </PrimayButton>
+      </div>
+
       <H4>
         Headline 4
       </H4>
 
+      <div>
+        <PrimayButton variant="secondary" height="default" color="white">
+          Button Label
+        </PrimayButton>
+      </div>
+
       <Body1>
         body1
       </Body1>
+      <div>
+        <PrimayButton onClick={() => alert('primário funcionando')} variant='primary' height="default" color="white">
+          Button Label
+        </PrimayButton>
+      </div>
 
       <Body2 weight="regular">
         body2
@@ -78,6 +94,11 @@ export default function App() {
       <DT weight="bold">
         Definition of the Term
       </DT>
+      <div>
+        <SecondaryButton>
+          Button Label
+        </SecondaryButton>
+      </div>
 
       <Label weight="bold" color="dark" size="large">
         Label large bold
@@ -95,6 +116,12 @@ export default function App() {
         Label large
       </Label>
 
+      <div>
+        <CtaButton height='default'>
+          Button Label
+        </CtaButton>
+      </div>
+
       <Caption>
         Caption
       </Caption>
@@ -111,6 +138,11 @@ export default function App() {
         Small Price
       </Price>
 
+      <div>
+        <CtaButton>
+          Button Label
+        </CtaButton>
+      </div>
     </div>
   );
 };
