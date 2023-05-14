@@ -7,10 +7,8 @@ interface ButtonProps {
   onClick?: () => void;
   variant?: 'primary' | 'secondary' | 'neutral';
   height?: "default" | "defaultCompact";
-  color?: string;
 };
-
-export const PrimayButton = ({ children, variant, onClick, height, color }: ButtonProps) => {
+export const PrimayButton = ({ children, variant, onClick, height }: ButtonProps) => {
   return (
     <button
       onClick={onClick}
@@ -18,6 +16,15 @@ export const PrimayButton = ({ children, variant, onClick, height, color }: Butt
         fontFamily: components.family.primary,
         fontSize: components.fontSize.large,
         fontWeight: components.fontWeight.bold,
+        borderRadius: styleButton.primary.borderRadius,
+        border: styleButton.primary.border,
+        padding: styleButton.primary.padding,
+        height: height === "default" ? styleButton.height.default: styleButton.height.defaultCompact,
+        width: styleButton.primary.width,
+        display: styleButton.primary.display,
+        alignItems: styleButton.primary.alignItems,
+        justifyContent: styleButton.primary.justifyContent,
+        background: variant === "primary" ? colors.brand.primary.primayXDark : colors.neutral.neutralLight,
         borderRadius: styleButton.style.borderRadius,
         backgroundColor: backgroundColor === "dark" ? colors.brand.primaryXDark : colors.neutral.neutralLight,
         color: colors.neutral.white,
