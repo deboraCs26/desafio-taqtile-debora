@@ -15,11 +15,10 @@ import { SecondaryButton } from './style/button/secondary';
 import { CtaButton } from './style/button/cta';
 export default function App() {
   return (
-    
-    <div>
-      <PrimaryButton onClick={() => alert('primário funcionando')} backgroundColor='dark'>
+     <div>
+      <PrimayButton onClick={() => alert('primário funcionando')} variant='primary' height='default'>
         label Large
-      </PrimaryButton>
+      </PrimayButton>
       
       <Display>
         display
@@ -28,7 +27,7 @@ export default function App() {
       <H1>Headline 1</H1>
 
       <div>
-        <PrimayButton onClick={() => alert('primário funcionando')} variant='primary' height="default" color="white">
+        <PrimayButton onClick={() => alert('primário funcionando')} variant='primary' height="defaultCompact">
           Button Label
         </PrimayButton>
       </div>
@@ -38,7 +37,7 @@ export default function App() {
       </H2>
 
       <div>
-        <PrimayButton variant="primary" height='defaultCompact' color="white">
+        <PrimayButton variant="primary" height='defaultCompact'>
           Button Label
         </PrimayButton>
       </div>
@@ -46,7 +45,7 @@ export default function App() {
       <H3>Headline 3</H3>
 
       <div>
-        <PrimayButton variant="secondary" height="defaultCompact" color="white">
+        <PrimayButton variant="secondary" height="defaultCompact">
           Button Label
         </PrimayButton>
       </div>
@@ -56,7 +55,7 @@ export default function App() {
       </H4>
 
       <div>
-        <PrimayButton variant="secondary" height="default" color="white">
+        <PrimayButton variant="secondary" height="default">
           Button Label
         </PrimayButton>
       </div>
@@ -65,7 +64,7 @@ export default function App() {
         body1
       </Body1>
       <div>
-        <PrimayButton onClick={() => alert('primário funcionando')} variant='primary' height="default" color="white">
+        <PrimayButton onClick={() => alert('primário funcionando')} variant='primary' height="default">
           Button Label
         </PrimayButton>
       </div>
