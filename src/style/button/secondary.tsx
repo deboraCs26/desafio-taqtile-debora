@@ -5,12 +5,10 @@ import { styleButton } from "../button/style-button"
 interface ButtonProps {
   children: React.ReactNode;
   onClick?: () => void;
-  variant?: 'primary' | 'secondary' | 'neutral';
   height?: "default" | "defaultCompact";
-  color?: string;
 };
 
-export const PrimayButton = ({ children, variant, onClick, height, color }: ButtonProps) => {
+export const SecondaryButton = ({ children, onClick, height}: ButtonProps) => {
   return (
     <button
       onClick={onClick}
@@ -26,14 +24,12 @@ export const PrimayButton = ({ children, variant, onClick, height, color }: Butt
         display: styleButton.primary.display,
         alignItems: styleButton.primary.alignItems,
         justifyContent: styleButton.primary.justifyContent,
-        background: variant === "primary" ? colors.brand.primary.primayXDark : colors.neutral.neutralLight,
-        color: colors.neutral.white,
+        color: colors.accessory.banner,
+        opacity: 0.5,
       }}
     >
       {children}
     </button>
   );
 };
-
-
 
