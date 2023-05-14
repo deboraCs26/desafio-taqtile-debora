@@ -10,36 +10,60 @@ import { DT } from './style/typography/dt-dd';
 import { LargeLabel } from './style/typography/LargeLabel';
 import { Caption } from './style/typography/caption';
 import { Price } from './style/typography/medium-price';
-import { Button } from '../src/style/button/primary';
-
-
+import { PrimayButton } from '../src/style/button/primary';
+import { SecondaryButton } from './style/button/secondary';
+import { CtaButton } from './style/button/cta';
 export default function App() {
   return (
-    
     <div>
-      <Button onClick={() => alert('primário funcionando')} backgroundColor='dark'>
-        label Large
-      </Button>
-      
       <Display>
         display
       </Display>
 
       <H1>Headline 1</H1>
 
+      <div>
+        <PrimayButton onClick={() => alert('primário funcionando')} variant='primary' height="default" color="white">
+          Button Label
+        </PrimayButton>
+      </div>
+
       <H2>
         Headline 2
       </H2>
 
+      <div>
+        <PrimayButton variant="primary" height='defaultCompact' color="white">
+          Button Label
+        </PrimayButton>
+      </div>
+
       <H3>Headline 3</H3>
+
+      <div>
+        <PrimayButton variant="secondary" height="defaultCompact" color="white">
+          Button Label
+        </PrimayButton>
+      </div>
 
       <H4>
         Headline 4
       </H4>
 
+      <div>
+        <PrimayButton variant="secondary" height="default" color="white">
+          Button Label
+        </PrimayButton>
+      </div>
+
       <Body1>
         body1
       </Body1>
+      <div>
+        <PrimayButton onClick={() => alert('primário funcionando')} variant='primary' height="default" color="white">
+          Button Label
+        </PrimayButton>
+      </div>
 
       <Body2 weight="regular">
         body2
@@ -60,6 +84,11 @@ export default function App() {
       <DT weight="bold">
         Definition of the Term
       </DT>
+      <div>
+        <SecondaryButton>
+          Button Label
+        </SecondaryButton>
+      </div>
 
       <LargeLabel weight="bold" color="dark" size="large">
         Label large bold
@@ -77,6 +106,12 @@ export default function App() {
         Label large
       </LargeLabel>
 
+      <div>
+        <CtaButton height='default'>
+          Button Label
+        </CtaButton>
+      </div>
+
       <Caption>
         Caption
       </Caption>
@@ -93,7 +128,12 @@ export default function App() {
         Small Price
       </Price>
 
+      <div>
+        <CtaButton>
+          Button Label
+        </CtaButton>
+      </div>
     </div>
 
   );
-}
+};

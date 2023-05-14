@@ -15,7 +15,7 @@ export const LargeLabel = ({ children, weight, color, size }: LargeLabelProps) =
         fontSize: size === "large" ? components.fontSize.medium : components.fontSize.large,
         fontWeight: weight === "bold" ? components.fontWeight.semiBold : components.fontWeight.regular,
         lineHeight: components.lineHeight.large,
-        color: color === "dark" ? colors.brand.primary.dark : colors.neutral.white,
+        color: color === "dark" ? colors.brand.primary.primayXDark : colors.neutral.white,
       }}
     >
       {children}
