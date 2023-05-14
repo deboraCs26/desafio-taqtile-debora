@@ -15,7 +15,12 @@ import { SecondaryButton } from './style/button/secondary';
 import { CtaButton } from './style/button/cta';
 export default function App() {
   return (
+    
     <div>
+      <PrimaryButton onClick={() => alert('primário funcionando')} backgroundColor='dark'>
+        label Large
+      </PrimaryButton>
+      
       <Display>
         display
       </Display>
