@@ -10,7 +10,7 @@ export const colors = {
   cta: "#2E9CA3",
 
   accessory: {
-    secundario: "#0C4888",
+    secondary: "#0C4888",
     banner: "#28ADBA"
   },
 

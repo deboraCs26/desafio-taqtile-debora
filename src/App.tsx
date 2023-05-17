@@ -1,4 +1,6 @@
+import '../src/style/button/button.css';
 import './App.css';
+import './style/button/button.css';
 import { Display } from './style/typography/display';
 import { H1 } from './style/typography/h1';
 import { H2 } from './style/typography/h2';
@@ -10,64 +12,87 @@ import { DT } from './style/typography/dt-dd';
 import { LargeLabel } from './style/typography/LargeLabel';
 import { Caption } from './style/typography/caption';
 import { Price } from './style/typography/medium-price';
-import { PrimayButton } from '../src/style/button/primary';
-import { SecondaryButton } from './style/button/secondary';
-import { CtaButton } from './style/button/cta';
+import { Button } from './style/button/props-button';
+import Icon from './style/button/Iconsax/Linear/Vector.png';
+
+
 export default function App() {
+
   return (
-     <div>
-      <PrimayButton onClick={() => alert('primário funcionando')} variant='primary' height='default'>
-        label Large
-      </PrimayButton>
-      
+    <div>
+      <div>
+        <H1>Stylegruide</H1>
+
+        <H2>Botão</H2>
+        <div className="button">
+          <Button variant="primary">
+            Button Label
+            <span className="icon">
+              <img src={Icon} alt="icone de uma lupa" />
+            </span>
+          </Button>
+        </div>
+        <div className="button">
+          <Button variant="primary" height="defaultCompact">
+            Button Label
+          </Button>
+        </div>
+
+        <div className="button">
+          <Button variant="primary" height="defaultCompact" onClick={() => alert("primário funcionando")}>
+            Button Label
+          </Button>
+        </div>
+
+        <div className="button">
+          <Button variant="primary" onClick={() => alert("primário funcionando")}>
+            Button Label
+          </Button>
+        </div>
+
+        <div className="button item-button :hover">
+          <Button variant="primary">
+            Button Label
+          </Button>
+        </div>
+
+        <div className="button">
+          <Button variant="secondary">
+            Button Label
+          </Button>
+        </div>
+        <div className="button">
+          <Button variant="secondary" height="defaultCompact">
+            Button Label
+          </Button>
+        </div>
+
+        <div className="button">
+          <Button variant="cta">
+            Button Label
+          </Button>
+        </div>
+
+        <div className="button">
+          <Button variant="cta" height="defaultCompact">
+            Button Label
+          </Button>
+        </div>
+      </div>
+
       <Display>
         display
       </Display>
 
-      <H1>Headline 1</H1>
-
-      <div>
-        <PrimayButton onClick={() => alert('primário funcionando')} variant='primary' height="defaultCompact">
-          Button Label
-        </PrimayButton>
-      </div>
-
-      <H2>
-        Headline 2
-      </H2>
-
-      <div>
-        <PrimayButton variant="primary" height='defaultCompact'>
-          Button Label
-        </PrimayButton>
-      </div>
-
       <H3>Headline 3</H3>
-
-      <div>
-        <PrimayButton variant="secondary" height="defaultCompact">
-          Button Label
-        </PrimayButton>
-      </div>
 
       <H4>
         Headline 4
       </H4>
 
-      <div>
-        <PrimayButton variant="secondary" height="default">
-          Button Label
-        </PrimayButton>
-      </div>
-
       <Body1>
         body1
       </Body1>
-      <div>
-        <PrimayButton onClick={() => alert('primário funcionando')} variant='primary' height="default">
-          Button Label
-        </PrimayButton>
-      </div>
 
       <Body2 weight="regular">
         body2
@@ -88,11 +113,6 @@ export default function App() {
       <DT weight="bold">
         Definition of the Term
       </DT>
-      <div>
-        <SecondaryButton>
-          Button Label
-        </SecondaryButton>
-      </div>
 
       <LargeLabel weight="bold" color="dark" size="large">
         Label large bold
@@ -110,12 +130,6 @@ export default function App() {
         Label large
       </LargeLabel>
 
-      <div>
-        <CtaButton height='default'>
-          Button Label
-        </CtaButton>
-      </div>
-
       <Caption>
         Caption
       </Caption>
@@ -132,11 +146,6 @@ export default function App() {
         Small Price
       </Price>
 
-      <div>
-        <CtaButton>
-          Button Label
-        </CtaButton>
-      </div>
     </div>
 
   );
