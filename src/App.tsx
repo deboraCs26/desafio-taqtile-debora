@@ -1,4 +1,3 @@
-import '../src/style/button/button.css';
 import './App.css';
 import { FormField } from './style/form/form';
 import { Display } from './style/typography/display';
@@ -43,16 +42,15 @@ export default function App() {
       <Display>
         display
       </Display>
+
       <H1>Headline 1</H1>
-      
-      <H2>Headline 2</H2>
 
       <H2>Headline 2</H2>
 
       <H3>Headline 3</H3>
 
       <div>
-        <PrimayButton variant="secondary" height="defaultCompact" color="white">
+        <PrimayButton variant="secondary" height="defaultCompact">
           Button Label
         </PrimayButton>
       </div>
@@ -62,7 +60,7 @@ export default function App() {
       </H4>
 
       <div>
-        <PrimayButton variant="secondary" height="default" color="white">
+        <PrimayButton variant="secondary" height="default">
           Button Label
         </PrimayButton>
       </div>
@@ -71,7 +69,7 @@ export default function App() {
         body1
       </Body1>
       <div>
-        <PrimayButton onClick={() => alert('primário funcionando')} variant='primary' height="default" color="white">
+        <PrimayButton onClick={() => alert('primário funcionando')} variant='primary' height="default">
           Button Label
         </PrimayButton>
       </div>
@@ -95,11 +93,6 @@ export default function App() {
       <DT weight="bold">
         Definition of the Term
       </DT>
-      <div>
-        <SecondaryButton>
-          Button Label
-        </SecondaryButton>
-      </div>
 
       <Label weight="bold" color="dark" size="large">
         Label large bold
@@ -117,12 +110,6 @@ export default function App() {
         Label large
       </Label>
 
-      <div>
-        <CtaButton height='default'>
-          Button Label
-        </CtaButton>
-      </div>
-
       <Caption>
         Caption
       </Caption>
@@ -139,11 +126,6 @@ export default function App() {
         Small Price
       </Price>
 
-      <div>
-        <CtaButton>
-          Button Label
-        </CtaButton>
-      </div>
     </div>
   );
 };

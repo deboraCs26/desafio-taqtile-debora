@@ -1,7 +1,6 @@
 import { colors } from "../colors";
 import { components } from "../typography/typography";
 import { styleButton } from "../button/style-button"
-
 interface ButtonProps {
   children: React.ReactNode;
   onClick?: () => void;
@@ -12,6 +11,7 @@ export const PrimayButton = ({ children, variant, onClick, height }: ButtonProps
   return (
     <button
       onClick={onClick}
+      
       style={{
         fontFamily: components.family.primary,
         fontSize: components.fontSize.large,
@@ -25,8 +25,6 @@ export const PrimayButton = ({ children, variant, onClick, height }: ButtonProps
         alignItems: styleButton.primary.alignItems,
         justifyContent: styleButton.primary.justifyContent,
         background: variant === "primary" ? colors.brand.primary.primayXDark : colors.neutral.neutralLight,
-        borderRadius: styleButton.style.borderRadius,
-        backgroundColor: backgroundColor === "dark" ? colors.brand.primaryXDark : colors.neutral.neutralLight,
         color: colors.neutral.white,
       }}
     >
