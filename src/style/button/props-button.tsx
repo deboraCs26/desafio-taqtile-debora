@@ -29,7 +29,7 @@ export const Button = ({ variant, children, icon, disabled = false, onClick, hei
         alignItems: styleButton.style.alignItems,
         borderRadius: styleButton.style.borderRadius,
         borderColor: colors.accessory.banner,
-        background: variant === "secondary" ? colors.neutral.white : variant === "cta" ? colors.cta : variant === "primary" ? disabled ? colors.neutral.neutralLight : colors.brand.primary.primayXDark : "",
+        background: variant === "secondary" ? colors.neutral.white : variant === "cta" ? colors.cta : variant === "primary" ? disabled ?  colors.neutral.neutralLight : colors.brand.primary.primayXDark : "",
         color: variant === "primary" ? colors.neutral.white : variant === "secondary" ? colors.accessory.banner : variant === "cta" ? colors.neutral.white : "",
         border: variant === "secondary" ? `1px solid ${colors.accessory.banner}` : "none",
         cursor: "pointer",

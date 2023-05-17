@@ -39,13 +39,13 @@ export default function App() {
         </div>
 
         <div className="button">
-          <Button variant="primary" height="defaultCompact" onClick={() => alert("primário funcionando")}>
+          <Button variant="primary" height="defaultCompact" disabled onClick={() => alert("primário funcionando")}>
             Button Label
           </Button>
         </div>
 
         <div className="button">
-          <Button variant="primary" onClick={() => alert("primário funcionando")}>
+          <Button variant="primary" disabled onClick={() => alert("primário funcionando")}>
             Button Label
           </Button>
         </div>
