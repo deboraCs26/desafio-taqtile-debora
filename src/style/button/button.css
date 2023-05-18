@@ -1,4 +1,8 @@
-<<<<<<< HEAD
+.button-container {
+  display: flex;
+  justify-content: center;
+  padding: 16px;
+ }
 .button-container {
   display: flex;
   justify-content: center;
@@ -7,32 +11,4 @@
  .item-button :hover {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
  }
-=======
-h1, h2{
-  display: flex;
-  justify-content: center;
-}
-.button {
-  display: flex;
-  justify-content: center;
-  flex-direction: row-reverse;
-  text-align: center;
-  border: none;
-  padding: 16px;
- }
- .button.default {
-  height: 48px; 
-}
 
-.button.defaultCompact {
-  height: 40px; 
-}
-
- .item-button :hover {
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
- }
- .icon {
-margin-right: 8px;
- }
- 
->>>>>>> 5a2b4c4 (button stylegruide challenge finished)
