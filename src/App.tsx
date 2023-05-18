@@ -24,57 +24,54 @@ export default function App() {
         <H1>Stylegruide</H1>
 
         <H2>Botão</H2>
-        <div className="button">
-          <Button variant="primary">
+        <div className="button-container">
+          <Button variant="primary"  icon={Icon} alt="Texto alternativo do ícone">
             Button Label
-            <span className="icon">
-              <img src={Icon} alt="icone de uma lupa" />
-            </span>
           </Button>
         </div>
-        <div className="button">
-          <Button variant="primary" height="defaultCompact">
+        <div className="button-container">
+          <Button variant="primary" compact>
             Button Label
           </Button>
         </div>
 
-        <div className="button">
-          <Button variant="primary" height="defaultCompact" disabled onClick={() => alert("primário funcionando")}>
+        <div className="button-container">
+          <Button variant="primary" compact disabled onClick={() => alert("primário funcionando")}>
             Button Label
           </Button>
         </div>
 
-        <div className="button">
+        <div className="button-container">
           <Button variant="primary" disabled onClick={() => alert("primário funcionando")}>
             Button Label
           </Button>
         </div>
 
-        <div className="button item-button :hover">
+        <div className="button-container item-button :hover">
           <Button variant="primary">
             Button Label
           </Button>
         </div>
 
-        <div className="button">
+        <div className="button-container">
           <Button variant="secondary">
             Button Label
           </Button>
         </div>
-        <div className="button">
-          <Button variant="secondary" height="defaultCompact">
+        <div className="button-container">
+          <Button variant="secondary" compact>
             Button Label
           </Button>
         </div>
 
-        <div className="button">
+        <div className="button-container">
           <Button variant="cta">
             Button Label
           </Button>
         </div>
 
-        <div className="button">
-          <Button variant="cta" height="defaultCompact">
+        <div className="button-container">
+          <Button variant="cta" compact>
             Button Label
           </Button>
         </div>

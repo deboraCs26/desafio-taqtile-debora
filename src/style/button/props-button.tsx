@@ -1,42 +1,65 @@
-import "./button.css"
+import React from "react";
+import "./button.css";
 import { colors } from "../colors";
 import { components } from "../typography/typography";
 import { styleButton } from "./style-button";
 
-
 interface ButtonProps {
-  variant: 'primary' | 'secondary' | 'cta';
+  variant: "primary" | "secondary" | "cta";
   children: React.ReactNode;
   onClick?: () => void;
   disabled?: boolean;
+  alt?: string;
   icon?: React.ReactNode;
-  height?: "default" | "defaultCompact";
+  compact?: boolean;
   style?: React.CSSProperties;
-};
 
-export const Button = ({ variant, children, icon, disabled = false, onClick, height }: ButtonProps) => {
+}
+
+export const Button = ({ variant, children, icon, disabled = false, onClick, compact, alt }: ButtonProps) => {
+
+  const buttonConstantStyle = {
+    fontFamily: components.family.primary,
+    fontSize: components.fontSize.large,
+    fontWeight: components.fontWeight.bold,
+    minWidth: styleButton.style.minWidth,
+    alignItems: styleButton.style.alignItems,
+    borderRadius: styleButton.style.borderRadius,
+    borderColor: colors.accessory.banner,
+    cursor: "pointer",
+  };
+
+  let backgroundColor, color, border;
+  if (variant === "primary") {
+    backgroundColor = disabled
+      ? colors.neutral.neutralLight
+      : colors.brand.primary.primayXDark;
+    color = colors.neutral.white;
+    border = styleButton.style.border
+  } else if (variant === "secondary") {
+    backgroundColor = colors.neutral.white;
+    color = colors.accessory.banner;
+    border = `1px solid ${colors.accessory.banner}`;
+  } else if (variant === "cta") {
+    backgroundColor = colors.cta;
+    color = colors.neutral.white;
+    border = styleButton.style.border
+  }
+
+  const styleDoButton = {
+    ...buttonConstantStyle,
+    backgroundColor,
+    color,
+    border,
+    height: compact ? "40px" : "48px",
+  };
 
   return (
     <button
-      className={`button ${height}`}
       disabled={disabled}
       onClick={onClick}
-      style={{
-        fontFamily: components.family.primary,
-        fontSize: components.fontSize.large,
-        fontWeight: components.fontWeight.bold,
-        width: styleButton.style.minWidth,
-        alignItems: styleButton.style.alignItems,
-        borderRadius: styleButton.style.borderRadius,
-        borderColor: colors.accessory.banner,
-        background: variant === "secondary" ? colors.neutral.white : variant === "cta" ? colors.cta : variant === "primary" ? disabled ?  colors.neutral.neutralLight : colors.brand.primary.primayXDark : "",
-        color: variant === "primary" ? colors.neutral.white : variant === "secondary" ? colors.accessory.banner : variant === "cta" ? colors.neutral.white : "",
-        border: variant === "secondary" ? `1px solid ${colors.accessory.banner}` : "none",
-        cursor: "pointer",
-      }}
-
+      style={styleDoButton}
     >
-      {icon && <span>{icon}</span>}
       {children}
     </button>
   );
