@@ -1,4 +1,6 @@
+import '../src/style/button/button.css';
 import './App.css';
+import './style/button/button.css';
 import { Display } from './style/typography/display';
 import { H1 } from './style/typography/h1';
 import { H2 } from './style/typography/h2';
@@ -10,18 +12,73 @@ import { DT } from './style/typography/dt-dd';
 import { LargeLabel } from './style/typography/LargeLabel';
 import { Caption } from './style/typography/caption';
 import { Price } from './style/typography/medium-price';
+import { Button } from './style/button/props-button';
+import Icon from './style/button/Iconsax/Linear/Vector.png';
+
 export default function App() {
+
   return (
     <div>
+      <div>
+        <H1>Stylegruide</H1>
+
+        <H2>Botão</H2>
+        <div className="button-container">
+          <Button variant="primary"  icon={Icon} alt="Texto alternativo do ícone">
+            Button Label
+          </Button>
+        </div>
+        <div className="button-container">
+          <Button variant="primary" compact icon={Icon} alt="Texto icone">
+            Button Label
+          </Button>
+        </div>
+
+        <div className="button-container">
+          <Button variant="primary" compact disabled onClick={() => alert("primário funcionando")}>
+            Button Label
+          </Button>
+        </div>
+
+        <div className="button-container">
+          <Button variant="primary" disabled onClick={() => alert("primário funcionando")}>
+            Button Label
+          </Button>
+        </div>
+
+        <div className="button-container item-button :hover">
+          <Button variant="primary">
+            Button Label
+          </Button>
+        </div>
+
+        <div className="button-container">
+          <Button variant="secondary">
+            Button Label
+          </Button>
+        </div>
+        <div className="button-container">
+          <Button variant="secondary" compact>
+            Button Label
+          </Button>
+        </div>
+
+        <div className="button-container">
+          <Button variant="cta">
+            Button Label
+          </Button>
+        </div>
+
+        <div className="button-container">
+          <Button variant="cta" compact>
+            Button Label
+          </Button>
+        </div>
+      </div>
+
       <Display>
         display
       </Display>
-
-      <H1>Headline 1</H1>
-
-      <H2>
-        Headline 2
-      </H2>
 
       <H3>Headline 3</H3>
 
@@ -88,4 +145,4 @@ export default function App() {
     </div>
 
   );
-}
+};
