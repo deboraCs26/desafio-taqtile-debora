@@ -4,11 +4,11 @@ export const colors = {
       medium: "#0C4888",
   },
 
-  cta: "#2E9CA3",
+  cta: "#29D6E7",
 
   accessory: {
-    secondary: "#0C4888",
-    banner: "#28ADBA"
+    backgroundSecundario: "#0C4888",
+    backgroundBanner: "#28ADBA"
   },
 
   neutral: {
