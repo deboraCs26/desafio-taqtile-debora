@@ -33,16 +33,16 @@ export const Button = ({ variant, children, icon, disabled = false, onClick, com
   if (variant === "primary") {
     backgroundColor = disabled
       ? colors.neutral.neutralLight
-      : colors.brand.primaryXDark;
-    color = colors.neutral.white;
+      : colors.brand.primaryXDark
+    color = colors.neutral.white
     border = styleButton.style.border
   } else if (variant === "secondary") {
-    backgroundColor = colors.neutral.white;
-    color = colors.accessory.banner;
-    border = `1px solid ${colors.accessory.banner}`;
+    backgroundColor = colors.neutral.white
+    color = colors.accessory.banner
+    border = `1px solid ${colors.accessory.banner}`
   } else if (variant === "cta") {
-    backgroundColor = colors.cta;
-    color = colors.neutral.white;
+    backgroundColor = colors.cta
+    color = colors.neutral.white
     border = styleButton.style.border
   }
 

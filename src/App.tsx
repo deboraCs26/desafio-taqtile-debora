@@ -24,12 +24,12 @@ export default function App() {
 
         <H2>Botão</H2>
         <div className="button-container">
-          <Button variant="primary"  icon={Icon} alt="Texto alternativo do ícone">
+          <Button variant="primary" icon={Icon} alt="Texto alternativo do ícone">
             Button Label
           </Button>
         </div>
         <div className="button-container">
-          <Button variant="primary" compact icon={Icon} alt="Texto icone">
+          <Button variant="primary" compact>
             Button Label
           </Button>
         </div>

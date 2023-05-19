@@ -1,7 +1,7 @@
 export const colors = {
   brand: {
-      primaryXDark: "#031F3D",
-      medium: "#0C4888",
+    primaryXDark: "#031F3D",
+    medium: "#0C4888",
   },
 
   cta: "#2E9CA3",
