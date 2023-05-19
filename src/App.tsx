@@ -1,8 +1,16 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-
-function App() {
+import { Display } from './style/typography/display';
+import { H1 } from './style/typography/h1';
+import { H2 } from './style/typography/h2';
+import { H3 } from './style/typography/h3';
+import { H4 } from './style/typography/h4';
+import { Body1 } from './style/typography/body1';
+import { Body2 } from './style/typography/body2';
+import { DT } from './style/typography/dt-dd';
+import { LargeLabel } from './style/typography/LargeLabel';
+import { Caption } from './style/typography/caption';
+import { Price } from './style/typography/medium-price';
+export default function App() {
   return (
     <div className="App">
       <header className="App-header">
@@ -20,7 +28,6 @@ function App() {
         </a>
       </header>
     </div>
+
   );
 }
-
-export default App;
