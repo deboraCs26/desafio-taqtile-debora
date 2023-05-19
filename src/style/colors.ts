@@ -1,17 +1,14 @@
 export const colors = {
   brand: {
-    primary: {
-      dark: "#031F3D",
+      primaryXDark: "#031F3D",
       medium: "#0C4888",
-    }
-
   },
 
-  cta: "#29D6E7",
+  cta: "#2E9CA3",
 
   accessory: {
-    backgroundSecundario: "#0C4888",
-    backgroundBanner: "#28ADBA"
+    secondary: "#0C4888",
+    banner: "#28ADBA"
   },
 
   neutral: {

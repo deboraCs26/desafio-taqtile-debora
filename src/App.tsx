@@ -1,3 +1,4 @@
+import '../src/style/button/button.css';
 import './App.css';
 import { FormField } from './style/form/form';
 import { Display } from './style/typography/display';
