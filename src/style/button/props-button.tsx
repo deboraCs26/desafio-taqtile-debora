@@ -9,7 +9,6 @@ interface ButtonProps {
   children: React.ReactNode;
   onClick?: () => void;
   disabled?: boolean;
-  alt?: string;
   icon?: React.ReactNode;
   compact?: boolean;
   style?: React.CSSProperties;
@@ -26,7 +25,7 @@ const buttonConstantStyle = {
   cursor: "pointer",
 };
 
-export const Button = ({ variant, children, icon, disabled = false, onClick, compact, alt }: ButtonProps) => {
+export const Button = ({ variant, children, icon, disabled = false, onClick, compact}: ButtonProps) => {
 
   let backgroundColor, color, border;
   if (variant === "primary") {
@@ -59,6 +58,7 @@ export const Button = ({ variant, children, icon, disabled = false, onClick, com
       onClick={onClick}
       style={styleDoButton}
     >
+      {!!icon && <span>{icon}</span>}
       {children}
     </button>
   );
