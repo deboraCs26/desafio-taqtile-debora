@@ -9,7 +9,6 @@ interface ButtonProps {
   children: React.ReactNode;
   onClick?: () => void;
   disabled?: boolean;
-  alt?: string;
   icon?: React.ReactNode;
   compact?: boolean;
   style?: React.CSSProperties;
@@ -21,6 +20,7 @@ export const Button = ({ variant, children, icon, disabled = false, onClick }: B
       disabled={disabled}
       onClick={onClick}
     >
+      {!!icon && <span>{icon}</span>}
       {children}
     </button>
   );
