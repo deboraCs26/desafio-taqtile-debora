@@ -14,8 +14,10 @@ interface ButtonProps {
   icon?: IconDefinition;
   compact?: boolean;
   style?: React.CSSProperties;
+};
 
-}
+export const Button = ({ variant, children, icon, disabled = false, onClick, compact }: ButtonProps) => {
+
 const buttonConstantStyle = {
   fontFamily: components.family.primary,
   fontSize: components.fontSize.large,
@@ -25,9 +27,7 @@ const buttonConstantStyle = {
   borderRadius: styleButton.style.borderRadius,
   borderColor: colors.accessory.banner,
   cursor: "pointer",
-};
-
-export const Button = ({ variant, children, icon, disabled = false, onClick, compact }: ButtonProps) => {
+  };
 
   let backgroundColor, color, border;
   if (variant === "primary") {
@@ -44,7 +44,7 @@ export const Button = ({ variant, children, icon, disabled = false, onClick, com
     backgroundColor = colors.cta;
     color = colors.neutral.white;
     border = styleButton.style.border
-  }
+  };
 
   const styleDoButton = {
     ...buttonConstantStyle,
@@ -60,7 +60,7 @@ export const Button = ({ variant, children, icon, disabled = false, onClick, com
       onClick={onClick}
       style={styleDoButton}
     >
-      {!!icon && <FontAwesomeIcon icon={icon} />}
+       {!!icon && <FontAwesomeIcon icon={icon} />}
       {children}
     </button>
   );
