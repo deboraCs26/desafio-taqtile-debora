@@ -13,7 +13,7 @@ import { LargeLabel } from './style/typography/LargeLabel';
 import { Caption } from './style/typography/caption';
 import { Price } from './style/typography/medium-price';
 import { Button } from './style/button/button';
-import {faSearch} from '@fortawesome/free-solid-svg-icons';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 export default function App() {
 
@@ -24,7 +24,7 @@ export default function App() {
 
         <H2>Botão</H2>
         <div className="button-container">
-          <Button variant="primary"  icon={faSearch}>
+          <Button variant="primary" icon={faSearch}>
             Button Label
           </Button>
         </div>
