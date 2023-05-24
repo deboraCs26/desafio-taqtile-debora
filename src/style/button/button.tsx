@@ -60,7 +60,7 @@ const buttonConstantStyle = {
       onClick={onClick}
       style={styleDoButton}
     >
-       {!!icon && <FontAwesomeIcon icon={icon} />}
+      {!!icon && <FontAwesomeIcon icon={icon} />}
       {children}
     </button>
   );
