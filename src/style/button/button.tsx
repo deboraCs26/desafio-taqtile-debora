@@ -1,5 +1,7 @@
 import React from "react";
 import "./button.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { colors } from "../colors";
 import { components } from "../typography/typography";
 import { styleButton } from "./style-button";
@@ -9,24 +11,23 @@ interface ButtonProps {
   children: React.ReactNode;
   onClick?: () => void;
   disabled?: boolean;
-  icon?: React.ReactNode;
+  icon?: IconDefinition ;
   compact?: boolean;
   style?: React.CSSProperties;
 
 }
+const buttonConstantStyle = {
+  fontFamily: components.family.primary,
+  fontSize: components.fontSize.large,
+  fontWeight: components.fontWeight.bold,
+  minWidth: styleButton.style.minWidth,
+  alignItems: styleButton.style.alignItems,
+  borderRadius: styleButton.style.borderRadius,
+  borderColor: colors.accessory.banner,
+  cursor: "pointer",
+};
 
 export const Button = ({ variant, children, icon, disabled = false, onClick, compact}: ButtonProps) => {
-
-  const buttonConstantStyle = {
-    fontFamily: components.family.primary,
-    fontSize: components.fontSize.large,
-    fontWeight: components.fontWeight.bold,
-    minWidth: styleButton.style.minWidth,
-    alignItems: styleButton.style.alignItems,
-    borderRadius: styleButton.style.borderRadius,
-    borderColor: colors.accessory.banner,
-    cursor: "pointer",
-  };
 
   let backgroundColor, color, border;
   if (variant === "primary") {
@@ -59,7 +60,7 @@ export const Button = ({ variant, children, icon, disabled = false, onClick, com
       onClick={onClick}
       style={styleDoButton}
     >
-      {!!icon && <span>{icon}</span>}
+       {!!icon && <FontAwesomeIcon icon={icon} />}
       {children}
     </button>
   );
