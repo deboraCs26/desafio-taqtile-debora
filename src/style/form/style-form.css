@@ -1,0 +1,33 @@
+.form {
+  min-height: 72px;
+  max-width: 360px;
+  margin-left: 10px;
+  border: none;
+  outline: none;
+  align-items: center;
+  width: 95%;
+  padding: 5px;
+}
+
+.icon-caption-container {
+  display: flex;
+  align-items: center;
+}
+.input-style {
+  border-radius: 4px;
+  display: flex;
+  height: 72px;
+  padding-right: 40px,;
+  width: 100%;
+}
+
+.input-container {
+  position: relative;
+}
+
+.input-container label {
+  position: absolute;
+  top: -10px;
+  border: none;
+  left: 5px;
+}

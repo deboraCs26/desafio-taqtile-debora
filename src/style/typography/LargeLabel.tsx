@@ -1,13 +1,13 @@
 import { colors } from '../colors'
 import { components } from './typography';
-interface LargeLabelProps {
+interface LabelProps {
   children: React.ReactNode;
   weight?: "bold" | "regular" | "semiBold";
   color?: "dark" | "white";
   size?: "medium" | "large";
 };
 
-export const LargeLabel = ({ children, weight, color, size }: LargeLabelProps) => {
+export const Label = ({ children, weight, color, size }: LabelProps) => {
   return (
     <label
       style={{
