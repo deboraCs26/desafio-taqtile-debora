@@ -12,8 +12,7 @@ import { DT } from './style/typography/dt-dd';
 import { LargeLabel } from './style/typography/LargeLabel';
 import { Caption } from './style/typography/caption';
 import { Price } from './style/typography/medium-price';
-import { Button } from './style/button/props-button';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Button } from './style/button/button';
 import {faSearch} from '@fortawesome/free-solid-svg-icons';
 
 export default function App() {
@@ -25,12 +24,12 @@ export default function App() {
 
         <H2>Botão</H2>
         <div className="button-container">
-          <Button variant="primary" icon={<FontAwesomeIcon icon={faSearch} />}>
+          <Button variant="primary"  icon={faSearch}>
             Button Label
           </Button>
         </div>
         <div className="button-container">
-          <Button variant="primary" icon={<FontAwesomeIcon icon={faSearch} />} compact>
+          <Button variant="primary" icon={faSearch} compact>
             Button Label
           </Button>
         </div>
