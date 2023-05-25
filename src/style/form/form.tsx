@@ -39,11 +39,6 @@ export const Form = ({ caption, label, icon }: FormProps) => {
     }
   };
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    setFocused(false);
-  };
-
   const handleInputFocus = () => {
     setFocused(true);
   };
@@ -53,33 +48,34 @@ export const Form = ({ caption, label, icon }: FormProps) => {
   };
 
   return (
-    <form className="form" onSubmit={handleSubmit}>
-      <div className='form'>
-        {!!icon && <FontAwesomeIcon icon={icon} />}
-        <div className=' input-container'>
-          <Label color='dark'>{label}</Label>
-          <input
-            className="input-style"
-            style={inputStyle}
-            type={label === "Senha" ? "password" : "text"}
-            placeholder={label}
-            onChange={handleInputChange}
-            onFocus={handleInputFocus}
-            onBlur={handleInputBlur}
-          />
-          {error && (
-            <span style={{ color: colors.feedback.feedbackError }}>
-              {error}
-            </span>
-          )}
-        </div>
+    <div>
+      {!!icon && <FontAwesomeIcon icon={icon} />}
+      <div className="input-container form">
+        <Label color="dark">{label}</Label>
+        <input
+          className="input-style"
+          style={inputStyle}
+          type={label === "Senha" ? "password" : "text"}
+          placeholder={label}
+          onChange={handleInputChange}
+          onFocus={handleInputFocus}
+          onBlur={handleInputBlur}
+        />
+        {error && (
+          <span style={{ color: colors.feedback.feedbackError }}>
+            {error}
+          </span>
+        )}
       </div>
       {caption && (
         <div className="icon-caption-container">
-          <FontAwesomeIcon icon={faExclamationTriangle} style={{ margin: "10px", color: colors.feedback.feedbackError }} />
+          <FontAwesomeIcon
+            icon={faExclamationTriangle}
+            style={{ margin: "10px", color: colors.feedback.feedbackError }}
+          />
           <span style={{ color: colors.feedback.feedbackError }}>{caption}</span>
         </div>
       )}
-    </form>
+    </div>
   );
 };
