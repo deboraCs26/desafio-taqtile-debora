@@ -1,8 +1,6 @@
 import './App.css';
-import { Display } from './style/typography/display';
-import { H1 } from './style/typography/h1';
-import { H2 } from './style/typography/h2';
-import { H3 } from './style/typography/h3';
+import { InfoTile } from './style/Info-Tile/infoTile';
+import { faCar } from '@fortawesome/free-solid-svg-icons';
 import { H4 } from './style/typography/h4';
 import { Body1 } from './style/typography/body1';
 import { Body2 } from './style/typography/body2';
