@@ -1,35 +1,31 @@
-.form {
+.form-container {
   min-height: 72px;
   max-width: 360px;
   margin-left: 10px;
+  width: 100%;
   border: none;
   outline: none;
-  align-items: center;
-  width: 95%;
-  padding-bottom: 12px;
+  padding: 13px;
+
 }
 
-.icon-caption-container {
-  display: flex;
-  align-items: center;
-}
 .input-style {
-  border-radius: 4px;
   display: flex;
+  border-radius: 8px;
   height: 72px;
   width: 100%;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 13px 0 0 20px;
+  
 }
 
-.input-container {
+.input-container .icon{
   position: relative;
+ 
 }
 
 .input-container label {
   position: absolute;
-  top: -10px;
   border: none;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 0 0 12px 20px;
+  
 }
