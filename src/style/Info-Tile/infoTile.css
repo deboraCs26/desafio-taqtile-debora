@@ -1,11 +1,6 @@
-.style-infoTile {
+.style-info-tile {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  border-radius: 12px;
-  width: 100px;
-  height: 90px;
-  padding: 60px;
-  margin-left: 10px
+  flex-direction: column; 
 }
