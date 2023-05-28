@@ -28,7 +28,7 @@ export default function App() {
       <H1>Formulario</H1>
       <Form label='Nome'/>
         <Form label='Email'/>
-        <Form caption="Senha inválida" password label="Senha" icon={faExclamationTriangle} error={true} />
+        <Form caption="Caption" password label="Senha" icon={faExclamationTriangle} error={true} />
         <button onClick={handleFormSubmit}>Submit</button>
         <Display>
         display
