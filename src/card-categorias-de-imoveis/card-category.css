@@ -1,0 +1,13 @@
+.card-container{
+  display: flex;
+  border-radius: 7px;
+  flex-direction:column;
+  box-shadow: 0px 3.40299px 4.53731px rgba(153, 155, 168, 0.15);
+  cursor: pointer;
+  height: 304px;
+  width: 212px;
+}
+
+.card-container img {
+  border-radius: 7px;
+}
