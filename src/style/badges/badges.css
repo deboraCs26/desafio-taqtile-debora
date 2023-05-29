@@ -1,0 +1,8 @@
+.style-badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+  width: 87px;
+  height: 47px;
+}

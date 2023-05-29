@@ -16,6 +16,10 @@ import { Button } from './style/button/button';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { CardCategory } from './style/card-categorias-de-imoveis/card-category';
 import imageCategory from './style/card-categorias-de-imoveis/cards/image-category.svg';
+import { Badge } from './style/badges/badges';
+import { ReactComponent as Icon360 } from './style/badges/Iconsax/Linear/Icon360.svg';
+import { ReactComponent as IconImagem } from './style/badges/Iconsax/Linear/Iconsax/Linear/IconImagem.svg'; 
+import { ReactComponent as IconVideo } from './style/badges/Iconsax/Linear/Iconsax/Iconsax/Linear/IconVideo.svg'; 
 
 export default function App() {
 
@@ -78,6 +82,9 @@ export default function App() {
           </Button>
         </div>
       </div>
+      <Badge icon={<IconVideo/>} text="video" />
+      <Badge icon={<IconImagem/>} text="imagem" />
+      <Badge icon={<Icon360/>} text="360°" />
 
       <Display>
         display
