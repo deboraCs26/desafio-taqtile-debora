@@ -1,7 +1,6 @@
 import React from 'react';
 import './infoTile.css';
 import { colors } from '../colors';
-import { components } from '../typography/typography';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCar } from '@fortawesome/free-solid-svg-icons';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
@@ -12,16 +11,18 @@ interface InfoTileProps {
   text?: string;
 }
 
-export const styleIcon ={
-fontSize: components.fontSize.XLarge,
-color: colors.neutral.neutralXDark,
+export const styleIcon = {
+  color: colors.neutral.neutralXDark,
 }
 
-export const InfoTile = ({text }: InfoTileProps) => {
+
+export const InfoTile = ({ text }: InfoTileProps) => {
   return (
-      <div className="style-info-tile">
-        <FontAwesomeIcon icon={faCar} style={ styleIcon}/>
+    <div className="style-info-tile">
+      <FontAwesomeIcon className='styleIcon'  icon={faCar} size="xl" style={styleIcon} />
+      <div className='style-text'>
         <H4>{text}</H4>
       </div>
+    </div>
   );
 };

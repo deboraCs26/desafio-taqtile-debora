@@ -1,6 +1,11 @@
 .style-info-tile {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column; 
+  margin: auto;
+  padding-left: 104px;
+  margin-top: 14px;
+}
+.styleIcon {
+  padding-left: 13px;
+}
+.style-text{
+  padding-top: 14px;
 }

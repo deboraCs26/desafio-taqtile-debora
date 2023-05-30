@@ -3,7 +3,7 @@ import { components } from './typography';
 
 export const H4 = ({ children }: { children: React.ReactNode }) => {
   return (
-    <h4
+    <p
       style={{
         fontFamily: components.family.primary,
         fontSize: components.fontSize.large,
@@ -13,6 +13,6 @@ export const H4 = ({ children }: { children: React.ReactNode }) => {
       }}
     >
       {children}
-    </h4>
+    </p>
   );
 };
