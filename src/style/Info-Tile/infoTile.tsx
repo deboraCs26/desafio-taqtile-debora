@@ -19,10 +19,8 @@ export const styleIcon = {
 export const InfoTile = ({ text }: InfoTileProps) => {
   return (
     <div className="style-info-tile">
-      <FontAwesomeIcon className='styleIcon'  icon={faCar} size="xl" style={styleIcon} />
-      <div className='style-text'>
-        <H4>{text}</H4>
-      </div>
+      <FontAwesomeIcon icon={faCar} size="xl" style={styleIcon} className='styleIcon' />
+      <H4>{text}</H4>
     </div>
   );
 };
