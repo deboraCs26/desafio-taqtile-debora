@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import './style-form.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
 import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
+import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
 import { colors } from '../colors';
-import { components } from '../typography/typography';
 import { Label } from '../typography/LargeLabel';
+import { Caption } from '../typography/caption';
+
 interface FormProps {
-  error?: boolean;
   caption?: string;
   label?: string;
   iconError?: IconDefinition;
@@ -15,17 +15,19 @@ interface FormProps {
   password?: boolean;
 }
 
-export const styleError = {
-  fontFamily: components.family.primary,
-  color: colors.neutral.neutralDark,
-}
-
-export const Form = ({error, label, icon, password, caption, iconError}: FormProps) => {
+export const FormField = ({ label, icon, password, caption }: FormProps) => {
   const [focused, setFocused] = useState(false);
   const [inputValue, setInputValue] = useState('');
+  const [error, setError] = useState(false);
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setInputValue(event.target.value);
+    const value = event.target.value;
+    setInputValue(value);
+    if (value === '') {
+      setError(true);
+    } else {
+      setError(false);
+    }
   };
 
   let border;
@@ -37,8 +39,8 @@ export const Form = ({error, label, icon, password, caption, iconError}: FormPro
   } else if (inputValue) {
     border = `1px solid ${colors.neutral.neutralLight}`;
   } else {
-    border= `1px solid`;
-  }
+    border = `1px solid`;
+  };
 
   const inputStyle = {
     border,
@@ -53,26 +55,25 @@ export const Form = ({error, label, icon, password, caption, iconError}: FormPro
   };
 
   return (
+
     <div className='form-container'>
-      <div className='input-container'>
+      <div className='input-container' style={inputStyle}>
         <Label color='dark'>{label}</Label>
         <input
           className='input-style'
-          style={inputStyle}
           type={password ? 'password' : 'text'}
           placeholder={label}
           onChange={handleInputChange}
           onFocus={handleInputFocus}
           onBlur={handleInputBlur}
         />
-        {error && (
-          <span style={styleError}>
-            {!!icon && <FontAwesomeIcon icon={faExclamationTriangle}/>}
-            {!!iconError && <FontAwesomeIcon icon={iconError} />}
-            {caption}
-          </span> 
-        )}
       </div>
+      {error && (
+        <Caption>
+          {!!icon && <FontAwesomeIcon icon={faExclamationTriangle} size='lg' className='icon' />}
+          {caption}
+        </Caption>
+      )}
     </div>
   );
 };

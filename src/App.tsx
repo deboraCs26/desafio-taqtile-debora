@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
 import './App.css';
-import { Form } from './style/form/form';
+import { FormField } from './style/form/form';
 import { Display } from './style/typography/display';
 import { H1 } from './style/typography/h1';
 import { H2 } from './style/typography/h2';
@@ -13,30 +12,21 @@ import { Label } from './style/typography/LargeLabel';
 import { Caption } from './style/typography/caption';
 import { Price } from './style/typography/medium-price';
 import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
-export default function App() {
-  const [senhaInvalida, setSenhaInvalida] = useState(false);
 
-  const handleFormSubmit = () => {
-    if (senhaInvalida) {
-      setSenhaInvalida(true);
-    } else {
-      setSenhaInvalida(false);
-    }
-  };
+export default function App() {
+
   return (
     <div>
       <H1>Formulario</H1>
-      <Form label='Nome'/>
-        <Form label='Email'/>
-        <Form caption="Caption" password label="Senha" icon={faExclamationTriangle} error={true} />
-        <button onClick={handleFormSubmit}>Submit</button>
-        <Display>
+      <FormField label='Nome' />
+      <FormField label='Email' />
+      <FormField caption="Caption" password label="Senha" icon={faExclamationTriangle} />
+
+      <Display>
         display
       </Display>
-      
-      <H2>
-        Headline 2
-      </H2>
+
+      <H2>Headline 2</H2>
 
       <H3>Headline 3</H3>
 
