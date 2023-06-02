@@ -13,11 +13,15 @@ export const CardCategory = ({ image, title, description }: CardProps) => {
 
   return (
     <div className="card-container">
-      <img src={image} alt="Card" className="card-container img" />
-      <div>
-        <H3>{title}</H3>
-        <Body2>{description}</Body2>
+      <div className='card'>
+        <img src={image} alt="Card" className="img" />
+        <div className='card-text'>
+          <H3>{title}</H3>
+          <Body2>{description}</Body2>
+        </div>
+
       </div>
+
     </div>
   );
 };
