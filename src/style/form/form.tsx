@@ -9,25 +9,20 @@ import { Caption } from '../typography/caption';
 
 interface FormProps {
   caption?: string;
-  label?: string;
-  iconError?: IconDefinition;
+  error?: boolean;
+  label: string;
   icon?: IconDefinition;
   password?: boolean;
+  minLength?: number;
 }
 
-export const FormField = ({ label, icon, password, caption }: FormProps) => {
+export const FormField = ({ error, label, icon, password, caption }: FormProps) => {
   const [focused, setFocused] = useState(false);
   const [inputValue, setInputValue] = useState('');
-  const [error, setError] = useState(false);
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value;
     setInputValue(value);
-    if (value === '') {
-      setError(true);
-    } else {
-      setError(false);
-    }
   };
 
   let border;
@@ -60,20 +55,24 @@ export const FormField = ({ label, icon, password, caption }: FormProps) => {
       <div className='input-container' style={inputStyle}>
         <Label color='dark'>{label}</Label>
         <input
+          style={{ width: '100%' }}
           className='input-style'
           type={password ? 'password' : 'text'}
           placeholder={label}
           onChange={handleInputChange}
           onFocus={handleInputFocus}
           onBlur={handleInputBlur}
+          required={true}
         />
       </div>
-      {error && (
-        <Caption>
-          {!!icon && <FontAwesomeIcon icon={faExclamationTriangle} size='lg' className='icon' />}
-          {caption}
-        </Caption>
-      )}
+      <div className='caption'>
+        {error && (
+          <Caption>
+            {!!icon && <FontAwesomeIcon icon={faExclamationTriangle} size='lg' className='icon' />}
+            {caption}
+          </Caption>
+        )}
+      </div>
     </div>
   );
 };

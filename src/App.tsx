@@ -16,11 +16,30 @@ import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 export default function App() {
 
   return (
+
     <div>
       <H1>Formulario</H1>
-      <FormField label='Nome' />
-      <FormField label='Email' />
-      <FormField caption="Caption" password label="Senha" icon={faExclamationTriangle} />
+      <FormField
+        label="Nome"
+        icon={faExclamationTriangle}
+        caption='Caption'
+        minLength={3}
+        error={true}
+      />
+      <FormField
+        label="Email"
+        icon={faExclamationTriangle}
+        caption="Caption"
+        error={true}
+      />
+      <FormField
+        label="Senha"
+        icon={faExclamationTriangle}
+        caption="Caption"
+        password
+        minLength={8}
+        error={true}
+      />
 
       <Display>
         display
