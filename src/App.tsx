@@ -1,5 +1,5 @@
 import './App.css';
-import { InfoTile } from './style/Info-Tile/infoTile';
+import { InfoTile } from './style/Info-Tile/info-tile';
 import { faCar } from '@fortawesome/free-solid-svg-icons';
 import { Display } from './style/typography/display';
 import { H1 } from './style/typography/h1';
