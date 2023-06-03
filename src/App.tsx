@@ -24,13 +24,11 @@ export default function App() {
         icon={faExclamationTriangle}
         caption='Caption'
         minLength={3}
-        error={true}
       />
       <FormField
         label="Email"
         icon={faExclamationTriangle}
         caption="Caption"
-        error={true}
       />
       <FormField
         label="Senha"
