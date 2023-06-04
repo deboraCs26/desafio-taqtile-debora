@@ -1,22 +1,18 @@
 import React, { useState } from 'react';
 import './badges.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { colors } from '../colors';
-import { components } from '../typography/typography';
 
 interface BadgeProps {
-  icon: React.ReactNode;
+  icon?: IconDefinition;
   text: string;
+  selected: boolean;
+  onClick: () => void;
 }
 
-export const fontBadges = {
-  fontFamily: components.family.primary,
-  fontSize: components.fontSize.large,
-}
-
-export const Badge = ({ icon, text }: BadgeProps) => {
-  const [selected, setSelected] = useState(false);
+export const Badge = ({ icon, text, selected, onClick }: BadgeProps) => {
   const [hovered, setHovered] = useState(false);
-
   const handleMouseEnter = () => {
     setHovered(true);
   };
@@ -25,28 +21,30 @@ export const Badge = ({ icon, text }: BadgeProps) => {
     setHovered(false);
   };
 
-  const handleClick = () => {
-    setSelected(!selected);
-  };
-  
   const badgeStyle = {
-    backgroundColor: selected ? colors.cta : '',
     color: selected ? colors.neutral.white : '',
+    backgroundColor: selected ? colors.cta : '',
     cursor: 'pointer',
     ...(hovered && { backgroundColor: '#29D6E733' }),
     border: `1px solid ${colors.neutral.neutralMedium}`
   };
 
   return (
-    <div
-      className="style-badge"
-      style={{...badgeStyle, ...fontBadges}}
-      onClick={handleClick}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
-       {icon}
-      <span>{text}</span>
+    <div className='style-badges'>
+      <div
+        className='badges'
+        style={badgeStyle}
+        onClick={onClick}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
+        <div className='icon'>
+          {!!icon && <FontAwesomeIcon icon={icon} />}
+        </div>
+        <div className='text'>
+          <p color={selected ? colors.neutral.neutralXDark : ''}>{text}</p>
+        </div>
+      </div>
     </div>
   );
 };

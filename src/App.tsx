@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import './App.css';
 import { InfoTile } from './style/Info-Tile/info-tile';
 import { faCar } from '@fortawesome/free-solid-svg-icons';
@@ -17,16 +18,39 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { CardCategory } from './style/card-categorias-de-imoveis/card-category';
 import imageCategory from './style/card-categorias-de-imoveis/cards/image-category.svg';
 import { Badge } from './style/badges/badges';
-import { ReactComponent as Icon360 } from './style/badges/Iconsax/Linear/Icon360.svg';
-import { ReactComponent as IconImagem } from './style/badges/Iconsax/Linear/Iconsax/Linear/IconImagem.svg'; 
-import { ReactComponent as IconVideo } from './style/badges/Iconsax/Linear/Iconsax/Iconsax/Linear/IconVideo.svg'; 
+import { faSyncAlt, faImage, faVideo } from '@fortawesome/free-solid-svg-icons';
 
 export default function App() {
 
+  const [selectedBadge, setSelectedBadge] = useState('');
+
+  const handleBadgeClick = (badge: string) => {
+    setSelectedBadge(badge);
+  };
+
   return (
     <div>
+      <H1>Badges</H1>
+
+      <Badge icon={faVideo}
+        text="Video"
+        selected={selectedBadge === 'video'}
+        onClick={() => handleBadgeClick('video°')}
+      />
+
+      <Badge icon={faImage}
+        text="Imagem"
+        selected={selectedBadge === 'imagem'}
+        onClick={() => handleBadgeClick('imagem')}
+      />
+
+      <Badge icon={faSyncAlt}
+        text="360°"
+        selected={selectedBadge === '360°'}
+        onClick={() => handleBadgeClick('360°')}
+      />
+
       <div>
-        <H1>Stylegruide</H1>
 
         <H2>Botão</H2>
 
@@ -82,9 +106,6 @@ export default function App() {
           </Button>
         </div>
       </div>
-      <Badge icon={<IconVideo/>} text="video" />
-      <Badge icon={<IconImagem/>} text="imagem" />
-      <Badge icon={<Icon360/>} text="360°" />
 
       <Display>
         display
