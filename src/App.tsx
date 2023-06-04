@@ -124,7 +124,6 @@ export default function App() {
       <Price size='medium' weight='regular'>
         Small Price
       </Price>
-
     </div>
   );
 };
