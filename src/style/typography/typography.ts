@@ -26,5 +26,4 @@ export const components = {
     medium: 500,
     regular: 400
   },
-
 };
