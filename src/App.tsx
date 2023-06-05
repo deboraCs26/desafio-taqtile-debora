@@ -48,30 +48,13 @@ export default function App() {
 
       <H3>Headline 3</H3>
 
-      <div>
-        <PrimayButton variant="secondary" height="defaultCompact">
-          Button Label
-        </PrimayButton>
-      </div>
-
       <H4>
         Headline 4
       </H4>
 
-      <div>
-        <PrimayButton variant="secondary" height="default">
-          Button Label
-        </PrimayButton>
-      </div>
-
       <Body1>
         body1
       </Body1>
-      <div>
-        <PrimayButton onClick={() => alert('primário funcionando')} variant='primary' height="default">
-          Button Label
-        </PrimayButton>
-      </div>
 
       <Body2 weight="regular">
         body2
