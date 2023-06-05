@@ -1,0 +1,23 @@
+.form-container {
+  width: 50%;
+  padding: 12px;
+}
+
+.input-style {
+  display: block;
+  border: none;
+  outline: none;
+  padding: 0; 
+}
+.icon {
+  padding-right: 8px;
+}
+.caption {
+  margin-top: 8px;
+}
+
+.input-container {
+  width: 50%;
+  border-radius: 8px;
+  padding: 12px 20px;
+}
