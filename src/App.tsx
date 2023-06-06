@@ -21,7 +21,6 @@ import imageCategory from './style/card-categorias-de-imoveis/Cards/image-catego
 import { Badge } from './style/badges/badge';
 import { faSyncAlt, faImage, faVideo, faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 import imgCategory from './style/componentization/Cards/card-imoveis.svg';
-
 import { RealEstateCard } from './style/componentization/real-estate-card';
 
 export default function App() {
