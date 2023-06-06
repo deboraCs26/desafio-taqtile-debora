@@ -13,6 +13,7 @@ export const Body2 = ({ children, weight }: Body2Props) => {
         fontSize: components.fontSize.large,
         fontWeight: weight === "bold" ? components.fontWeight.bold : components.fontWeight.regular,
         color: colors.neutral.neutralXDark,
+        margin: 0,
       }}
     >
       {children}

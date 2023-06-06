@@ -8,8 +8,7 @@ export const Caption = ({ children }: { children: React.ReactNode }) => {
         fontFamily: components.family.primary,
         fontSize: components.fontSize.small,
         fontWeight: components.fontWeight.regular,
-        lineHeight: components.lineHeight.large,
-        color: colors.neutral.neutralXDark,
+        color: colors.neutral.neutralMedium,
       }}
     >
       {children}

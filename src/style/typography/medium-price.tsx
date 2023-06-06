@@ -11,10 +11,10 @@ export const Price = ({ children, weight, size }: PriceProps) => {
     <p
       style={{
         fontFamily: components.family.primary,
-        lineHeight: components.lineHeight.large,
         fontSize: size === "xxxLarge" ? components.fontSize.XLarge : components.fontSize.medium,
         fontWeight: weight === "bold" ? components.fontWeight.bold : components.fontWeight.regular,
         color: colors.neutral.neutralXDark,
+        margin:0,
       }}
     >
       {children}
