@@ -20,6 +20,9 @@ import { CardCategory } from './style/card-categorias-de-imoveis/card-category';
 import imageCategory from './style/card-categorias-de-imoveis/Cards/image-category.svg';
 import { Badge } from './style/badges/badge';
 import { faSyncAlt, faImage, faVideo, faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
+import { RealEstateCard } from './style/componentization/card-imoveis';
+import imgCategory from './style/componentization/Cards/card-imoveis.svg';
+import { faHeart, faBath, faChartArea, faBed  } from '@fortawesome/free-solid-svg-icons';
 
 export default function App() {
   const [selectedBadge, setSelectedBadge] = useState('');
@@ -157,6 +160,23 @@ export default function App() {
         body2
       </Body2>
 
+      <div>
+        <RealEstateCard
+          image={imgCategory}
+          icon={faHeart}
+          description="R$400.000"
+          title="Alphaville, SP"
+          text='Barueri, 32394, São Paulo'
+          icon1={faBed}
+          caption1="3 Quartos"
+          icon2={faBath}
+          caption2="2 Banheiros"
+          icon3={faChartArea}
+          caption3="5x7 m²"
+        />
+      </div>
+        
+      
       <Body2 weight="bold">
         body2
       </Body2>
