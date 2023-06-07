@@ -10,9 +10,9 @@ import { DT } from './style/typography/dt-dd';
 import { LargeLabel } from './style/typography/LargeLabel';
 import { Caption } from './style/typography/caption';
 import { Price } from './style/typography/medium-price';
-import { RealEstateCard } from './style/componentization/card-imoveis';
+import { RealEstateCard } from './style/componentization/real-estate-card';
 import imageCategory from './style/componentization/Cards/card-imoveis.svg';
-import { faHeart, faBath, faChartArea, faBed  } from '@fortawesome/free-solid-svg-icons';
+
 export default function App() {
   return (
     <div>
@@ -43,20 +43,16 @@ export default function App() {
       <div>
         <RealEstateCard
           image={imageCategory}
-          icon={faHeart}
-          description="R$400.000"
-          title="Alphaville, SP"
-          text='Barueri, 32394, São Paulo'
-          icon1={faBed}
-          caption1="3 Quartos"
-          icon2={faBath}
-          caption2="2 Banheiros"
-          icon3={faChartArea}
-          caption3="5x7 m²"
+          price="R$ 400.000"
+          cityAndState="Alphaville, SP"
+          address="Barueri, 32394, São Paulo"
+          numberOfBedrooms={3}
+          numberOfBathrooms={2}
+          area={35}
+          iconIsFavorite={true}
         />
       </div>
-        
-      
+
       <Body2 weight="bold">
         body2
       </Body2>
