@@ -13,7 +13,7 @@ import { Price } from './style/typography/medium-price';
 import { Button } from './style/button/button';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { CardCategory } from './style/card-categorias-de-imoveis/card-category';
-import imageCategory from './card-categorias-de-imoveis/Cards/image-category.svg';
+import imageCategory from './style/card-categorias-de-imoveis/cards/image-category.svg';
 
 export default function App() {
 
@@ -82,14 +82,12 @@ export default function App() {
       </Display>
 
       <H3>Card categorias do imóvel</H3>
-      <div>
         <CardCategory
           image={imageCategory}
           title="Com Pricina"
           description="723,457 Imóveis"
         />
-      </div>
-
+    
       <H4>
         Headline 4
       </H4>

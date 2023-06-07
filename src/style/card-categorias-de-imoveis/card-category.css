@@ -3,12 +3,8 @@
   cursor: pointer;
   border-radius: 4px;
   display: inline-block;
-}
-.img {
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
   overflow: hidden;
 }
 .category-card-text {
-  padding: 0 12px;
+  padding-inline: 12px;
 }

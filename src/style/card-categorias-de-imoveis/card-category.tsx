@@ -19,6 +19,5 @@ export const CardCategory = ({ image, title, description }: CardProps) => {
         <Body2>{description}</Body2>
       </div>
     </div>
-
   );
 };
