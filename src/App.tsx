@@ -1,5 +1,4 @@
 import './App.css';
-import { FormField } from './style/form/form';
 import { Display } from './style/typography/display';
 import { H1 } from './style/typography/h1';
 import { H2 } from './style/typography/h2';
@@ -11,40 +10,74 @@ import { DT } from './style/typography/dt-dd';
 import { Label } from './style/typography/LargeLabel';
 import { Caption } from './style/typography/caption';
 import { Price } from './style/typography/medium-price';
-import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
+import { Button } from './style/button/button';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 export default function App() {
 
   return (
     <div>
-      <H1>Formulario</H1>
-      <FormField
-        label="Nome"
-        icon={faExclamationTriangle}
-        caption='Caption'
-        minLength={3}
-      />
-      <FormField
-        label="Email"
-        icon={faExclamationTriangle}
-        caption="Caption"
-      />
-      <FormField
-        label="Senha"
-        icon={faExclamationTriangle}
-        caption="Caption"
-        password
-        minLength={8}
-        error={true}
-      />
+      <div>
+        <H1>Stylegruide</H1>
+
+        <H2>Botão</H2>
+
+        <div className="button-container">
+          <Button variant="primary" icon={faSearch}>
+            Button Label
+          </Button>
+        </div>
+        <div className="button-container">
+          <Button variant="primary" icon={faSearch} compact>
+            Button Label
+          </Button>
+        </div>
+
+        <div className="button-container">
+          <Button variant="primary" compact disabled onClick={() => alert("primário funcionando")}>
+            Button Label
+          </Button>
+        </div>
+
+        <div className="button-container">
+          <Button variant="primary" disabled onClick={() => alert("primário funcionando")}>
+            Button Label
+          </Button>
+        </div>
+
+        <div className="button-container item-button :hover">
+          <Button variant="primary">
+            Button Label
+          </Button>
+        </div>
+
+        <div className="button-container">
+          <Button variant="secondary">
+            Button Label
+          </Button>
+        </div>
+        <div className="button-container">
+          <Button variant="secondary" compact>
+            Button Label
+          </Button>
+        </div>
+
+        <div className="button-container">
+          <Button variant="cta">
+            Button Label
+          </Button>
+        </div>
+
+        <div className="button-container">
+          <Button variant="cta" compact>
+            Button Label
+          </Button>
+        </div>
+      </div>
 
       <Display>
         display
       </Display>
-
-      <H1>Headline 1</H1>
-
-      <H2>Headline 2</H2>
 
       <H3>Headline 3</H3>
 

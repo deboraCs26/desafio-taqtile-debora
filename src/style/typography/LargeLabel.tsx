@@ -14,7 +14,7 @@ export const Label = ({ children, weight, color, size }: LabelProps) => {
         fontFamily: components.family.primary,
         fontSize: size === "large" ? components.fontSize.medium : components.fontSize.large,
         fontWeight: weight === "bold" ? components.fontWeight.semiBold : components.fontWeight.regular,
-        color: color === "dark" ? colors.brand.primary.dark : colors.neutral.white,
+        color: color === "dark" ? colors.brand.primaryXDark : colors.neutral.white,
       }}
     >
       {children}
