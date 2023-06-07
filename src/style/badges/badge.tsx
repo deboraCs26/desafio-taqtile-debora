@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import './badges.css';
+import './badge.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { colors } from '../colors';
+import { Caption } from '../typography/caption';
+import { Separator } from '../Separator/separator';
 
 interface BadgeProps {
   icon?: IconDefinition;
@@ -22,7 +24,7 @@ export const Badge = ({ icon, text, selected, onClick }: BadgeProps) => {
   };
 
   const badgeStyle = {
-    color: selected ? colors.neutral.white : '',
+    color: selected ? colors.neutral.white : "",
     backgroundColor: selected ? colors.cta : '',
     cursor: 'pointer',
     ...(hovered && { backgroundColor: '#29D6E733' }),
@@ -30,21 +32,19 @@ export const Badge = ({ icon, text, selected, onClick }: BadgeProps) => {
   };
 
   return (
-    <div className='style-badges'>
-      <div
-        className='badges'
-        style={badgeStyle}
-        onClick={onClick}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-      >
-        <div className='icon'>
-          {!!icon && <FontAwesomeIcon icon={icon} />}
-        </div>
-        <div className='text'>
-          <p color={selected ? colors.neutral.neutralXDark : ''}>{text}</p>
-        </div>
+    <div
+      className='badge-container'
+      style={badgeStyle}
+      onClick={onClick}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      <div className='badge-icon'>
+        {!!icon && <FontAwesomeIcon icon={icon} />}
       </div>
+      <Separator size="small"/>
+      <Caption color={selected ? "white" : "dark"}>{text}</Caption>
     </div>
+
   );
 };

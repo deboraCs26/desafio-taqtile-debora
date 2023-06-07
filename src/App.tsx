@@ -17,7 +17,7 @@ import { Button } from './style/button/button';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { CardCategory } from './style/card-categorias-de-imoveis/card-category';
 import imageCategory from './style/card-categorias-de-imoveis/cards/image-category.svg';
-import { Badge } from './style/badges/badges';
+import { Badge } from './style/badges/badge';
 import { faSyncAlt, faImage, faVideo } from '@fortawesome/free-solid-svg-icons';
 
 export default function App() {

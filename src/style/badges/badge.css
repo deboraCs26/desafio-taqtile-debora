@@ -1,0 +1,10 @@
+.badge-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  padding: 16px 12px;
+}
+.badge-icon {
+  padding: 6px 8px;
+}
