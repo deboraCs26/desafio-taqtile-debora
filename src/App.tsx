@@ -1,4 +1,6 @@
 import './App.css';
+import { InfoTile } from './style/Info-Tile/info-tile';
+import { faCar } from '@fortawesome/free-solid-svg-icons';
 import { Display } from './style/typography/display';
 import { H1 } from './style/typography/h1';
 import { H2 } from './style/typography/h2';
@@ -89,8 +91,12 @@ export default function App() {
         />
     
       <H4>
-        Headline 4
+        Itens do imóvel
       </H4>
+      
+      <div>
+        <InfoTile icon={faCar} text="1 Vaga" />
+      </div>
 
       <Body1>
         body1
@@ -148,5 +154,6 @@ export default function App() {
         Small Price
       </Price>
     </div>
+
   );
 };
