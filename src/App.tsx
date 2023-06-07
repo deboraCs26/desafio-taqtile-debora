@@ -12,8 +12,9 @@ import { Caption } from './style/typography/caption';
 import { Price } from './style/typography/medium-price';
 import { Button } from './style/button/button';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
-import { CardCategory } from './card-categorias-de-imoveis/card-category';
+import { CardCategory } from './style/card-categorias-de-imoveis/card-category';
 import imageCategory from './card-categorias-de-imoveis/Cards/image-category.svg';
+
 export default function App() {
 
   return (
