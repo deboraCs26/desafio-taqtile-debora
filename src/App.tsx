@@ -16,7 +16,7 @@ import { Price } from './style/typography/medium-price';
 import { Button } from './style/button/button';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { CardCategory } from './style/card-categorias-de-imoveis/card-category';
-import imageCategory from './style/card-categorias-de-imoveis/cards/image-category.svg';
+import imageCategory from './style/card-categorias-de-imoveis/Cards/image-category.svg';
 import { Badge } from './style/badges/badge';
 import { faSyncAlt, faImage, faVideo } from '@fortawesome/free-solid-svg-icons';
 

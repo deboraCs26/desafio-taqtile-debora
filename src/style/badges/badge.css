@@ -5,6 +5,7 @@
   border-radius: 8px;
   padding: 16px 12px;
 }
+
 .badge-icon {
-  padding: 6px 8px;
+  padding-right: 4px;
 }
