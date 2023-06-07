@@ -84,8 +84,12 @@ export default function App() {
       <H3>Headline 3</H3>
 
       <H4>
-        Headline 4
+        Itens do imóvel
       </H4>
+      
+      <div>
+        <InfoTile icon={faCar} text="1 Vaga" />
+      </div>
 
       <Body1>
         body1
