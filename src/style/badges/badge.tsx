@@ -39,9 +39,12 @@ export const Badge = ({ icon, text, selected, onClick }: BadgeProps) => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      {!!icon && <FontAwesomeIcon icon={icon} className='badge-icon' />}
-      <Separator width={4} />
+      <div className='badge-icon'>
+        {!!icon && <FontAwesomeIcon icon={icon} />}
+      </div>
+      <Separator size='small' />
       <Caption color={selected ? "white" : "dark"}>{text}</Caption>
     </div>
+
   );
 };
