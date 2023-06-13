@@ -8,7 +8,7 @@ interface SeparatorProps {
 export const Separator = ({ height, width }: SeparatorProps) => {
   const separatorStyle: React.CSSProperties = {
     height: height ? `${height}px` : "",
-    width: width ? `${width}px` : "undefined",
+    width: width ? `${width}px` : "",
   };
 
   return <div style={separatorStyle} />;
