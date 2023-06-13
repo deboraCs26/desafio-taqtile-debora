@@ -1,22 +1,15 @@
 import React from 'react';
 
 interface SeparatorProps {
-  size: 'small' | 'medium' | 'large';
+  height?: number;
+  width?: number;
 }
 
-export const Separator = ({ size } : SeparatorProps) => {
+export const Separator = ({ height, width }: SeparatorProps) => {
+  const separatorStyle: React.CSSProperties = {
+    height: height ? `${height}px` : "",
+    width: width ? `${width}px` : "undefined",
+  };
 
-  let spacing: string;
-
-  if (size === 'small') {
-    spacing = '8px';
-  } else if (size === 'medium') {
-    spacing = '16px';
-  } else if (size === 'large') {
-    spacing = '24px';
-  } else {
-    spacing = '16px'; 
-  }
-
-  return <div style={{ height: spacing }} />;
+  return <div style={separatorStyle} />;
 };

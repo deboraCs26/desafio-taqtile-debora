@@ -15,7 +15,7 @@ export const InfoTile = ({ text }: InfoTileProps) => {
   return (
     <div className="style-info-tile">
       <FontAwesomeIcon icon={faCar} size="xl" className='style-icon' />
-      <Separator size='medium' />
+      <Separator width={8} />
       <H4>{text}</H4>
     </div>
   );
