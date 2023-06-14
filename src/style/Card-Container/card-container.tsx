@@ -1,12 +1,22 @@
-import React, { ReactNode } from 'react';
 import './card-container.css'
+import { components } from '../typography/typography';
+import { colors } from '../colors';
 
-interface CardContainerProps {
-  children: ReactNode;
-}
+interface ContainerProps{
+children: React.ReactNode
+margin?: boolean;
+};
 
-export const CardContainer = ({ children }: CardContainerProps) => {
+export const ContainerCards = ({ children, margin }: ContainerProps) => {
   return (
-    <div className="card-container">{children}</div>
+    <div
+      style={{
+        boxShadow: colors.boxShadow.boxShadow,
+        borderRadius: components.borderRadius.smallRadius,
+        margin: margin ? "14px" : "",
+      }}
+    >
+      {children}
+    </div>
   );
 };
