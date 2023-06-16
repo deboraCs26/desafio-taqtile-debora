@@ -6,7 +6,7 @@ interface ContainerProps {
   children: React.ReactNode;
 };
 
-export const ContainerCards = ({ children }: ContainerProps) => {
+export const ContainerCard = ({ children}: ContainerProps) => {
   return (
     <div
       className='card-container'

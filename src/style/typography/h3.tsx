@@ -7,7 +7,7 @@ export const H3 = ({ children }: { children: React.ReactNode }) => {
       style={{
         fontFamily: components.family.primary,
         fontSize: components.fontSize.XLarge,
-        fontWeight: components.fontWeight.semiBold,
+        fontWeight: components.fontWeight.regular,
         color: colors.neutral.neutralXDark,
       }}
     >

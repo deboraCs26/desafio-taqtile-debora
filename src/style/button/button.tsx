@@ -18,15 +18,16 @@ interface ButtonProps {
 
 export const Button = ({ variant, children, icon, disabled = false, onClick, compact }: ButtonProps) => {
 
-  const buttonConstantStyle = {
-    fontFamily: components.family.primary,
-    fontSize: components.fontSize.large,
-    fontWeight: components.fontWeight.bold,
-    minWidth: styleButton.style.minWidth,
-    alignItems: styleButton.style.alignItems,
-    borderRadius: styleButton.style.borderRadius,
-    borderColor: colors.accessory.banner,
-    cursor: "pointer",
+const buttonConstantStyle = {
+  fontFamily: components.family.primary,
+  fontSize: components.fontSize.large,
+  fontWeight: components.fontWeight.bold,
+  minWidth: styleButton.style.minWidth,
+  alignItems: styleButton.style.alignItems,
+  borderRadius: styleButton.style.borderRadius,
+  borderColor: colors.accessory.banner,
+  cursor: "pointer",
+  width: "100%",
   };
 
   let backgroundColor
