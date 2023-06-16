@@ -3,17 +3,15 @@ import { components } from '../typography/typography';
 import { colors } from '../colors';
 
 interface ContainerProps{
-children: React.ReactNode
-margin?: boolean;
+children: React.ReactNode;
 };
 
-export const ContainerCards = ({ children, margin }: ContainerProps) => {
+export const ContainerCards = ({ children}: ContainerProps) => {
   return (
     <div
       style={{
         boxShadow: colors.boxShadow.boxShadow,
         borderRadius: components.borderRadius.smallRadius,
-        margin: margin ? "14px" : "",
       }}
     >
       {children}
