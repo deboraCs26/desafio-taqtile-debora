@@ -19,18 +19,18 @@ interface RealEstateCardProps {
   iconIsFavorite: boolean;
 }
 
-export const RealEstateCard = ({ image, price, cityAndState, address, numberOfBedrooms,numberOfBathrooms, area,  iconIsFavorite }: RealEstateCardProps) => {
+export const RealEstateCard = ({ image, price, cityAndState, address, numberOfBedrooms, numberOfBathrooms, area, iconIsFavorite }: RealEstateCardProps) => {
   const heartIcon = iconIsFavorite ? faHeartSolid : faHeartRegular;
 
   return (
-    <div className='card'>
+    <div className='real-estate-card'>
       <div>
         <img src={image} alt="Card" className="img" />
       </div>
 
       <div className='text-price'>
-      <Price weight="bold" size="XLarge"> {price} </Price>
-      <FontAwesomeIcon icon={heartIcon} size='xl'/>
+        <Price weight="bold" size="XLarge"> {price} </Price>
+        <FontAwesomeIcon icon={heartIcon} size='xl' />
       </div>
 
       <div className="card-text">
