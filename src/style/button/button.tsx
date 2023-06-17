@@ -27,7 +27,8 @@ const buttonConstantStyle = {
   borderRadius: styleButton.style.borderRadius,
   borderColor: colors.accessory.banner,
   cursor: "pointer",
-  width: "100%",
+  width: "90%",
+  margin: 0,
   };
 
   let backgroundColor
