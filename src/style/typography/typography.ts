@@ -27,4 +27,8 @@ export const components = {
     regular: 400
   },
 
+  borderRadius: {
+    smallRadius: "4px",
+    mediumRadius: "8px",
+  }
 };

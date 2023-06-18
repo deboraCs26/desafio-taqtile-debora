@@ -9,7 +9,7 @@ export const H1 = ({ children }: { children: React.ReactNode }) => {
         fontSize: components.fontSize.xxxxLarge,
         fontWeight: components.fontWeight.semiBold,
         lineHeight: components.lineHeight.large,
-        color: colors.brand.primary.medium,
+        color: colors.brand.medium,
       }}
     >
       {children}

@@ -1,17 +1,14 @@
 export const colors = {
   brand: {
-    primary: {
-      dark: "#031F3D",
+      primaryXDark: "#031F3D",
       medium: "#0C4888",
-    }
-
   },
 
-  cta: "#29D6E7",
+  cta: "#2E9CA3",
 
   accessory: {
-    backgroundSecundario: "#0C4888",
-    backgroundBanner: "#28ADBA"
+    secondary: "#0C4888",
+    banner: "#28ADBA"
   },
 
   neutral: {
@@ -27,4 +24,8 @@ export const colors = {
     feedbackSuccess: "#2AC084",
     feedbackError: "#EB5E55"
   },
+  
+  boxShadow: {
+    boxShadow: "0px 4px 4px rgba(153, 155, 168, 0.15)",
+  }
 };

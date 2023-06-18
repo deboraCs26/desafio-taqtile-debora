@@ -1,15 +1,20 @@
 import { colors } from '../colors';
 import { components } from './typography';
 
-export const Caption = ({ children }: { children: React.ReactNode }) => {
+interface CaptionProps{
+  children: React.ReactNode;
+  color?: "dark" | "white";
+}
+
+export const Caption = ({ children, color } : CaptionProps) => {
   return (
     <p
       style={{
         fontFamily: components.family.primary,
         fontSize: components.fontSize.small,
         fontWeight: components.fontWeight.regular,
-        lineHeight: components.lineHeight.large,
-        color: colors.neutral.neutralXDark,
+        color: color === "dark" ? colors.neutral.neutralDark : colors.neutral.white,
+        margin: 0,
       }}
     >
       {children}
