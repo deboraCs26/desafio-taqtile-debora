@@ -14,14 +14,14 @@ import { Label } from './style/typography/LargeLabel';
 import { Caption } from './style/typography/caption';
 import { Price } from './style/typography/medium-price';
 import { Button } from './style/button/button';
+import { FormField } from './style/form/form';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { CardCategory } from './style/card-categorias-de-imoveis/card-category';
 import imageCategory from './style/card-categorias-de-imoveis/Cards/image-category.svg';
 import { Badge } from './style/badges/badge';
-import { faSyncAlt, faImage, faVideo } from '@fortawesome/free-solid-svg-icons';
+import { faSyncAlt, faImage, faVideo, faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 
 export default function App() {
-
   const [selectedBadge, setSelectedBadge] = useState('');
 
   const handleBadgeClick = (badge: string) => {
@@ -107,21 +107,44 @@ export default function App() {
         </div>
       </div>
 
+      <div>
+        <H1>Formulario</H1>
+        <FormField
+          label="Nome"
+          icon={faExclamationTriangle}
+          caption='Caption'
+          minLength={3}
+        />
+        <FormField
+          label="Email"
+          icon={faExclamationTriangle}
+          caption="Caption"
+        />
+        <FormField
+          label="Senha"
+          icon={faExclamationTriangle}
+          caption="Caption"
+          password={true}
+          minLength={8}
+          error={true}
+        />
+      </div>
+
       <Display>
         display
       </Display>
 
       <H3>Card categorias do imóvel</H3>
-        <CardCategory
-          image={imageCategory}
-          title="Com Pricina"
-          description="723,457 Imóveis"
-        />
-    
+      <CardCategory
+        image={imageCategory}
+        title="Com Pricina"
+        description="723,457 Imóveis"
+      />
+
       <H4>
         Itens do imóvel
       </H4>
-      
+
       <div>
         <InfoTile icon={faCar} text="1 Vaga" />
       </div>

@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { colors } from '../colors';
 import { Caption } from '../typography/caption';
-import { Separator } from '../Separator/separator';
+import { Separator } from '../separator/separator';
 
 interface BadgeProps {
   icon?: IconDefinition;
@@ -42,7 +42,7 @@ export const Badge = ({ icon, text, selected, onClick }: BadgeProps) => {
       <div className='badge-icon'>
         {!!icon && <FontAwesomeIcon icon={icon} />}
       </div>
-      <Separator size='small' />
+      <Separator  width={4}/>
       <Caption color={selected ? "white" : "dark"}>{text}</Caption>
     </div>
 

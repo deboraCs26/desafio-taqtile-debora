@@ -8,8 +8,8 @@ export const H4 = ({ children }: { children: React.ReactNode }) => {
         fontFamily: components.family.primary,
         fontSize: components.fontSize.large,
         fontWeight: components.fontWeight.extraBold,
-        lineHeight: components.lineHeight.large,
         color: colors.brand.medium,
+        margin: 0,
       }}
     >
       {children}

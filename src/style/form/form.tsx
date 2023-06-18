@@ -16,7 +16,7 @@ interface FormProps {
   minLength?: number;
 }
 
-export const FormField = ({ error, label, icon, password, caption }: FormProps) => {
+export const FormField = ({ error, label, icon, password, caption}: FormProps) => {
   const [focused, setFocused] = useState(false);
   const [inputValue, setInputValue] = useState('');
 
@@ -35,7 +35,7 @@ export const FormField = ({ error, label, icon, password, caption }: FormProps) 
     border = `1px solid ${colors.neutral.neutralLight}`;
   } else {
     border = `1px solid`;
-  };
+  }
 
   const inputStyle = {
     border,
@@ -50,13 +50,12 @@ export const FormField = ({ error, label, icon, password, caption }: FormProps) 
   };
 
   return (
-
-    <div className='form-container'>
-      <div className='input-container' style={inputStyle}>
-        <Label color='dark'>{label}</Label>
+    <div className="form-container">
+      <div className="input-container" style={inputStyle}>
+        <Label color="dark">{label}</Label>
         <input
           style={{ width: '100%' }}
-          className='input-style'
+          className="input-style"
           type={password ? 'password' : 'text'}
           placeholder={label}
           onChange={handleInputChange}
@@ -65,10 +64,10 @@ export const FormField = ({ error, label, icon, password, caption }: FormProps) 
           required={true}
         />
       </div>
-      <div className='caption'>
+      <div className="caption">
         {error && (
-          <Caption>
-            {!!icon && <FontAwesomeIcon icon={faExclamationTriangle} size='lg' className='icon' />}
+          <Caption color='dark'>
+            {!!icon && <FontAwesomeIcon icon={faExclamationTriangle} size="lg" className="icon" />}
             {caption}
           </Caption>
         )}
