@@ -23,9 +23,10 @@ export const RealEstateCard = ({ image, price, cityAndState, address, numberOfBe
   const heartIcon = iconIsFavorite ? faHeartSolid : faHeartRegular;
 
   return (
+    
     <div className='real-estate-card'>
       <div>
-        <img src={image} alt="Card" className="img" />
+        <img src={image} alt="Card" className="card-img" />
       </div>
 
       <div className='text-price'>
@@ -35,16 +36,16 @@ export const RealEstateCard = ({ image, price, cityAndState, address, numberOfBe
 
       <div className="card-text">
         <Body2 weight="bold">{cityAndState}</Body2>
-        <Caption>{address}</Caption>
+        <Caption color='dark'>{address}</Caption>
       </div>
 
       <div className="card-components">
         <FontAwesomeIcon icon={faBed} />
-        <Caption>{numberOfBedrooms} quartos</Caption>
+        <Caption color='dark'>{numberOfBedrooms} quartos</Caption>
         <FontAwesomeIcon icon={faBath} />
-        <Caption>{numberOfBathrooms} banheiros</Caption>
+        <Caption color='dark'>{numberOfBathrooms} banheiros</Caption>
         <FontAwesomeIcon icon={faChartArea} />
-        <Caption>{area} m²</Caption>
+        <Caption color='dark'>{area} m²</Caption>
       </div>
     </div>
   );

@@ -13,8 +13,7 @@ export const Caption = ({ children, color } : CaptionProps) => {
         fontFamily: components.family.primary,
         fontSize: components.fontSize.small,
         fontWeight: components.fontWeight.regular,
-        color: color === "dark" ? colors.neutral.neutralDark : colors.neutral.white,
-        margin: 0,
+        color: color === "dark" ? colors.neutral.neutralMedium : colors.neutral.white,
       }}
     >
       {children}

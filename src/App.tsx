@@ -20,7 +20,7 @@ import { CardCategory } from './style/card-categorias-de-imoveis/card-category';
 import imageCategory from './style/card-categorias-de-imoveis/Cards/image-category.svg';
 import { Badge } from './style/badges/badge';
 import { faSyncAlt, faImage, faVideo, faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
-import imgCategory from './style/componentization/Cards/card-imoveis.svg';
+import imgCategory from './style/componentization/cards/card-imoveis.svg';
 import { RealEstateCard } from './style/componentization/real-estate-card';
 
 export default function App() {
