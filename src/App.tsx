@@ -17,7 +17,7 @@ import { Button } from './style/button/button';
 import { FormField } from './style/form/form';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { CardCategory } from './style/card-categorias-de-imoveis/card-category';
-import imageCategory from './style/card-categorias-de-imoveis/Cards/image-category.svg';
+import imageCategory from './style/card-categorias-de-imoveis/cards/image-category.svg';
 import { Badge } from './style/badges/badge';
 import { faSyncAlt, faImage, faVideo, faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 import imgCategory from './style/componentization/cards/card-imoveis.svg';
@@ -57,7 +57,7 @@ export default function App() {
         <H2>Botão</H2>
 
         <div className="button-container">
-          <Button variant="primary" icon={faSearch}>
+          <Button variant="primary"  icon={faSearch}> 
             Button Label
           </Button>
         </div>

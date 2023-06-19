@@ -26,7 +26,7 @@ export const RealEstateCard = ({ image, price, cityAndState, address, numberOfBe
     
     <div className='real-estate-card'>
       <div>
-        <img src={image} alt="Card" className="card-img" />
+        <img src={image} alt="Card" className="real-estate-card-image" />
       </div>
 
       <div className='text-price'>

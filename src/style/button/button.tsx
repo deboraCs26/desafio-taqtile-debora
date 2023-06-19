@@ -29,7 +29,10 @@ export const Button = ({ variant, children, icon, disabled = false, onClick, com
     cursor: "pointer",
   };
 
-  let backgroundColor, color, border;
+  let backgroundColor
+  let color
+  let border
+
   if (variant === "primary") {
     backgroundColor = disabled
       ? colors.neutral.neutralLight
