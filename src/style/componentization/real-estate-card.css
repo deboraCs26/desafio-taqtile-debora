@@ -1,0 +1,26 @@
+.real-estate-card {
+  display: inline-block;
+  border: 1px solid #f0effb;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.text-price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+}
+.real-estate-card-image {
+  border-radius: 4px;
+}
+.card-text {
+  padding-left: 12px;
+}
+.card-components {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 12px;
+  padding-top: 8px;
+  border-top: 1px solid #f0effb;
+}
