@@ -1,9 +1,6 @@
 .carousel-without-arrows .react-multi-carousel-arrow {
   display: none;
 }
-.carousel-container {
-  margin: 50px;
-}
 .carousel-item {
   width: auto !important;
   padding-right: 16px;

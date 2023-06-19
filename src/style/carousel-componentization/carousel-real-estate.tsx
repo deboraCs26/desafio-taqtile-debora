@@ -28,7 +28,7 @@ export const CarouselRealEstate = ({ children }: CarouselProps) => {
   };
 
   return (
-    <div className='carousel-container'>
+    <div>
       <Carousel responsive={responsive}
         customTransition="all .5s"
         additionalTransfrom={0}
