@@ -7,7 +7,7 @@ import { Display } from './style/typography/display';
 import { H2 } from './style/typography/h2';
 import { CardCategory } from './style/card-categorias-de-imoveis/card-category';
 import { CategoryCarousel } from './style/category-carousel/carousel-section';
-import imageCategory from './style/card-categorias-de-imoveis/Cards/image-category.svg';
+import imageCategory from './style/card-categorias-de-imoveis/cards/image-category.svg';
 import imgVisiting from './style/card-to-schedule-visits/img/Img.png'
 
 export default function App() {

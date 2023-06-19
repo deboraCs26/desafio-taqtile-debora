@@ -1,24 +1,24 @@
 .visiting-card-container {
-  padding: 20px 30px 0;
+  padding: 20px 32px 0;
 }
 .text-price-container {
   border-top: 1px solid #c5c5c5;
   display: flex;
   justify-content: space-between;
   padding-top: 16px;
-  margin: 4px 30px;
+  margin: 4px 32px;
 }
 .text-container {
   display: flex;
   justify-content: space-between;
-  padding: 16px 0 30px;
+  padding: 16px 0 32px;
   margin: 0 32px;
 }
 .text-img-container {
   padding-inline: 16px;
   display: flex;
   border-radius: 8px;
-  border: 0.76px solid #c5c5c5;
+  border: 1px solid #c5c5c5;
   margin: 16px;
 }
 .card-image {
