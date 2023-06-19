@@ -22,6 +22,7 @@ import { Badge } from './style/badges/badge';
 import { faSyncAlt, faImage, faVideo, faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 import imgCategory from './style/componentization/cards/card-imoveis.svg';
 import { RealEstateCard } from './style/componentization/real-estate-card';
+import { CarouselRealEstate } from './style/carousel-componentization/carousel-real-estate';
 
 export default function App() {
   const [selectedBadge, setSelectedBadge] = useState('');
@@ -53,61 +54,103 @@ export default function App() {
       />
 
       <div>
+        <h1>Carrossel de imóveis</h1>
+        <CarouselRealEstate>
+          <CardCategory
+            image={imageCategory}
+            title="Com Pricina"
+            description="723,457 Imóveis"
+          />
 
-        <H2>Botão</H2>
+          <CardCategory
+            image={imageCategory}
+            title="Com Pricina"
+            description="723,457 Imóveis"
+          />
+          <CardCategory
+            image={imageCategory}
+            title="Com Pricina"
+            description="723,457 Imóveis"
+          />
+          <CardCategory
+            image={imageCategory}
+            title="Com Pricina"
+            description="723,457 Imóveis"
+          />
+          <CardCategory
+            image={imageCategory}
+            title="Com Pricina"
+            description="723,457 Imóveis"
+          />
+          <CardCategory
+            image={imageCategory}
+            title="Com Pricina"
+            description="723,457 Imóveis"
+          />
+          <CardCategory
+            image={imageCategory}
+            title="Com Pricina"
+            description="723,457 Imóveis"
+          />
 
-        <div className="button-container">
-          <Button variant="primary"  icon={faSearch}> 
-            Button Label
-          </Button>
-        </div>
-        <div className="button-container">
-          <Button variant="primary" icon={faSearch} compact>
-            Button Label
-          </Button>
-        </div>
-
-        <div className="button-container">
-          <Button variant="primary" compact disabled onClick={() => alert("primário funcionando")}>
-            Button Label
-          </Button>
-        </div>
-
-        <div className="button-container">
-          <Button variant="primary" disabled onClick={() => alert("primário funcionando")}>
-            Button Label
-          </Button>
-        </div>
-
-        <div className="button-container item-button :hover">
-          <Button variant="primary">
-            Button Label
-          </Button>
-        </div>
-
-        <div className="button-container">
-          <Button variant="secondary">
-            Button Label
-          </Button>
-        </div>
-        <div className="button-container">
-          <Button variant="secondary" compact>
-            Button Label
-          </Button>
-        </div>
-
-        <div className="button-container">
-          <Button variant="cta">
-            Button Label
-          </Button>
-        </div>
-
-        <div className="button-container">
-          <Button variant="cta" compact>
-            Button Label
-          </Button>
-        </div>
+        </CarouselRealEstate>
       </div>
+
+
+      <H2>Botão</H2>
+
+      <div className="button-container">
+        <Button variant="primary" icon={faSearch}>
+          Button Label
+        </Button>
+      </div>
+      <div className="button-container">
+        <Button variant="primary" icon={faSearch} compact>
+          Button Label
+        </Button>
+      </div>
+
+      <div className="button-container">
+        <Button variant="primary" compact disabled onClick={() => alert("primário funcionando")}>
+          Button Label
+        </Button>
+      </div>
+
+      <div className="button-container">
+        <Button variant="primary" disabled onClick={() => alert("primário funcionando")}>
+          Button Label
+        </Button>
+      </div>
+
+      <div className="button-container item-button :hover">
+        <Button variant="primary">
+          Button Label
+        </Button>
+      </div>
+
+      <div className="button-container">
+        <Button variant="secondary">
+          Button Label
+        </Button>
+      </div>
+      <div className="button-container">
+        <Button variant="secondary" compact>
+          Button Label
+        </Button>
+      </div>
+
+      <div className="button-container">
+        <Button variant="cta">
+          Button Label
+        </Button>
+      </div>
+
+      <div className="button-container">
+        <Button variant="cta" compact>
+          Button Label
+        </Button>
+      </div>
+
 
       <div>
         <H1>Formulario</H1>
