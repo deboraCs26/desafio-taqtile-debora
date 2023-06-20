@@ -1,5 +1,5 @@
-.carousel-without-arrows .react-multi-carousel-arrow {
-  display: none;
+.react-multiple-carousel__arrow {
+  display: none !important;
 }
 .carousel-item {
   width: auto !important;

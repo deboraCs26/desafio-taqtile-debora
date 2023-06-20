@@ -28,17 +28,14 @@ export const CarouselRealEstate = ({ children }: CarouselProps) => {
   };
 
   return (
-    <div>
-      <Carousel responsive={responsive}
-        customTransition="all .5s"
-        additionalTransfrom={0}
-        arrows={false}
-        className="carousel-without-arrows"
-        itemClass="carousel-item">
-        {children.map((item, itemIndex) => (
-          <div key={itemIndex}>{item}</div>
-        ))}
-      </Carousel>
-    </div>
+    <Carousel responsive={responsive}
+      customTransition="all .5s"
+      additionalTransfrom={0}
+      className="carousel-without-arrows"
+      itemClass="carousel-item">
+      {children.map((item, itemIndex) => (
+        <div key={itemIndex}>{item}</div>
+      ))}
+    </Carousel>
   );
 };
