@@ -1,4 +1,4 @@
-.visiting-card-container {
+.card-price {
   padding: 20px 32px 0;
 }
 .text-price-container {
@@ -11,15 +11,30 @@
 .text-container {
   display: flex;
   justify-content: space-between;
-  padding: 16px 0 32px;
+  padding: 16px 0 0;
   margin: 0 32px;
+}
+.card-text-container{
+  margin: 0 32px;
+}
+.card-body2-text-container{
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 0 0; 
+}
+.card-price-text-container {
+  border-top: 1px solid #c5c5c5;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  margin:  16px 32px;
 }
 .text-img-container {
   padding-inline: 16px;
   display: flex;
   border-radius: 8px;
   border: 1px solid #c5c5c5;
-  margin: 16px;
+  margin:28px 12px 16px;
 }
 .card-image {
   padding: 12px 8px 16px;
@@ -34,4 +49,17 @@
 .container-text-components {
   display: flex;
   justify-content: space-around;
+}
+.card-button-container{
+  text-align: center;
+  width: 100%;
+}
+.card-button{
+  margin-bottom: 8px;
+}
+.title-button{
+  padding-inline: 60px;
+}
+.title-button-visit{
+  padding-inline: 94px;
 }

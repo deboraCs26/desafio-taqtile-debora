@@ -2,9 +2,9 @@
   display: flex;
   justify-content: center;
   flex-direction: row-reverse;
-  text-align: center;
+  text-align: center; 
   border: none;
-  padding: 16px;
+  padding: 16px 0 0;
 }
 
 .item-button :hover {

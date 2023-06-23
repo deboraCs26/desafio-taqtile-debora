@@ -22,12 +22,11 @@ export const Button = ({ variant, children, icon, disabled = false, onClick, com
     fontFamily: components.family.primary,
     fontSize: components.fontSize.large,
     fontWeight: components.fontWeight.bold,
-    minWidth: styleButton.style.minWidth,
+    minWidth: styleButton.style.width,
     alignItems: styleButton.style.alignItems,
     borderRadius: styleButton.style.borderRadius,
     borderColor: colors.accessory.banner,
     cursor: "pointer",
-    width: "90%",
     margin: 0,
   };
 
