@@ -1,0 +1,7 @@
+.react-multiple-carousel__arrow {
+  display: none !important;
+}
+.carousel-item {
+  width: auto !important;
+  padding-right: 16px;
+}
