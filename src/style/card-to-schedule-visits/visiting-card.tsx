@@ -6,7 +6,7 @@ import { faHeart, faShareAlt, faCheck } from '@fortawesome/free-solid-svg-icons'
 import { Body2 } from '../typography/body2';
 import { Caption } from '../typography/caption';
 import { Price } from '../typography/medium-price';
-import { ContainerCards } from '../card-container/card-container';
+import { ContainerCards } from '../Card-Container/card-container';
 import { Label } from '../typography/LargeLabel';
 import { Button } from '../button/button';
 import { H3 } from '../typography/h3';

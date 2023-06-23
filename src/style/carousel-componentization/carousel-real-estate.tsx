@@ -33,9 +33,7 @@ export const CarouselRealEstate = ({ children }: CarouselProps) => {
       additionalTransfrom={0}
       className="carousel-without-arrows"
       itemClass="carousel-item">
-      {children.map((item, itemIndex) => (
-        <div key={itemIndex}>{item}</div>
-      ))}
+      {children}
     </Carousel>
   );
 };
