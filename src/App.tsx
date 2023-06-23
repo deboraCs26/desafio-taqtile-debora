@@ -30,7 +30,7 @@ export default function App() {
   const handleBadgeClick = (badge: string) => {
     setSelectedBadge(badge);
   };
-
+  
   return (
     <div>
       <H1>Badges</H1>
