@@ -106,6 +106,10 @@ export default function App() {
         </CarouselRealEstate>
       </div>
 
+      <div>
+        <H1>Carrossel de fotos</H1>
+        <PhotoCarousel photos={photos} />
+      </div>
 
       <H2>Botão</H2>
 
