@@ -20,11 +20,21 @@ import { CardCategory } from './style/card-categorias-de-imoveis/card-category';
 import imageCategory from './style/card-categorias-de-imoveis/cards/image-category.svg';
 import { Badge } from './style/badges/badge';
 import { faSyncAlt, faImage, faVideo, faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
-import imgCategory from './style/componentization/cards/card-imoveis.svg';
+import imgCategory from './style/componentization/Cards/card-imoveis.svg';
 import { RealEstateCard } from './style/componentization/real-estate-card';
 import { CarouselRealEstate } from './style/carousel-componentization/carousel-real-estate';
+import { PhotoCarousel } from './style/photo-carousel/photo-carousel';
 
 export default function App() {
+  const photos = [
+    'https://cdn.temporadalivre.com/blog-media/posts/cover/10078/como-tirar-fotos-dos-imoveis-de-temporada-para-anuncia-los-na-internet-84c8d51e.jpg',
+    'https://i.pinimg.com/originals/8e/23/83/8e2383315dd561dc5ca790a5b81c523d.jpg',
+    'https://imagens-revista.vivadecora.com.br/uploads/2019/12/casas-lindas-por-dentro-decorada-em-tons-neutros-Foto-Quitete-Faria.jpg',
+    'https://www.wkoerichimoveis.com.br/wp-content/uploads/2020/05/pexels-photo-3076899-886x600.jpeg',
+    'https://casacor.abril.com.br/wp-content/uploads/sites/7/2021/09/viviane-2.jpg?quality=90&strip=info',
+
+  ];
+
   const [selectedBadge, setSelectedBadge] = useState('');
 
   const handleBadgeClick = (badge: string) => {
@@ -96,6 +106,10 @@ export default function App() {
         </CarouselRealEstate>
       </div>
 
+      <div>
+        <H1>Carrossel de fotos</H1>
+        <PhotoCarousel photos={photos} />
+      </div>
 
       <H2>Botão</H2>
 
