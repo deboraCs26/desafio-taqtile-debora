@@ -33,9 +33,9 @@ interface VisitingCardProps {
   amount?: string;
 }
 
-export const VisitingCard = ({image, bigPrice, locationText, iptuText, price, condominiumPrice, description, captions, icon, iconColor, serviceFeeLabel, serviceFeeValue, rentLabel, rentValue, value, amount}: VisitingCardProps) => {
+export const VisitingCard = ({ image, bigPrice, locationText, iptuText, price, condominiumPrice, description, captions, icon, iconColor, serviceFeeLabel, serviceFeeValue, rentLabel, rentValue, value, amount }: VisitingCardProps) => {
   const heartIcon = icon ? faHeartSolid : faHeartRegular;
-  const heartIconClass = iconColor === "red"? colors.feedback.feedbackError : "";
+  const heartIconClass = iconColor === "red" ? colors.feedback.feedbackError : "";
 
   return (
     <ContainerCard>
@@ -91,7 +91,7 @@ export const VisitingCard = ({image, bigPrice, locationText, iptuText, price, co
         <div className='card-button'>
           <Button variant='cta'>
             <div className='title-button'>
-              <FontAwesomeIcon icon={faWhatsapp} size='xl' className='icon-container'/>
+              <FontAwesomeIcon icon={faWhatsapp} size='xl' className='icon-container' />
               Falar com o corretor
             </div>
           </Button>
@@ -107,10 +107,10 @@ export const VisitingCard = ({image, bigPrice, locationText, iptuText, price, co
       </div>
 
       <div className='container-text-components .visiting-button'>
-        <H3><FontAwesomeIcon 
-        icon={heartIcon}
-         className="icon-container"
-         style={heartIconClass ? { color: colors.feedback.feedbackError} : {}}/>Favoritar</H3>
+        <H3><FontAwesomeIcon
+          icon={heartIcon}
+          className="icon-container"
+          style={heartIconClass ? { color: colors.feedback.feedbackError } : {}} />Favoritar</H3>
         <H3><FontAwesomeIcon icon={faShareAlt} className='icon-container' /> compartilhar</H3>
       </div>
     </ContainerCard>
