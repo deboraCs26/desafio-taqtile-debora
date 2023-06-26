@@ -42,7 +42,7 @@ export const Badge = ({ icon, text, selected, onClick }: BadgeProps) => {
       <div className='badge-icon'>
         {!!icon && <FontAwesomeIcon icon={icon} />}
       </div>
-      <Separator size='small' horizontal={false} />
+      <Separator size='small' />
       <Caption color={selected ? "white" : "dark"}>{text}</Caption>
     </div>
 
