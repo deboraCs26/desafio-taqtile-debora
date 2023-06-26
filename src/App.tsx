@@ -12,7 +12,8 @@ export default function App() {
 
     <div>
       <Banner />
-      <H2 color='Xdark'>Encontre o imóvel ideal para o seu estilo de vida!</H2>
+      
+      <H2 color='neutralXDark'>Encontre o imóvel ideal para o seu estilo de vida!</H2>
       <CategoryCarousel>
         <CardCategory
           image={imageCategory}
