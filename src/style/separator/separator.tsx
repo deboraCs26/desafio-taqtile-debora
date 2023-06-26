@@ -2,8 +2,7 @@ import React from 'react';
 
 interface SeparatorProps {
   size: "small" | "medium" | "large";
-  horizontal?: boolean;
-  
+  horizontal?: boolean; 
 }
 
 export const Separator = ({ size, horizontal }: SeparatorProps) => {
@@ -12,4 +11,3 @@ export const Separator = ({ size, horizontal }: SeparatorProps) => {
   
   return <div style={{ [dimension]: height }} />;
 };
-
