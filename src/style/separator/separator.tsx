@@ -1,15 +1,14 @@
 import React from 'react';
 
 interface SeparatorProps {
-  width?: number;
-  height?: number;
+  size: "small" | "medium" | "large";
+  horizontal: boolean;
+  
 }
 
-export const Separator = ({ width, height }: SeparatorProps) => {
-  const separatorStyle = {
-    width: `${width}px`,
-    height: height ? `${height}px` : undefined,
-  };
+export const Separator = ({ size, horizontal }: SeparatorProps) => {
+  const dimension = horizontal ? 'width' : 'height';
+  const height = size === 'small' ? '8px' : size === 'large' ? '16px' : '24px';
 
-  return <div style={separatorStyle} />;
+  return <div style={{ [dimension]: height }} />;
 };
