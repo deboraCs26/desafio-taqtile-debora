@@ -50,16 +50,11 @@
   display: flex;
   justify-content: space-around;
 }
-.card-button-container{
-  text-align: center;
-  width: 100%;
+.card-button-container button{
+  width: 92%;
 }
 .card-button{
-  margin-bottom: 8px;
-}
-.title-button{
-  padding-inline: 60px;
-}
-.title-button-visit{
-  padding-inline: 94px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

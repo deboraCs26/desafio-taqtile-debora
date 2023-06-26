@@ -13,6 +13,7 @@ import { Label } from '../typography/LargeLabel';
 import { Button } from '../button/button';
 import { H3 } from '../typography/h3';
 import { colors } from '../colors';
+import { Separator } from '../separator/separator';
 
 interface VisitingCardProps {
   image: string;
@@ -90,18 +91,14 @@ export const VisitingCard = ({ image, bigPrice, locationText, iptuText, price, c
       <div className='card-button-container'>
         <div className='card-button'>
           <Button variant='cta'>
-            <div className='title-button'>
               <FontAwesomeIcon icon={faWhatsapp} size='xl' className='icon-container' />
               Falar com o corretor
-            </div>
           </Button>
         </div>
-
+            <Separator size='large' horizontal={false}/>
         <div className='card-button'>
           <Button variant='primary'>
-            <div className='title-button-visit'>
               Agendar visita
-            </div>
           </Button>
         </div>
       </div>
