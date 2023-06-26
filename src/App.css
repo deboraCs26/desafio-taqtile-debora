@@ -3,7 +3,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+<<<<<<< HEAD
   height: 100vh;
+=======
+  height: 70vh;
+>>>>>>> 412ac76 (first hero section)
 }
 
 .App-logo {
