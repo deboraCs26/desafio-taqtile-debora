@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import { Hero } from './style/hero-section';
 import { Banner } from './style/banner';
+import { Footer } from './style/footer';
 import { H2 } from './style/typography/h2';
 import { CardCategory } from './style/card-categorias-de-imoveis/card-category';
 import { CategoryCarousel } from './style/category-carousel/carousel-section';
@@ -59,7 +60,10 @@ export default function App() {
         />
 
       </CategoryCarousel>
+      
+      <Footer/>
     </div>
     
+
   );
 };
