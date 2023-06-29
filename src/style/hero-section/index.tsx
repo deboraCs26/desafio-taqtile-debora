@@ -20,10 +20,10 @@ export const Hero = () => {
 
       <div className='hero-text-container'>
         <div className='hero-display-text'>
-          <Display color="cta">Encontre seu espaço no mundo!</Display>
+          <Display color='cta'>Encontre seu espaço no mundo!</Display>
           <Separator size='small' />
           <div className='hero-body-text'>
-            <Body1>Os melhores imóveis de acordo com as suas preferências.</Body1>
+            <Body1 color='dark'>Os melhores imóveis de acordo com as suas preferências.</Body1>
           </div>
         </div>
         <Separator size='small' />
