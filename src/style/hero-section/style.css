@@ -1,0 +1,22 @@
+.hero-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.button-hero button{
+  width: 36%;
+}
+.hero-text-container {
+  display: flex;
+  flex-direction: column;
+}
+.hero-display-text{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.hero-body-text {
+  display: flex;
+  flex-direction: column;
+}

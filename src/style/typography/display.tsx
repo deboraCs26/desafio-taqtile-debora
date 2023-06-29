@@ -3,8 +3,9 @@ import { components } from './typography';
 
 interface DisplayProps {
   children: React.ReactNode;
-  color?: "dark" | "white";
+  color?: "dark" | "cta";
 };
+
 
 export const Display = ({ children, color}: DisplayProps) => {
   return (
@@ -13,7 +14,7 @@ export const Display = ({ children, color}: DisplayProps) => {
         fontFamily: components.family.primary,
         fontSize: components.fontSize.xxxxLarge,
         fontWeight: components.fontWeight.bold,
-        color: color === "dark" ? colors.brand.primaryXDark : colors.neutral.white,
+        color: color === "dark" ? colors.brand.primaryXDark : colors.cta,
         margin: 0,
       }}
     >

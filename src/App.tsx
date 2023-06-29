@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import { Hero } from './style/hero-section';
 import { Banner } from './style/banner';
 import { H2 } from './style/typography/h2';
 import { CardCategory } from './style/card-categorias-de-imoveis/card-category';
@@ -11,8 +12,12 @@ export default function App() {
   return (
 
     <div>
+      <div className='App'>
+        <Hero />
+      </div>
+
       <Banner />
-      
+
       <H2>Encontre o imóvel ideal para o seu estilo de vida!</H2>
       <CategoryCarousel>
         <CardCategory

@@ -63,7 +63,7 @@ export const Button = ({ variant, children, icon, disabled = false, onClick, com
       onClick={onClick}
       style={styleDoButton}
     >
-      {!!icon && <FontAwesomeIcon icon={icon} />}
+      {!!icon && <FontAwesomeIcon icon={icon} className="icon" />}
       {children}
     </button>
   );
