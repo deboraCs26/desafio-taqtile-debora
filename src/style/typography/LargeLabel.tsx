@@ -1,5 +1,6 @@
 import { colors } from '../colors'
 import { components } from './typography';
+
 interface LabelProps {
   children: React.ReactNode;
   weight?: "bold" | "regular" | "semiBold";
