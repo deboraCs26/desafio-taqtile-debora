@@ -24,8 +24,8 @@ export const colors = {
     feedbackSuccess: "#2AC084",
     feedbackError: "#EB5E55"
   },
-  
+
   boxShadow: {
-    boxShadow: "0px 4px 4px rgba(153, 155, 168, 0.15)",
+    boxShadow: "0px 2px 10px rgba(0, 0, 0, 0.1)",
   }
 };

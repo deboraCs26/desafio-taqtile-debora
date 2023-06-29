@@ -52,7 +52,7 @@ export const FormField = ({ error, label, icon, password, caption}: FormProps) =
   return (
     <div className="form-container">
       <div className="input-container" style={inputStyle}>
-        <Label color="dark">{label}</Label>
+        <Label color="Xdark">{label}</Label>
         <input
           style={{ width: '100%' }}
           className="input-style"

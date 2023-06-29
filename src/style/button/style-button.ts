@@ -2,7 +2,7 @@ export const styleButton = {
   style: {
     borderRadius: "4px",
     alignItems: "center",
-    minWidth: "143px ",
+    width: "13%",
     border: "none",
   },
 };

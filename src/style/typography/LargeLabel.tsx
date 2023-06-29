@@ -4,7 +4,7 @@ import { components } from './typography';
 interface LabelProps {
   children: React.ReactNode;
   weight?: "bold" | "regular" | "semiBold";
-  color?: "dark" | "white";
+  color?: "Xdark" | "white";
   size?: "medium" | "large";
 };
 
@@ -15,7 +15,7 @@ export const Label = ({ children, weight, color, size }: LabelProps) => {
         fontFamily: components.family.primary,
         fontSize: size === "large" ? components.fontSize.medium : components.fontSize.large,
         fontWeight: weight === "bold" ? components.fontWeight.semiBold : components.fontWeight.regular,
-        color: color === "dark" ? colors.brand.primaryXDark : colors.neutral.white,
+        color: color === "Xdark" ? colors.brand.primaryXDark : colors.neutral.white,
       }}
     >
       {children}
