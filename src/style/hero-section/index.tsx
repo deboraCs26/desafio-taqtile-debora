@@ -10,7 +10,7 @@ import { Separator } from '../separator/separator';
 
 export const Hero = () => {
 
-  const handleBuscarClick = () => {
+  const handleSearchClick = () => {
     alert('Em construção');
   };
 
@@ -26,9 +26,10 @@ export const Hero = () => {
             <Body1>Os melhores imóveis de acordo com as suas preferências.</Body1>
           </div>
         </div>
-
+        <Separator size='small' />
+        <Separator size='small' />
         <div className='button-hero'>
-          <Button variant='primary' compact icon={faSearch} onClick={handleBuscarClick}>
+          <Button variant='primary' compact icon={faSearch} onClick={handleSearchClick}>
             <Label weight='semiBold' color='white'>
               Buscar
             </Label>
