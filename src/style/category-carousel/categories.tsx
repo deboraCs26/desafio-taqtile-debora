@@ -48,7 +48,7 @@ export const CarouselSection = ({ title }: CarouselSectionProps) => {
 
   return (
     <div>
-      <H2>{title}</H2>
+      <H2 color='Xdark'>{title}</H2>
       <CategoryCarousel>
         {categories.map((category, index) => (
           <div key={index}>
