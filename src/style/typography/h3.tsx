@@ -7,7 +7,6 @@ interface H3Props {
   color?: "dark" | "white";
 };
 
-
 export const H3 = ({ children, color}: H3Props) => {
   return (
     <h3

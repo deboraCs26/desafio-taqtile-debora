@@ -1,29 +1,21 @@
 .footer-container {
   display: flex;
   padding: 40px 0;
-  background: #031f3d;
+  justify-content: space-evenly;
 }
-.itens-container{
+.footer-session > H3 {
+  padding-inline: 36px;
+}
+.items-container {
   display: flex;
-  justify-content: center;
-  padding-left: 100px;
+  width: 50%;
 }
-.title {
-  padding: 0 40px;
-}
-.logo-container {
-  padding-left: 100px;
-}
-.footer-block ul {
+.footer-session ul {
   list-style-type: none;
 }
-.footer-block li {
-  padding-bottom: 8px;
-  padding-right: 80px;
-}
-.rodape {
+.copyright-container {
   display: flex;
   justify-content: center;
   text-align: center;
-  background: #031f3d;
+  border-top: 2px solid #ffffff;
 }

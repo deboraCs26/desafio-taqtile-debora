@@ -5,7 +5,7 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { Display } from '../typography/display';
 import { Body1 } from '../typography/body1';
 import { Button } from '../button/button';
-import { Label } from '../typography/LargeLabel';
+import { Label } from '../typography/large-label';
 import { Separator } from '../separator/separator';
 
 export const Hero = () => {

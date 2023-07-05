@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
 import { colors } from '../colors';
-import { Label } from '../typography/LargeLabel';
+import { Label } from '../typography/large-label';
 import { Caption } from '../typography/caption';
 
 interface FormProps {

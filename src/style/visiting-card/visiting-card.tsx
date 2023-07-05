@@ -9,7 +9,7 @@ import { Body2 } from '../typography/body2';
 import { Caption } from '../typography/caption';
 import { Price } from '../typography/medium-price';
 import { ContainerCard } from '../card-container/card-container';
-import { Label } from '../typography/LargeLabel';
+import { Label } from '../typography/large-label';
 import { Button } from '../button/button';
 import { H3 } from '../typography/h3';
 import { colors } from '../colors';

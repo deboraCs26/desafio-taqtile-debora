@@ -1,62 +1,63 @@
 import React from "react";
 import './style.css';
 import logo from './image/LOGO.svg'
-import { FooterBlock } from "./footer";
+import { FooterSession } from "./footer-session";
 import { Separator } from "../separator/separator";
+import { colors } from "../colors";
 
+const styleFooter = {
+  background: colors.brand.primaryXDark,
+}
 export const Footer = () => (
 
-  <footer>
-    <div  className="footer-container">
+  <footer style={styleFooter}>
+    <div className="footer-container">
+
       <div className="logo-container">
         <img src={logo} alt="logo" />
       </div>
-      <div className="itens-container">
-      <div>
-        <FooterBlock
-          title="Comprar"
-          items={['Casas', 'Apartamentos', 'Lançamentos', 'Melhores negócios']}
-        />
-        <Separator size="large" />
-        <Separator size="large" />
-        <Separator size="large" />
-        <div>
-          <FooterBlock
+
+      <div className="items-container">
+        <div className="items-column">
+          <FooterSession
+            title="Comprar"
+            items={['Casas', 'Apartamentos', 'Lançamentos', 'Melhores negócios']}
+          />
+          <Separator size="large" />
+          <Separator size="large" />
+          <Separator size="large" />
+
+          <FooterSession
             title="Alugar"
             items={['Casas', 'Apartamentos', 'Lançamentos', 'Melhores negócios']}
           />
         </div>
-      </div>
 
-      <div>
-        <FooterBlock
-          title="Termos & Privacidade"
-          items={['Política de cookies', 'Termos de uso', 'Política de privacidade']}
-        />
-        <Separator size="large" />
-        <Separator size="large" />
-        <Separator size="large" />
-        <Separator size="large" />
-        <div>
-          <FooterBlock
+        <div className="items-column">
+          <FooterSession
+            title="Termos & Privacidade"
+            items={['Política de cookies', 'Termos de uso', 'Política de privacidade']}
+          />
+          <Separator size="large" />
+          <Separator size="large" />
+          <Separator size="large" />
+          <Separator size="large" />
+
+          <FooterSession
             title="Institucional"
             items={['Sobre nós', 'Contato', 'Trabalhe conosco']}
           />
         </div>
-      </div>
 
-      <div>
-        <FooterBlock
+        <FooterSession
           title="Informações"
           items={['Blog', 'Guia', 'FAQ', 'Canal de ajuda']}
         />
       </div>
-      </div>
-     
     </div>
-    <Separator size="small"/>
-    <div className="rodape">
-      <FooterBlock items={['©2022 Estatery. Todos os direitos estão reservados']} />
+
+    <div className="copyright-container" style={styleFooter}>
+      <FooterSession items={['©2022 Estatery. Todos os direitos estão reservados']} />
     </div>
   </footer>
 );

@@ -14,11 +14,9 @@ export default function App() {
   return (
 
     <div>
-      <div className='App'>
+      <div>
         <Hero />
       </div>
-
-      <Banner />
 
       <H2>Encontre o imóvel ideal para o seu estilo de vida!</H2>
       <CategoryCarousel>
@@ -60,8 +58,10 @@ export default function App() {
         />
 
       </CategoryCarousel>
-      
-      <Footer/>
+
+      <Banner />
+
+      <Footer />
     </div>
   );
 };
