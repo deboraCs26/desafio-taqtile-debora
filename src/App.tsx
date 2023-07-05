@@ -7,6 +7,7 @@ import { Footer } from './style/footer';
 import { H2 } from './style/typography/h2';
 import { CardCategory } from './style/card-categorias-de-imoveis/card-category';
 import { CategoryCarousel } from './style/category-carousel/carousel-section';
+import { ReleasesSection } from './style/carousel-section/releases-section';
 import imageCategory from './style/card-categorias-de-imoveis/cards/image-category.svg';
 
 export default function App() {
@@ -61,11 +62,16 @@ export default function App() {
       </CategoryCarousel>
 
       <Separator size="large" />
-
       <Banner />
 
       <Separator size="large" />
+      <ReleasesSection title='Lançamentos que você pode se interessar!' />
+
+      <Separator size="large" />
       <Footer />
+     
+
+      
     </div>
   );
 };
