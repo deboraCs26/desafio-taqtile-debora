@@ -7,52 +7,54 @@ interface CarouselSectionProps {
   title: string;
 }
 
+const categories = [
+  {
+    name: 'Com piscina',
+    imageUrl: 'https://storage.cloud.google.com/instituto-taqtile/desafio/piscina.png',
+    numberOfProperties: 500
+  },
+  {
+    name: 'Com piscina',
+    imageUrl: 'https://storage.cloud.google.com/instituto-taqtile/desafio/piscina.png',
+    numberOfProperties: 500
+  },
+  {
+    name: 'Com piscina',
+    imageUrl: 'https://storage.cloud.google.com/instituto-taqtile/desafio/piscina.png',
+    numberOfProperties: 500
+  },
+  {
+    name: 'Com piscina',
+    imageUrl: 'https://storage.cloud.google.com/instituto-taqtile/desafio/piscina.png',
+    numberOfProperties: 500
+  },
+  {
+    name: 'Com piscina',
+    imageUrl: 'https://storage.cloud.google.com/instituto-taqtile/desafio/piscina.png',
+    numberOfProperties: 500
+  },
+  {
+    name: 'Com piscina',
+    imageUrl: 'https://storage.cloud.google.com/instituto-taqtile/desafio/piscina.png',
+    numberOfProperties: 500
+  },
+  {
+    name: 'Com piscina',
+    imageUrl: 'https://storage.cloud.google.com/instituto-taqtile/desafio/piscina.png',
+    numberOfProperties: 600
+  }
+];
+
 export const CarouselSection = ({ title }: CarouselSectionProps) => {
-  const categories = [
-    {
-      name: 'Com piscina',
-      imageUrl: 'https://storage.cloud.google.com/instituto-taqtile/desafio/piscina.png',
-      numberOfProperties: 500
-    },
-    {
-      name: 'Com piscina',
-      imageUrl: 'https://storage.cloud.google.com/instituto-taqtile/desafio/piscina.png',
-      numberOfProperties: 500
-    },
-    {
-      name: 'Com piscina',
-      imageUrl: 'https://storage.cloud.google.com/instituto-taqtile/desafio/piscina.png',
-      numberOfProperties: 500
-    },
-    {
-      name: 'Com piscina',
-      imageUrl: 'https://storage.cloud.google.com/instituto-taqtile/desafio/piscina.png',
-      numberOfProperties: 500
-    },
-    {
-      name: 'Com piscina',
-      imageUrl: 'https://storage.cloud.google.com/instituto-taqtile/desafio/piscina.png',
-      numberOfProperties: 500
-    },
-    {
-      name: 'Com piscina',
-      imageUrl: 'https://storage.cloud.google.com/instituto-taqtile/desafio/piscina.png',
-      numberOfProperties: 500
-    },
-    {
-      name: 'Com piscina',
-      imageUrl: 'https://storage.cloud.google.com/instituto-taqtile/desafio/piscina.png',
-      numberOfProperties: 600
-    }
-  ];
+ 
 
   return (
     <div>
-      <H2 color='Xdark'>{title}</H2>
+      <H2 color='XDark'>{title}</H2>
       <CategoryCarousel>
-        {categories.map((category, index) => (
-          <div key={index}>
-            <img src={category.imageUrl} alt='' />
+        {categories.map((category, id) => (
+          <div key={id}>
+            <img src={category.imageUrl} alt='imagem categoria de imóveis' />
           </div>
         ))}
       </CategoryCarousel>
