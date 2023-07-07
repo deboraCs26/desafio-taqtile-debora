@@ -7,7 +7,7 @@ interface SeparatorProps {
 
 export const Separator = ({ size, horizontal }: SeparatorProps) => {
   const dimension = horizontal ? 'width' : 'height';
-  const height = size === 'small' ? '16px' : size === 'large' ? '40px' : '8px' ;
-  
+  const height = size === 'small' ? '8px' : size === 'large' ? '24px' : '16px';
+
   return <div style={{ [dimension]: height }} />;
 };

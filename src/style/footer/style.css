@@ -1,0 +1,21 @@
+.footer-container {
+  display: flex;
+  padding: 40px 0;
+  justify-content: space-evenly;
+}
+.footer-session > H3 {
+  padding-inline: 36px;
+}
+.items-container {
+  display: flex;
+  width: 50%;
+}
+.footer-session ul {
+  list-style-type: none;
+}
+.copyright-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border-top: 2px solid #ffffff;
+}
