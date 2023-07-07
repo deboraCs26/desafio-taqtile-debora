@@ -1,7 +1,12 @@
 import { colors } from '../colors';
 import { components } from './typography';
 
-export const H2 = ({ children }: { children: React.ReactNode }) => {
+interface H2Props {
+  children: React.ReactNode;
+  color?: "Xdark" | "neutralMedium";
+};
+
+export const H2 = ({ children, color }: H2Props) => {
   return (
     <h2
       style={{
@@ -9,7 +14,7 @@ export const H2 = ({ children }: { children: React.ReactNode }) => {
         fontSize: components.fontSize.xxLarge,
         fontWeight: components.fontWeight.regular,
         lineHeight: components.lineHeight.large,
-        color: colors.neutral.neutralMedium,
+        color: color === "Xdark" ? colors.neutral.neutralXDark : colors.neutral.neutralMedium,
       }}
     >
       {children}
