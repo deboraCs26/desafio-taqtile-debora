@@ -29,7 +29,7 @@ export const ReleasesSection = ({ title }: CarouselSectionProps) => {
  
   return (
     <div>
-      <H2 color='Xdark'>{title}</H2>
+      <H2 color='XDark'>{title}</H2>
       <CarouselSection>
         {categories.map((category, id) => (
           <div key={id}>

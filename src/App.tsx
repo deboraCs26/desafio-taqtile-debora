@@ -4,11 +4,8 @@ import { Separator } from './style/separator/separator';
 import { Hero } from './style/hero-section';
 import { Banner } from './style/banner';
 import { Footer } from './style/footer';
-import { H2 } from './style/typography/h2';
-import { CardCategory } from './style/card-categorias-de-imoveis/card-category';
-import { CategoryCarousel } from './style/category-carousel/carousel-section';
 import { ReleasesSection } from './style/carousel-section/releases-section';
-import imageCategory from './style/card-categorias-de-imoveis/cards/image-category.svg';
+import { CarouselSection } from './style/category-carousel/categories';
 
 export default function App() {
 
@@ -16,50 +13,10 @@ export default function App() {
   return (
 
     <div>
-      <div>
-        <Hero />
-      </div>
+      
+      <Hero />
 
-      <H2>Encontre o imóvel ideal para o seu estilo de vida!</H2>
-      <CategoryCarousel>
-        <CardCategory
-          image={imageCategory}
-          title="Com Pricina"
-          description="723,457 Imóveis"
-        />
-
-        <CardCategory
-          image={imageCategory}
-          title="Com Pricina"
-          description="723,457 Imóveis"
-        />
-        <CardCategory
-          image={imageCategory}
-          title="Com Pricina"
-          description="723,457 Imóveis"
-        />
-        <CardCategory
-          image={imageCategory}
-          title="Com Pricina"
-          description="723,457 Imóveis"
-        />
-        <CardCategory
-          image={imageCategory}
-          title="Com Pricina"
-          description="723,457 Imóveis"
-        />
-        <CardCategory
-          image={imageCategory}
-          title="Com Pricina"
-          description="723,457 Imóveis"
-        />
-        <CardCategory
-          image={imageCategory}
-          title="Com Pricina"
-          description="723,457 Imóveis"
-        />
-
-      </CategoryCarousel>
+      <CarouselSection title='Encontre o imóvel ideal para o seu estilo de vida!' />
 
       <Separator size="large" />
       <Banner />
@@ -68,10 +25,7 @@ export default function App() {
       <ReleasesSection title='Lançamentos que você pode se interessar!' />
 
       <Separator size="large" />
-      <Footer />
-     
-
-      
+      <Footer />    
     </div>
   );
 };
