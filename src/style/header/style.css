@@ -1,21 +1,20 @@
-.container {
+.menu-container {
   display: flex;
-  justify-content: space-between;
-  padding: 12px 71px;
-  border: 0px solid  #C5C5C5;
-  background:  #FFFFFF;
+  justify-content: space-around;
+  align-items: center;
+  padding: 12px 0 0;
+  border-bottom: 1px solid #f4f4f4;
 }
 .menu-item-selected:hover {
   border-bottom: 5px solid #29d6e7;
 }
-.menu ul {
+.menu-items-container ul {
   list-style-type: none;
   display: flex;
-  justify-content: center;
 }
-.menu li {
+.menu-items-container li {
   margin-right: 32px;
 }
-.menu-button {
+.menu-button-container {
   display: flex;
 }

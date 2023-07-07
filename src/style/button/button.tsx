@@ -13,19 +13,19 @@ interface ButtonProps {
   disabled?: boolean;
   icon?: IconDefinition;
   compact?: boolean;
+  expand?: boolean
   style?: React.CSSProperties;
 };
 
-export const Button = ({ variant, children, icon, disabled = false, onClick, compact }: ButtonProps) => {
+export const Button = ({ variant, children, icon, disabled = false, onClick, compact, expand}: ButtonProps) => {
 
   const buttonConstantStyle = {
     fontFamily: components.family.primary,
     fontSize: components.fontSize.large,
     fontWeight: components.fontWeight.bold,
-    minWidth: styleButton.style.width,
     alignItems: styleButton.style.alignItems,
     borderRadius: styleButton.style.borderRadius,
-    borderColor: colors.accessory.banner,
+    borderColor: colors.accessory.secondary,
     cursor: "pointer",
     margin: 0,
   };
@@ -42,8 +42,8 @@ export const Button = ({ variant, children, icon, disabled = false, onClick, com
     border = styleButton.style.border
   } else if (variant === "secondary") {
     backgroundColor = colors.neutral.white;
-    color = colors.accessory.banner;
-    border = `1px solid ${colors.accessory.banner}`;
+    color = colors.accessory.secondary;
+    border = `1px solid ${colors.accessory.secondary}`;
   } else if (variant === "cta") {
     backgroundColor = colors.cta;
     color = colors.neutral.white;
@@ -51,6 +51,7 @@ export const Button = ({ variant, children, icon, disabled = false, onClick, com
   };
 
   const styleDoButton = {
+    width: expand ? "100%" : "",
     ...buttonConstantStyle,
     backgroundColor,
     color,

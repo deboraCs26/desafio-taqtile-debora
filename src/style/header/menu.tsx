@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
 import './style.css';
-import { Label } from '../typography/LargeLabel';
+import { Label } from '../typography/large-label';
 
 interface MenuProps {
   label: string;
+  isSelected?: boolean;
+  showHoverBorder?: boolean;
 }
 
-export const ComponentizationMenu = ({ label }: MenuProps) => {
+export const MenuItem = ({ label, isSelected, showHoverBorder }: MenuProps) => {
   const [isHovered, setHovered] = useState(false);
+
   const handleMouseEnter = () => {
     setHovered(true);
   };
@@ -18,13 +21,11 @@ export const ComponentizationMenu = ({ label }: MenuProps) => {
 
   return (
     <li
-      className={`${isHovered ? 'menu-item-selected' : ''}`}
+      className={`${(isHovered || isSelected) && showHoverBorder ? 'menu-item-selected' : ''}`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <Label weight={isHovered ? 'bold' : 'semiBold'} color='Xdark'>{label}</Label>
+    <Label weight="bold" color='Xdark'>{label}</Label>
     </li>
-
-
   );
 };
