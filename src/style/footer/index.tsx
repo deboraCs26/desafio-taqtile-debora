@@ -1,6 +1,6 @@
 import React from "react";
 import './style.css';
-import logo from './image/LOGO.svg'
+import logo from './image/logo.svg'
 import { FooterSession } from "./footer-session";
 import { Separator } from "../separator/separator";
 import { colors } from "../colors";
@@ -25,8 +25,7 @@ export const Footer = () => (
           />
           <Separator size="large" />
           <Separator size="large" />
-          <Separator size="large" />
-
+         
           <FooterSession
             title="Alugar"
             items={['Casas', 'Apartamentos', 'Lançamentos', 'Melhores negócios']}
@@ -41,8 +40,7 @@ export const Footer = () => (
           <Separator size="large" />
           <Separator size="large" />
           <Separator size="large" />
-          <Separator size="large" />
-
+          
           <FooterSession
             title="Institucional"
             items={['Sobre nós', 'Contato', 'Trabalhe conosco']}

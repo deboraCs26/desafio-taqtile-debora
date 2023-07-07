@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import { Separator } from './style/separator/separator';
 import { Hero } from './style/hero-section';
 import { Banner } from './style/banner';
 import { Footer } from './style/footer';
@@ -59,8 +60,11 @@ export default function App() {
 
       </CategoryCarousel>
 
+      <Separator size="large" />
+
       <Banner />
 
+      <Separator size="large" />
       <Footer />
     </div>
   );

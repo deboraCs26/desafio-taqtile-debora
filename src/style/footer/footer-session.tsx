@@ -14,7 +14,7 @@ export const FooterSession = ({ title, items }: FooterSessionProps) => {
       <H3>{title}</H3>
       <ul>
         {items.map((item, index) => (
-          <li key={index}>
+          <li key={item}>
             <Body2 weight="regular">{item}</Body2>
           </li>
         ))}
