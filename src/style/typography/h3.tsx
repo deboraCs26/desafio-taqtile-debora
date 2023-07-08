@@ -4,17 +4,17 @@ import { components } from './typography';
 interface H3Props {
   children: React.ReactNode;
   weight?: "regular" | "bold";
-  color?: "dark" | "white";
+  color?: "XDark" | "white";
 };
 
-export const H3 = ({ children, color}: H3Props) => {
+export const H3 = ({ children, color, weight}: H3Props) => {
   return (
     <h3
       style={{
         fontFamily: components.family.primary,
         fontSize: components.fontSize.XLarge,
-        fontWeight: components.fontWeight.semiBold,
-        color: color === "dark" ? colors.brand.primaryXDark : colors.neutral.white,
+        fontWeight: weight === "bold" ? components.fontWeight.bold : components.fontWeight.regular,
+        color: color === "XDark" ? colors.neutral.neutralXDark : colors.neutral.white,
         margin: 0,
       }}
     >

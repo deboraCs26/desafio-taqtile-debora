@@ -1,7 +1,7 @@
 import { gql } from '@apollo/client';
 
 export const GET_CATEGORIES = gql`
-  query GetCategories {
+  query CategoriesProperties {
     categories {
       id
       imageUrl
@@ -9,15 +9,15 @@ export const GET_CATEGORIES = gql`
       numberOfProperties
     }
   }
-}
 `;
 
 export interface Category {
   id: string;
-  imageIrl: string;
+  imageUrl: string;
+  name: string;
   numberOfProperties: number;
 };
 
-export interface QueryCategory{
+export interface QueryCategory {
   categories?: Category[];
 };

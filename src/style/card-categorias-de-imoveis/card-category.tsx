@@ -5,18 +5,18 @@ import { Body2 } from '../typography/body2';
 
 interface CardProps {
   image: string;
-  title: string;
-  description: string;
+  name: string;
+  numberOfProperties: number;
 }
 
-export const CardCategory = ({ image, title, description }: CardProps) => {
+export const CardCategory = ({ image, name, numberOfProperties }: CardProps) => {
 
   return (
     <div className='category-card-container'>
       <img src={image} alt="Card" className="img" />
       <div className='category-card-text'>
-        <H3>{title}</H3>
-        <Body2>{description}</Body2>
+        <H3 color='XDark'>{name}</H3>
+        <Body2 color='XDark'>{numberOfProperties}</Body2>
       </div>
     </div>
   );
