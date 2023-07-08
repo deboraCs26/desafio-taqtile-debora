@@ -1,10 +1,10 @@
 import React from "react";
-import './button.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { colors } from "../colors";
 import { components } from "../typography/typography";
 import { styleButton } from "./style-button";
+import { Separator } from "../separator/separator";
 
 interface ButtonProps {
   variant: "primary" | "secondary" | "cta";
@@ -20,14 +20,11 @@ interface ButtonProps {
 export const Button = ({ variant, children, icon, disabled = false, onClick, compact, expand}: ButtonProps) => {
 
   const buttonConstantStyle = {
+    ...styleButton.style,
     fontFamily: components.family.primary,
     fontSize: components.fontSize.large,
     fontWeight: components.fontWeight.bold,
-    alignItems: styleButton.style.alignItems,
-    borderRadius: styleButton.style.borderRadius,
     borderColor: colors.accessory.secondary,
-    cursor: "pointer",
-    margin: 0,
   };
 
   let backgroundColor
@@ -65,7 +62,10 @@ export const Button = ({ variant, children, icon, disabled = false, onClick, com
       onClick={onClick}
       style={styleDoButton}
     >
-      {!!icon && <FontAwesomeIcon icon={icon} className="icon" />}
+      {!!icon && <>
+        <FontAwesomeIcon icon={icon} className="icon" />
+        <Separator size="small" horizontal />
+      </>}
       {children}
     </button>
   );

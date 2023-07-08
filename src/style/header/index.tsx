@@ -14,17 +14,17 @@ export const Menu = () => {
 
         <div className="menu-items-container">
           <ul>
-            <MenuItem label='Home' isSelected showHoverBorder />
+            <MenuItem label='Home' />
             <MenuItem label='Quem Somos' />
             <MenuItem label='Contato' />
           </ul>
         </div>
 
         <div className='menu-button-container'>
-            <Button compact variant='secondary' expand>
+            <Button compact variant='secondary' >
               Logar
             </Button>
-          <Separator size='large' horizontal />
+          <Separator size='small' horizontal />
           <Button compact variant='primary'>Cadastrar</Button>
         </div>
       </div>

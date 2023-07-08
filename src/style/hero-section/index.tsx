@@ -21,15 +21,14 @@ export const Hero = () => {
       <div className='hero-text-container'>
         <div className='hero-display-text'>
           <Display color='cta'>Encontre seu espaço no mundo!</Display>
-          <Separator size='small' />
+          <Separator size='medium' />
           <div className='hero-body-text'>
             <Body1 color='dark'>Os melhores imóveis de acordo com as suas preferências.</Body1>
           </div>
         </div>
-        <Separator size='small' />
-        <Separator size='small' />
+        <Separator size='XLarge' />
         <div className='button-hero'>
-          <Button variant='primary' compact icon={faSearch} onClick={handleSearchClick}>
+          <Button variant='primary' compact expand icon={faSearch} onClick={handleSearchClick}>
             <Label weight='semiBold' color='white'>
               Buscar
             </Label>

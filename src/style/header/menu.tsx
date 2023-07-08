@@ -4,11 +4,9 @@ import { Label } from '../typography/large-label';
 
 interface MenuProps {
   label: string;
-  isSelected?: boolean;
-  showHoverBorder?: boolean;
 }
 
-export const MenuItem = ({ label, isSelected, showHoverBorder }: MenuProps) => {
+export const MenuItem = ({ label  }: MenuProps) => {
   const [isHovered, setHovered] = useState(false);
 
   const handleMouseEnter = () => {
@@ -21,7 +19,7 @@ export const MenuItem = ({ label, isSelected, showHoverBorder }: MenuProps) => {
 
   return (
     <li
-      className={`${(isHovered || isSelected) && showHoverBorder ? 'menu-item-selected' : ''}`}
+      className={`${isHovered ? 'menu-item-selected' : ''}`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
