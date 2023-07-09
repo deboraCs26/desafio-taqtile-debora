@@ -7,36 +7,39 @@ import { faHeart as faHeartRegular } from '@fortawesome/free-regular-svg-icons';
 import { Body2 } from '../typography/body2';
 import { Caption } from '../typography/caption';
 import { Price } from '../typography/medium-price';
+import { FormatPrice } from '../formatted-price';
 
 interface RealEstateCardProps {
   image: string;
-  price: string;
-  cityAndState: string;
-  address: string;
-  numberOfBedrooms: number;
+  buyPrices: number;
+  city: string;
+  state: string;
+  district: string;
+  streetNumber: number;
   numberOfBathrooms: number;
+  numberOfBedrooms: number;
   area: number;
-  iconIsFavorite: boolean;
+  iconIsFavorite?: boolean;
 }
 
-export const RealEstateCard = ({ image, price, cityAndState, address, numberOfBedrooms, numberOfBathrooms, area, iconIsFavorite }: RealEstateCardProps) => {
+export const RealEstateCard = ({ image, buyPrices, city, state, district, streetNumber, numberOfBathrooms, numberOfBedrooms, area, iconIsFavorite }: RealEstateCardProps) => {
   const heartIcon = iconIsFavorite ? faHeartSolid : faHeartRegular;
 
   return (
-    
+
     <div className='real-estate-card'>
       <div>
         <img src={image} alt="Card" className="real-estate-card-image" />
       </div>
 
       <div className='text-price'>
-        <Price weight="bold" size="XLarge"> {price} </Price>
+        <Price weight="bold" size="XLarge" color='cta'> {FormatPrice(buyPrices)} </Price>
         <FontAwesomeIcon icon={heartIcon} size='xl' />
       </div>
 
       <div className="card-text">
-        <Body2 weight="bold">{cityAndState}</Body2>
-        <Caption color='dark'>{address}</Caption>
+        <Body2 weight="bold" color='XDark'>{city},{state}</Body2>
+        <Caption color='dark'>{district},{streetNumber},{city}</Caption>
       </div>
 
       <div className="card-components">
