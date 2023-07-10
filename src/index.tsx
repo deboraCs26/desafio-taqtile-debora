@@ -5,8 +5,6 @@ import reportWebVitals from './reportWebVitals';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { Home } from './route/home';
-import { WhoAre } from './route/pages/who-we-are';
-import { Contact } from './route/pages/contact';
 
 const client = new ApolloClient({
   uri: 'https://taqtile-challenge-api-sjz6wnaoia-uc.a.run.app/graphql',
@@ -17,14 +15,6 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <Home />,
-  },
-  {
-    path: '/quem-somos',
-    element: <WhoAre />,
-  },
-  {
-    path: '/contato',
-    element: <Contact />,
   },
 ]);
 
