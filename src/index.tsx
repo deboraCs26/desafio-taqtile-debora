@@ -1,10 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { Home } from './route/home';
+import { WhoAre } from './route/pages/who-we-are';
+import { Contact } from './route/pages/contact';
 
 const client = new ApolloClient({
   uri: 'https://taqtile-challenge-api-sjz6wnaoia-uc.a.run.app/graphql',
@@ -13,21 +15,26 @@ const client = new ApolloClient({
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <Home />,
+  },
+  {
+    path: '/quem-somos',
+    element: <WhoAre />,
+  },
+  {
+    path: '/contato',
+    element: <Contact />,
   },
 ]);
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
-
-root.render(
+ReactDOM.render(
   <ApolloProvider client={client}>
     <React.StrictMode>
       <RouterProvider router={router} />
     </React.StrictMode>
-  </ApolloProvider>
+  </ApolloProvider>,
+  document.getElementById('root')
 );
 
 reportWebVitals();
