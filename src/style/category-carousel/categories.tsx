@@ -49,7 +49,7 @@ export const CarouselSection = ({ title }: CarouselSectionProps) => {
  
 
   return (
-    <div>
+    <div className='carousel-container'>
       <H2 color='XDark'>{title}</H2>
       <CategoryCarousel>
         {categories.map((category, id) => (

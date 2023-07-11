@@ -1,0 +1,20 @@
+.menu-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 12px 0 0;
+  border-bottom: 1px solid #f4f4f4;
+}
+.menu-item-selected:hover {
+  border-bottom: 5px solid #29d6e7;
+}
+.menu-items-container ul {
+  list-style-type: none;
+  display: flex;
+}
+.menu-items-container li {
+  margin-right: 32px;
+}
+.menu-button-container {
+  display: flex;
+}
