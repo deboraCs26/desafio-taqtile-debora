@@ -19,7 +19,7 @@ export const MenuItem = ({ label  }: MenuProps) => {
 
   return (
     <li
-      className={`${isHovered ? 'menu-item-selected' : ''}`}
+      className={`${isHovered && 'menu-item-selected'}`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
