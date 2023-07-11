@@ -4,13 +4,7 @@ import { GET_CATEGORIES } from './categories';
 
 export const GetCategories = () => {
   const { loading, error, data } = useQuery<QueryCategory>(GET_CATEGORIES);
-  
-  const categories = data?.categories?.map((category) => ({
-    id: category.id,
-    imageUrl: category.imageUrl,
-    name: category.name,
-    numberOfProperties: category.numberOfProperties,
-  }));
+  const categories = data?.categories ?? [];
 
   return {
     loading,

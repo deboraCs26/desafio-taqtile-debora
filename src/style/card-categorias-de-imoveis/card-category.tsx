@@ -16,7 +16,7 @@ export const CardCategory = ({ image, name, numberOfProperties }: CardProps) => 
       <img src={image} alt="Card" className="img" />
       <div className='category-card-text'>
         <H3 color='XDark'>{name}</H3>
-        <Body2 color='XDark'>{numberOfProperties}</Body2>
+        <Body2 color='XDark'>{`${numberOfProperties} ${numberOfProperties === 1 ? "Imovel" :  "Imóveis"}`}</Body2>
       </div>
     </div>
   );
