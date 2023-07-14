@@ -15,9 +15,9 @@ export const PhotoCarousel: React.FC<PhotoCarouselProps> = ({ photos, children }
       responsive={responsive}
       className='img-carousel'
     >
-      {photos.map((photo, index) => (
-        <div key={index} className='carousel-item'>
-          <img src={photo} alt={`Foto ${index + 1}`} className='photos-container' />
+      {photos.map((photo, item) => (
+        <div key={item} className='carousel-item'>
+          <img src={photo} alt={`Foto ${item + 1}`} className='photos-container' />
         </div>
       ))}
       {children}
