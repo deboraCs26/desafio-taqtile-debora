@@ -3,7 +3,7 @@ import './carousel-section.css';
 import { CardCategory } from '../card-categorias-de-imoveis/card-category';
 import { CategoryCarousel } from './carousel-section';
 import { H2 } from '../typography/h2';
-import { GetCategories } from '../graphql-query/use-query';
+import { GetCategories  } from '../graphql-query/use-query/use-query-categories';
 import { Category } from '../graphql-query/categories';
 
 interface CarouselSectionProps {

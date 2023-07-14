@@ -1,40 +1,42 @@
 import React from 'react';
 import './style.css';
-import { CarouselSection} from './index';
+import { RealEstateCard } from '../componentization/real-estate-card';
+import { CarouselSection } from './index';
 import { H2 } from '../typography/h2';
+import { GetProperties } from '../graphql-query/use-query/use-query-properties';
 
 interface CarouselSectionProps {
   title: string;
 }
 
-const categories = [
-  {
-    name: 'Seção de lançamentos',
-    imageUrl: 'https://user-images.githubusercontent.com/119463609/251038153-2e961418-2eab-484d-a69e-676d7db4b325.png',
-    numberOfProperties: 500
-  },
-  {
-    name: 'Seção de lançamentos',
-    imageUrl: 'https://user-images.githubusercontent.com/119463609/251038153-2e961418-2eab-484d-a69e-676d7db4b325.png',
-    numberOfProperties: 500
-  },
-  {
-    name: 'Seção de lançamentos',
-    imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGL321o66Mn0NEtfHO3kC-enQC2SogHd9oFjhu3wuFFDGjJPCLhK7Yu6gl93NwyeRofxY&usqp=CAU',
-    numberOfProperties: 600
-  },
-];
-
 export const ReleasesSection = ({ title }: CarouselSectionProps) => {
- 
+  const { loading, error, properties } = GetProperties();
+
+  if (loading) {
+    return <div>Buscando categorias</div>;
+  }
+
+  if (error) {
+    return <div>Ocorreu um erro ao buscar as categorias: {error.message}</div>;
+  }
+
   return (
     <div className='carousel-container'>
       <H2 color='XDark'>{title}</H2>
       <CarouselSection>
-        {categories.map((category, id) => (
-          <div key={id}>
-            <img src={category.imageUrl} alt='' />
-          </div>
+        {properties.map((property) => (
+          <RealEstateCard
+            buyPrices={property.buyPrices.total}
+            image={property.imageUrls?.[0]}
+            city={property.address.state}
+            state={property.address.city}
+            streetNumber={property.address.streetNumber}
+            district={property.address.district}
+            numberOfBedrooms={property.bedrooms}
+            numberOfBathrooms={property.bathrooms}
+            area={property.area}
+
+          />
         ))}
       </CarouselSection>
     </div>
