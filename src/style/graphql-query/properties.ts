@@ -39,8 +39,7 @@ export interface Property {
   address: Address;
 }
 
-
-export interface QueryProperties {
+export interface ResponseProperties {
   recentProperties: Property[];
 };
 
