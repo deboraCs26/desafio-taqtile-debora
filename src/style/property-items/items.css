@@ -1,0 +1,13 @@
+.icon-container {
+  display: flex;
+  
+}
+.icon-items {
+  display: flex;
+  flex-direction: column;
+  
+}
+.icon-property {
+  display: flex;
+  flex-direction: column;
+}

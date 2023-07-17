@@ -1,6 +1,6 @@
 import { Menu } from "../../style/header";
 import { PhotoProperty } from "../../style/photo-section/property-photos";
-import { PropertyCard } from "../../style/property-description/property-card";
+import { PropertyItems } from "../../style/property-items/items";
 
 export function HomePage() {
   return (
@@ -8,8 +8,8 @@ export function HomePage() {
       <Menu />
 
       <PhotoProperty />
-
-      <PropertyCard />
+    
+      <PropertyItems />
     </>
   );
 };
