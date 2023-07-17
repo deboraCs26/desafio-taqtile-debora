@@ -31,7 +31,7 @@ export const Description = ({ bathrooms, bedrooms, area, pool, vacancy }: Proper
   const description = [
     { icon: <FontAwesomeIcon icon={faBed} className="icon" style={iconStyle} size="lg" />, title: `${bathrooms} Quartos` },
     { icon: <FontAwesomeIcon icon={faBath} className="icon" style={iconStyle} size="lg" />, title: `${bedrooms} Banheiros` },
-    { icon: <FontAwesomeIcon icon={faRuler} className="icon" style={iconStyle} size="lg" />, title: `${area}` },
+    { icon: <FontAwesomeIcon icon={faRuler} className="icon" style={iconStyle} size="lg" />, title: area },
     { icon: pool && <FontAwesomeIcon icon={faSwimmingPool} className="icon" style={iconStyle} size="lg" />, title: "Piscina" },
     { icon: vacancy && <FontAwesomeIcon icon={faCar} className="icon" style={iconStyle} size="lg" />, title: "1 Vaga" },
   ];
