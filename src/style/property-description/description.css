@@ -1,8 +1,11 @@
 .description-container {
-  margin: 40px;
+  display: flex;
+}
+.text-description {
+  margin: 0 40px;
 }
 .title-properties {
-  width: 46%;
+  width: 70%;
 }
 .card-description {
   display: flex;
@@ -30,5 +33,9 @@
 }
 
 .description {
-  width: 45%;
+  width: 65%;
+  padding: 32px;
+}
+.visiting-card {
+  width: 70%;
 }
