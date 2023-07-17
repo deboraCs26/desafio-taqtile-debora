@@ -15,6 +15,7 @@ export const H2 = ({ children, color }: H2Props) => {
         fontWeight: components.fontWeight.regular,
         lineHeight: components.lineHeight.large,
         color: color === "XDark" ? colors.neutral.neutralXDark : colors.neutral.neutralMedium,
+        margin: 0,
       }}
     >
       {children}
