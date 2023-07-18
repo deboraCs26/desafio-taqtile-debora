@@ -1,6 +1,6 @@
 import { Menu } from "../../style/header";
 import { PhotoProperty } from "../../style/photo-section/property-photos";
-import { Description } from "../../style/property-description/description";
+import { PropertyCard } from "../../style/property-description/property-card";
 
 export function HomePage() {
   return (
@@ -9,7 +9,7 @@ export function HomePage() {
 
       <PhotoProperty />
 
-      <Description pool vacancy area="8x10 m²" bathrooms={2} bedrooms={2} />
+      <PropertyCard />
     </>
   );
 };

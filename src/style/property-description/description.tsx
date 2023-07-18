@@ -3,7 +3,6 @@ import './description.css';
 import { H1 } from "../typography/h1";
 import { Body2 } from "../typography/body2";
 import location from "./icon/location.png"
-import imageDoCard from "./image-do-card/Img.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBath, faCar } from '@fortawesome/free-solid-svg-icons';
 import { faSwimmingPool, faRuler, faBed } from '@fortawesome/free-solid-svg-icons';
@@ -12,41 +11,48 @@ import { H4 } from "../typography/h4";
 import { H2 } from "../typography/h2";
 import { colors } from "../colors";
 import { Separator } from "../separator/separator";
+import imageDoCard from "./image-do-card/img.png"
 import { VisitingCard } from "../visiting-card/visiting-card";
 
-interface PropertyDescriptionProps {
-  bathrooms?: number;
-  bedrooms?: number;
-  area?: string;
-  pool?: boolean;
-  vacancy?: boolean;
-}
+interface DescriptionProps {
+  propertyCard: {
+    title: string;
+    explanation: string;
+    description: string;
+    address: string;
+    bathrooms: number;
+    bedrooms: number;
+    area: string;
+    pool: boolean;
+    vacancy: boolean;
+  };
+};
 
 const iconStyle = {
   color: colors.neutral.neutralXDark
 };
 
-export const Description = ({ bathrooms, bedrooms, area, pool, vacancy }: PropertyDescriptionProps) => {
-
+export const Description = ({ propertyCard } : DescriptionProps ) => {
+ 
   const description = [
-    { icon: <FontAwesomeIcon icon={faBed} className="icon" style={iconStyle} size="lg" />, title: `${bathrooms} Quartos` },
-    { icon: <FontAwesomeIcon icon={faBath} className="icon" style={iconStyle} size="lg" />, title: `${bedrooms} Banheiros` },
-    { icon: <FontAwesomeIcon icon={faRuler} className="icon" style={iconStyle} size="lg" />, title: area },
-    { icon: pool && <FontAwesomeIcon icon={faSwimmingPool} className="icon" style={iconStyle} size="lg" />, title: "Piscina" },
-    { icon: vacancy && <FontAwesomeIcon icon={faCar} className="icon" style={iconStyle} size="lg" />, title: "1 Vaga" },
+    { propertyCard: <FontAwesomeIcon icon={faBed} className="icon" style={iconStyle} size="lg" />, title: `${propertyCard.bedrooms} Quartos` },
+    { propertyCard: <FontAwesomeIcon icon={faBath} className="icon" style={iconStyle} size="lg" />, title: `${propertyCard.bathrooms} Banheiros` },
+    { propertyCard: <FontAwesomeIcon icon={faRuler} className="icon" style={iconStyle} size="lg" />, title: propertyCard.area },
+    { propertyCard: propertyCard.pool && <FontAwesomeIcon icon={faSwimmingPool} className="icon" style={iconStyle} size="lg" />, title: "Piscina" },
+    { propertyCard: propertyCard.vacancy && <FontAwesomeIcon icon={faCar} className="icon" style={iconStyle} size="lg" />, title: "1 Vaga" },
   ];
 
   return (
     <div className="description-container">
       <div className="text-description">
         <div className="title-properties">
-          <H1 color="XDark">Casa à venda em Osasco,  bairro Bonfim, melhor da região!</H1>
+          <H1 color="XDark">{propertyCard.title}</H1>
         </div>
 
         <div className="andress">
           <img src={location} alt="endereço do imóvel" />
           <Separator size="small" horizontal />
-          <Body2 color="XDark">Avenida das Nações Unidas 3239, Complemento 245B, Bonfim, Osasco</Body2>
+          <Body2 color="XDark">{propertyCard.address}</Body2>
         </div>
 
         <Separator size="XLarge" />
@@ -54,7 +60,7 @@ export const Description = ({ bathrooms, bedrooms, area, pool, vacancy }: Proper
           <div className="card-description">
             {description.map((item, id) => (
               <div className="item" key={id}>
-                {item.icon}
+                {item.propertyCard}
                 <H4 color="XDark" weight="semiBold">{item.title}</H4>
               </div>
             ))}
@@ -63,13 +69,11 @@ export const Description = ({ bathrooms, bedrooms, area, pool, vacancy }: Proper
 
         <Separator size="XLarge" />
         <div className="description" >
-          <H2 color="XDark">Descrição</H2>
+          <H2 color="XDark">{propertyCard.explanation}</H2>
 
           <Body2 color="XDark">
-            A casa se insere em um clima de paz, de natureza. A decoração acompanha a magia desse microclima ecológico que encanta a adultos e crianças. A casa foi construída em madeira nobre. Decorada com lustres temáticos e estruturas que dão vida ao lugar. Ideal para todos que busquem descansar ou trabalhar e desejam morar na melhor região de Osasco- SP.
+            {propertyCard.description}
           </Body2>
-
-
         </div>
       </div>
 
