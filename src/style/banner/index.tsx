@@ -17,20 +17,18 @@ export const Banner = () => {
   };
 
   return (
-
-    <section className='banner-container'>
-      <div style={styleBanner} className='banner-content' onClick={handleBuscarClick}>
-        <div className='banner-image banner-img'>
-          <img src={image} alt="Banner" />
-        </div>
-
-        <div className='banner-text'>
-          <Display color='white'>Melhores imóveis</Display>
-          <Body1 color='white'>Confira opções que podem ser uma grande oportunidade!</Body1>
-
-        </div>
-        <img src={bannerIcon} alt="Icon" className='banner-icon' />
+    <div style={styleBanner} className='banner-container' onClick={handleBuscarClick}>
+      <div className='banner-image'>
+        <img src={image} alt="Banner" />
       </div>
-    </section>
+      <div className='banner-text'>
+        <Display color='white'>Melhores imóveis</Display>
+        <Body1 color='white'>Confira opções que podem ser uma grande oportunidade!</Body1>
+      </div>
+
+      <div className='banner-icon' >
+        <img src={bannerIcon} alt="Icon" />
+      </div>
+    </div>
   );
 };

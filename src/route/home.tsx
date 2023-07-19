@@ -4,17 +4,15 @@ import { CarouselSection } from "../style/category-carousel/categories";
 import { Banner } from "../style/banner";
 import { ReleasesSection } from "../style/carousel-section/releases-section";
 import { Footer } from "../style/footer";
-import { H3 } from "../style/typography/h3";
 
 export function Home() {
   return (
     <>
-      <H3 color="XDark">Integração criação de configuração de rotas</H3>
       <Menu />
       <Hero />
-      <CarouselSection title="router" />
+      <CarouselSection title="Encontre o imóvel ideal para o seu estilo de vida!" />
       <Banner />
-      <ReleasesSection title="router" />
+      <ReleasesSection title="Lançamentos que você pode se interessar!" />
       <Footer />
     </>
   );
