@@ -1,13 +1,31 @@
-.icon-container {
-  display: flex;
-  
+.property-list-container {
+  width: 41%;
+  margin: 0 40px;
 }
-.icon-items {
-  display: flex;
-  flex-direction: column;
-  
+.first-list {
+  float: left;
+  gap: 40px;
 }
-.icon-property {
+.items-container {
   display: flex;
-  flex-direction: column;
+  width: 100%;
+}
+.items-container ul {
+  padding: 0;
+  margin: 0;
+}
+.items-container li {
+  list-style-type: none;
+  display: flex;
+  padding: 8px;
+}
+.list-container {
+  display: flex;
+}
+.icon {
+  padding-right: 8px;
+}
+.property-list {
+  padding-top: 32px;
+  border-top: 1px solid #c5c5c5;
 }
