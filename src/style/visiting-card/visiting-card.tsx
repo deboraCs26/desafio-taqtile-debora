@@ -99,7 +99,8 @@ export const VisitingCard = ({ image, bigPrice, locationText, iptuText, price, c
           Agendar visita
         </Button>
       </div>
-
+          
+      <Separator size='large' />
       <div className='container-text-components'>
         <H3 color='XDark' weight='regular'><FontAwesomeIcon
           icon={heartIcon}
@@ -107,6 +108,7 @@ export const VisitingCard = ({ image, bigPrice, locationText, iptuText, price, c
           style={heartIconClass ? { color: colors.feedback.feedbackError } : {}} />Favoritar</H3>
         <H3 color='XDark' weight='regular'><FontAwesomeIcon icon={faShareAlt} className='icon-container' /> Compartilhar</H3>
       </div>
+      <Separator size='large' />
     </ContainerCard>
   );
 };

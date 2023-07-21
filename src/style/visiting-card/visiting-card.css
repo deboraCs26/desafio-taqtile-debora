@@ -49,7 +49,7 @@
 .container-text-components {
   display: flex;
   justify-content: space-around;
-  padding: 20px 35px;
+  align-items: center;
 }
 .card-button-container {
   display: flex;

@@ -1,5 +1,8 @@
 import React from "react";
-import {Description} from "./description";
+import { Description } from "./description";
+import { VisitingCard } from "../visiting-card/visiting-card";
+import imageDoCard from "./image-do-card/img.png"
+import { Separator } from "../separator/separator";
 
 export const PropertyCard = () => {
   const propertyData = {
@@ -16,9 +19,29 @@ export const PropertyCard = () => {
     vacancy: true
   };
 
+  const imovelData = {
+    image: imageDoCard,
+    bigPrice: "R$250.000",
+    condominiumPrice: "Condomínio",
+    locationText: "1450,00",
+    iptuText: "IPTU",
+    price: "450,00",
+    description: "Jonathan Marques",
+    captions: ["Imobilar Corretora Imobiliária", "CRECI-SP J22.004"],
+    icon: true,
+  };
+
   return (
-    <div>
-      <Description propertyCard={propertyData} />
+    <div className="property-card-container">
+      <div className="property-card-section">
+        <Description propertyCard={propertyData} />
+      </div>
+
+      <Separator size="XLarge" horizontal />
+      <Separator size="XLarge" horizontal />
+      <div className="property-visinting">
+        <VisitingCard {...imovelData} />
+      </div>
     </div>
   );
 };
