@@ -1,11 +1,17 @@
 import React from "react";
 import { Description } from "./description";
+<<<<<<< HEAD
 import { Separator } from "../separator/separator";
 import { PropertyItems } from "../property-items/items";
 import { ProximitySection } from "../proximity-section/proximity-section";
 import { colors } from "../colors";
 import { PropertyMap } from "../location-map/location";
 import { faUtensils, faLeaf, faGraduationCap, faHospital, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+=======
+import { Proximity } from "../proximity-section/proximity";
+import { Separator } from "../separator/separator";
+import { PropertyItems } from "../property-items/items";
+>>>>>>> 6a77155 (proximity section task)
 
 export const PropertyCard = () => {
   const propertyData = {
