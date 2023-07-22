@@ -1,8 +1,14 @@
 import React from "react";
+<<<<<<< HEAD
 import { Description } from "./description";
 import { VisitingCard } from "../visiting-card/visiting-card";
 import imageDoCard from "./image-do-card/img.png"
 import { Separator } from "../separator/separator";
+=======
+import {Description} from "./description";
+import { Separator } from "../separator/separator";
+import { PropertyItems } from "../property-items/items";
+>>>>>>> d1866e4 (add task property items in property description)
 
 export const PropertyCard = () => {
   const propertyData = {
