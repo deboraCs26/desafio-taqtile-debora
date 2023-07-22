@@ -31,7 +31,7 @@ export const Items = ({ title, itemsCta, itemsNeutral }: ItemsListProps) => {
   return (
     <section>
       <H2 color="XDark">{title}</H2>
-      <div className="items-container  first-list">
+      <div className="items-property-container  first-list">
         <ul>
           {itemsNeutral && itemsNeutral.map((item, id) => (
             <li key={id}>
