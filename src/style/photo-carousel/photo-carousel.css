@@ -1,9 +1,14 @@
-.carousel-item {
-  padding-right: 16px;
+.carousel-item{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.react-multi-carousel-list {
+  padding: 32px 8px;
 }
 .photos-container {
-  border-radius: 8px;
-  width: 100%;
+  border-radius: 16px;
+  width: 97%;
   height: 100%;
 }
 .img-carousel .react-multiple-carousel__arrow {
