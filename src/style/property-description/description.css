@@ -1,5 +1,12 @@
-.description-section {
-  padding: 0 60px;
+.description-section-container {
+  border: 1px solid #FFFFFF;
+  margin: 0 42px;
+}
+.description-container {
+  display: flex;
+}
+.title-properties {
+  width: 70%;
 }
 .card-description {
   display: flex;
@@ -8,6 +15,7 @@
   margin-right: 30px;
   padding: 16px;
 }
+
 .item {
   display: flex;
   flex-direction: column;
@@ -15,20 +23,18 @@
   gap: 4px;
   margin: 16px;
 }
+
 .icon {
   justify-self: flex-start;
   padding-bottom: 12px;
 }
+
 .andress {
   display: flex;
 }
-.property-card-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 60px;
-  margin-inline: 42px;
+.description {
+  width: 65%;
 }
-.property-visinting {
-  width: 100%;
+.visiting-card {
+  width: 70%;
 }
