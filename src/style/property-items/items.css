@@ -1,0 +1,31 @@
+.property-list-container {
+  width: 41%;
+  margin: 0 40px;
+}
+.first-list {
+  float: left;
+  gap: 40px;
+}
+.items-container {
+  display: flex;
+  width: 100%;
+}
+.items-container ul {
+  padding: 0;
+  margin: 0;
+}
+.items-container li {
+  list-style-type: none;
+  display: flex;
+  padding: 8px;
+}
+.list-container {
+  display: flex;
+}
+.icon {
+  padding-right: 8px;
+}
+.property-list {
+  padding-top: 32px;
+  border-top: 1px solid #c5c5c5;
+}
