@@ -7,7 +7,7 @@ import { Body2 } from "../typography/body2";
 import { H4 } from "../typography/h4";
 import { H2 } from "../typography/h2";
 
-interface Item {
+interface ProximityIcon {
   icon: IconProp;
   text: string;
   title: String;
@@ -16,21 +16,21 @@ interface Item {
 
 interface ItemsListProps {
   title?: string;
-  itemsNeutral?: Item[];
+  proximityIcons: ProximityIcon[];
 };
 
 const styleItems = {
   neutralLight: colors.neutral.neutralLight,
 };
 
-export const ProximitySection = ({ title, itemsNeutral }: ItemsListProps) => {
+export const ProximitySection = ({ title, proximityIcons }: ItemsListProps) => {
 
   return (
     <div className="items-proximity-container">
       <H2 color="XDark">{title}</H2>
       <div className="proximity-section">
         <ul>
-          {itemsNeutral && itemsNeutral.map((item, id) => (
+          {proximityIcons && proximityIcons.map((item, id) => (
             <li key={id} className="proximity-item">
               <FontAwesomeIcon icon={item.icon} style={{ color: styleItems.neutralLight }} size="lg" />
               <div>
