@@ -1,7 +1,12 @@
 import { colors } from '../colors';
 import { components } from './typography';
 
-export const H1 = ({ children }: { children: React.ReactNode }) => {
+interface H1Props {
+  children: React.ReactNode;
+  color?: "XDark" | "white";
+};
+
+export const H1 = ({ children, color }: H1Props) => {
   return (
     <h1
       style={{
@@ -9,7 +14,8 @@ export const H1 = ({ children }: { children: React.ReactNode }) => {
         fontSize: components.fontSize.xxxxLarge,
         fontWeight: components.fontWeight.semiBold,
         lineHeight: components.lineHeight.large,
-        color: colors.brand.medium,
+        color: color === "XDark" ? colors.neutral.neutralXDark : colors.neutral.neutralMedium,
+        margin: 0,
       }}
     >
       {children}

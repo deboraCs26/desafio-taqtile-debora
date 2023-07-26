@@ -41,24 +41,24 @@ export const VisitingCard = ({ image, bigPrice, locationText, iptuText, price, c
   return (
     <ContainerCard>
       <div className="card-price">
-        <Price weight="bold" size="xxxLarge"> {bigPrice} </Price>
+        <Price weight="bold" size="xxxLarge" color='XDark'> {bigPrice} </Price>
       </div>
 
       <div className="text-price-container">
-        <Body2 weight="bold">{locationText}</Body2>
-        <Price weight="regular" size="medium"> {condominiumPrice} </Price>
+        <Body2 weight="bold" color='XDark'>{condominiumPrice}</Body2>
+        <Price weight="regular" size="medium" color='XDark'> {locationText} </Price>
       </div>
 
       <div className="text-container">
-        <Body2 weight="bold">{iptuText}</Body2>
-        <Price weight="regular" size="medium"> {price} </Price>
+        <Body2 weight="bold" color='XDark'>{iptuText}</Body2>
+        <Price weight="regular" size="medium" color='XDark'> {price} </Price>
       </div>
 
       {serviceFeeLabel && serviceFeeValue && (
         <div className="card-text-container">
           <div className="card-body2-text-container">
             <Body2 weight="bold">{serviceFeeLabel}</Body2>
-            <Price weight="regular" size="medium"> {serviceFeeValue} </Price>
+            <Price weight="regular" size="medium" color='XDark'> {serviceFeeValue} </Price>
           </div>
 
           <div className="card-body2-text-container">
@@ -89,27 +89,26 @@ export const VisitingCard = ({ image, bigPrice, locationText, iptuText, price, c
       </div>
 
       <div className='card-button-container'>
-        <div className='card-button'>
-          <Button variant='cta'>
-              <FontAwesomeIcon icon={faWhatsapp} size='xl' className='icon-container' />
-              Falar com o corretor
-          </Button>
-        </div>
-            <Separator size='large' horizontal={false}/>
-        <div className='card-button'>
-          <Button variant='primary'>
-              Agendar visita
-          </Button>
-        </div>
-      </div>
+        <Button variant='cta' expand>
+          <FontAwesomeIcon icon={faWhatsapp} size='xl' className='icon-container' />
+          Falar com o corretor
+        </Button>
 
-      <div className='container-text-components .visiting-button'>
-        <H3><FontAwesomeIcon
+        <Separator size='medium' />
+        <Button variant='primary' expand>
+          Agendar visita
+        </Button>
+      </div>
+          
+      <Separator size='large' />
+      <div className='container-text-components'>
+        <H3 color='XDark' weight='regular'><FontAwesomeIcon
           icon={heartIcon}
           className="icon-container"
           style={heartIconClass ? { color: colors.feedback.feedbackError } : {}} />Favoritar</H3>
-        <H3><FontAwesomeIcon icon={faShareAlt} className='icon-container' /> compartilhar</H3>
+        <H3 color='XDark' weight='regular'><FontAwesomeIcon icon={faShareAlt} className='icon-container' /> Compartilhar</H3>
       </div>
+      <Separator size='large' />
     </ContainerCard>
   );
 };
