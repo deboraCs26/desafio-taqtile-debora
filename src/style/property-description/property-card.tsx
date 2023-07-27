@@ -1,8 +1,10 @@
 import React from "react";
 import { Description } from "./description";
-import { VisitingCard } from "../visiting-card/visiting-card";
-import imageDoCard from "./image-do-card/img.png"
 import { Separator } from "../separator/separator";
+import { PropertyItems } from "../property-items/items";
+import { ProximitySection } from "../proximity-section/proximity-section";
+import { colors } from "../colors";
+import { faUtensils, faLeaf, faGraduationCap, faHospital, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
 export const PropertyCard = () => {
   const propertyData = {
@@ -19,28 +21,29 @@ export const PropertyCard = () => {
     vacancy: true
   };
 
-  const imovelData = {
-    image: imageDoCard,
-    bigPrice: "R$250.000",
-    condominiumPrice: "Condomínio",
-    locationText: "1450,00",
-    iptuText: "IPTU",
-    price: "450,00",
-    description: "Jonathan Marques",
-    captions: ["Imobilar Corretora Imobiliária", "CRECI-SP J22.004"],
-    icon: true,
-  };
+  const proximityIcon = [
+    { icon: faUtensils, title: "Restaurantes bem avaliados", text: "Cabanã Osasco,  Salva Burguer, Jin Chef e O Bom do Baião.", color: colors.neutral.neutralLight },
+    { icon: faLeaf, title: "Parques e áreas verdes", text: "2° Floresta Urbana de Osasco, Parque Chico Mendes e Praça Laurindo de Camargo.", color: colors.neutral.neutralLight },
+    { icon: faGraduationCap, title: "Escolas e colégios", text: "E.E. Profº Francisco Casabona, ETEC Professor André Bogasian e Colégio Padre Anchieta.", color: colors.neutral.neutralLight },
+    { icon: faGraduationCap, title: "Faculdades", text: "Universidade Estácio - Polo Osasco, Universidade Anhembi Morumbi e FNJ - Faculdade Nove de Julho.", color: colors.neutral.neutralLight },
+    { icon: faHospital, title: "Hospitais", text: "Hospital Nossa Senhora de Fátima e Hospital Geral de Carapicuíba.", color: colors.neutral.neutralLight },
+    { icon: faShoppingCart, title: "Mercados", text: "Atacadão, Mercado Moretti Bittencourt e Mercado Municipal de Osasco.", color: colors.neutral.neutralLight },
+
+  ];
 
   return (
-    <div className="property-card-container">
-      <div className="property-card-section">
-        <Description propertyCard={propertyData} />
-      </div>
+    <div className="description-section-container">
 
-      <Separator size="XLarge" horizontal />
-      <Separator size="XLarge" horizontal />
-      <div className="property-visinting">
-        <VisitingCard {...imovelData} />
+      <Description propertyCard={propertyData} />
+
+      <Separator size="XLarge" />
+      <PropertyItems />
+
+      <Separator size="XLarge" />
+      <div className="proximity-container">
+        <div className="proximity-list">
+        </div>
+        <ProximitySection title="Proximidades" proximityIcons={proximityIcon} />
       </div>
     </div>
   );
