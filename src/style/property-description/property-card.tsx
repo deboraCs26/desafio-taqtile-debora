@@ -4,6 +4,7 @@ import { Separator } from "../separator/separator";
 import { PropertyItems } from "../property-items/items";
 import { ProximitySection } from "../proximity-section/proximity-section";
 import { colors } from "../colors";
+import { PropertyMap } from "../location-map/location";
 import { faUtensils, faLeaf, faGraduationCap, faHospital, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
 export const PropertyCard = () => {
@@ -33,17 +34,24 @@ export const PropertyCard = () => {
 
   return (
     <div className="description-section-container">
-
       <Description propertyCard={propertyData} />
-
+  
       <Separator size="XLarge" />
       <PropertyItems />
-
+  
       <Separator size="XLarge" />
+
+      <div className="location-container">
+
       <div className="proximity-container">
         <div className="proximity-list">
         </div>
         <ProximitySection title="Proximidades" proximityIcons={proximityIcon} />
+      </div>
+      
+        <div className="map-container">
+          <PropertyMap />
+        </div>
       </div>
     </div>
   );
