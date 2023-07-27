@@ -33,9 +33,7 @@ export const Login = () => {
     }
   };
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-
+  const handleSubmit = () => {
     validateFields();
   };
 
@@ -47,7 +45,7 @@ export const Login = () => {
         <Body2 color="neutralMedium">Para utilizar os serviços da nossa plataforma, você precisa entrar uma conta!</Body2>
       </div>
 
-      <form onSubmit={handleSubmit} className='form-login-container'>
+      <div className='form-login-container'>
         <div className='field-form'>
           <FormField
             label="Email"
@@ -65,6 +63,7 @@ export const Login = () => {
             password
             error={!!passwordError}
             caption={passwordError}
+            icon={faExclamationTriangle}
             minLength={8}
             value={password}
             onChange={setPassword}
@@ -72,9 +71,9 @@ export const Login = () => {
           />
         </div>
         <div className='button-login-container'>
-          <Button variant="primary" expand>Entrar</Button>
+          <Button variant="primary" expand onClick={handleSubmit}>Entrar</Button>
         </div>
-      </form>
+      </div>
     </div>
   );
 };

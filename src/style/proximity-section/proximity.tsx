@@ -18,9 +18,8 @@ export const Proximity = () => {
   return (
     <div className="proximity-container">
       <div className="proximity-list">
-        <ProximitySection title="Proximidades" />
+        <ProximitySection title="Proximidades" proximityIcons={proximityIcon} />
       </div>
-      <ProximitySection itemsNeutral={proximityIcon} />
     </div>
   );
 };
