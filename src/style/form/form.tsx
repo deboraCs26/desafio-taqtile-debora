@@ -10,7 +10,7 @@ import { Caption } from '../typography/caption';
 interface FormProps {
   caption?: string;
   error?: boolean;
-  label: string;
+  label?: string;
   icon?: IconDefinition;
   password?: boolean;
   minLength?: number;
