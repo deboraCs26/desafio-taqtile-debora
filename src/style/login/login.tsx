@@ -5,6 +5,7 @@ import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 import { H1 } from "../typography/h1";
 import { Body2 } from "../typography/body2";
 import { Button } from "../button/button";
+import { ImageForm } from '../images-form/img';
 
 export const Login = () => {
 
@@ -39,41 +40,47 @@ export const Login = () => {
 
   return (
     <div className='login-container'>
-      <H1 color="XDark">Acesse sua conta</H1>
+      <div className='login-page-container'>
+        <H1 color="XDark">Acesse sua conta</H1>
 
-      <div className='account-login'>
-        <Body2 color="neutralMedium">Para utilizar os serviços da nossa plataforma, você precisa entrar uma conta!</Body2>
+        <div className='account-login'>
+          <Body2 color="neutralMedium">Para utilizar os serviços da nossa plataforma, você precisa entrar uma conta!</Body2>
+        </div>
+
+        <div className='form-login-container'>
+          <div className='field-form'>
+            <FormField
+              label="Email"
+              error={!!emailError}
+              caption={emailError}
+              value={email}
+              icon={faExclamationTriangle}
+              onChange={setEmail}
+              expand
+            />
+          </div>
+          <div className='field-form'>
+            <FormField
+              label="Senha"
+              password
+              error={!!passwordError}
+              caption={passwordError}
+              icon={faExclamationTriangle}
+              minLength={8}
+              value={password}
+              onChange={setPassword}
+              expand
+            />
+          </div>
+          <div className='button-login-container'>
+            <Button variant="primary" expand onClick={handleSubmit}>Entrar</Button>
+          </div>
+        </div>
       </div>
-
-      <div className='form-login-container'>
-        <div className='field-form'>
-          <FormField
-            label="Email"
-            error={!!emailError}
-            caption={emailError}
-            value={email}
-            icon={faExclamationTriangle}
-            onChange={setEmail}
-            expand
-          />
-        </div>
-        <div className='field-form'>
-          <FormField
-            label="Senha"
-            password
-            error={!!passwordError}
-            caption={passwordError}
-            icon={faExclamationTriangle}
-            minLength={8}
-            value={password}
-            onChange={setPassword}
-            expand
-          />
-        </div>
-        <div className='button-login-container'>
-          <Button variant="primary" expand onClick={handleSubmit}>Entrar</Button>
-        </div>
+      <div className='login-image'>
+        <ImageForm />
       </div>
     </div>
+
   );
 };
