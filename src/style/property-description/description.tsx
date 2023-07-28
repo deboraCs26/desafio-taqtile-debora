@@ -33,11 +33,11 @@ const iconStyle = {
 export const Description = ({ propertyCard }: DescriptionProps) => {
 
   const description = [
-    { propertyCard: <FontAwesomeIcon icon={faBed} className="icon" style={iconStyle} size="lg" />, title: `${propertyCard.bedrooms} Quartos` },
-    { propertyCard: <FontAwesomeIcon icon={faBath} className="icon" style={iconStyle} size="lg" />, title: `${propertyCard.bathrooms} Banheiros` },
-    { propertyCard: <FontAwesomeIcon icon={faRuler} className="icon" style={iconStyle} size="lg" />, title: propertyCard.area },
-    { propertyCard: propertyCard.pool && <FontAwesomeIcon icon={faSwimmingPool} className="icon" style={iconStyle} size="lg" />, title: "Piscina" },
-    { propertyCard: propertyCard.vacancy && <FontAwesomeIcon icon={faCar} className="icon" style={iconStyle} size="lg" />, title: "1 Vaga" },
+    { propertyCard: <FontAwesomeIcon icon={faBed} className="icon-description" style={iconStyle} size="lg" />, title: `${propertyCard.bedrooms} Quartos` },
+    { propertyCard: <FontAwesomeIcon icon={faBath} className="icon-description" style={iconStyle} size="lg" />, title: `${propertyCard.bathrooms} Banheiros` },
+    { propertyCard: <FontAwesomeIcon icon={faRuler} className="icon-description" style={iconStyle} size="lg" />, title: propertyCard.area },
+    { propertyCard: propertyCard.pool && <FontAwesomeIcon icon={faSwimmingPool} className="icon-description" style={iconStyle} size="lg" />, title: "Piscina" },
+    { propertyCard: propertyCard.vacancy && <FontAwesomeIcon icon={faCar} className="icon-description" style={iconStyle} size="lg" />, title: "1 Vaga" },
   ];
 
   return (

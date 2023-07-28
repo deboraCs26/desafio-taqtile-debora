@@ -8,39 +8,47 @@ import { H1 } from "../typography/h1";
 import { Body2 } from "../typography/body2";
 import { Button } from "../button/button";
 import { ImageForm } from '../images-form/img';
-import { DT } from '../typography/dt-dd';
 import { Separator } from '../separator/separator';
 
 export const RegisterForm = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [senha, setSenha] = useState('');
-  const [confirmarSenha, setConfirmarSenha] = useState('');
+  const [password, setPassword] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [confirmarPassword, setConfirmarPassword] = useState('');
   const [nameError, setNameError] = useState('');
   const [emailError, setEmailError] = useState('');
-  const [senhaError, setSenhaError] = useState('');
-  const [confirmarSenhaError, setConfirmarSenhaError] = useState('');
+  const [passwordError, setPasswordError] = useState('');
+  const [confirmarPasswordError, setConfirmarPasswordError] = useState('');
+  const [lastNameError, setLastNameError] = useState('');
 
   const isValidEmail = (email: string) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   };
 
-  const isValidSenha = (senha: string) => {
-    const senhaRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/;
-    return senhaRegex.test(senha);
+  const isValidPassword = (password: string) => {
+    const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/;
+    return passwordRegex.test(password);
   };
 
   const validateFields = () => {
     setNameError('');
+    setLastNameError('');
     setEmailError('');
-    setSenhaError('');
-    setConfirmarSenhaError('');
+    setPasswordError('');
+    setConfirmarPasswordError('');
 
     if (!name.trim()) {
       setNameError('Campo obrigatório. O nome deve ter ao menos 2 letras.');
     } else if (name.length < 2) {
       setNameError('Nome inválido. O nome deve ter ao menos 2 letras.');
+    }
+
+    if (!lastName.trim()) {
+      setLastNameError('Campo obrigatório. O sobrenome deve ter ao menos 2 letras.');
+    } else if (lastName.length < 2) {
+      setLastNameError('Sobrenome inválido. O sobrenome deve ter ao menos 2 letras.');
     }
 
     if (!email.trim()) {
@@ -49,22 +57,22 @@ export const RegisterForm = () => {
       setEmailError('Email inválido.');
     }
 
-    if (!senha.trim()) {
-      setSenhaError('Campo obrigatório. A senha deve conter pelo menos 6 caracteres, incluindo letras e números.');
-    } else if (!isValidSenha(senha)) {
-      setSenhaError('Senha inválida. A senha deve conter pelo menos 6 caracteres, incluindo letras e números.');
+    if (!password.trim()) {
+      setPasswordError('Campo obrigatório. A senha deve conter pelo menos 6 caracteres, incluindo letras e números.');
+    } else if (!isValidPassword(password)) {
+      setPasswordError('Senha inválida. A senha deve conter pelo menos 6 caracteres, incluindo letras e números.');
     }
 
-    if (!confirmarSenha.trim()) {
-      setConfirmarSenhaError('Campo obrigatório.');
-    } else if (senha !== confirmarSenha) {
-      setConfirmarSenhaError('As senhas não coincidem.');
+    if (!confirmarPassword.trim()) {
+      setConfirmarPasswordError('Campo obrigatório.');
+    } else if (password !== confirmarPassword) {
+      setConfirmarPasswordError('As senhas não coincidem.');
     }
   };
 
   const handleSubmit = () => {
     validateFields();
-    if (!nameError && !emailError && !senhaError && !confirmarSenhaError) {
+    if (!nameError && !emailError && !passwordError && !confirmarPasswordError && !lastName) {
     }
   };
 
@@ -90,7 +98,7 @@ export const RegisterForm = () => {
 
           <div className='name-register'>
             <FormField
-              label="Digite Seu Nome"
+              label="Digite seu nome"
               icon={faExclamationTriangle}
               caption={nameError}
               value={name}
@@ -103,44 +111,43 @@ export const RegisterForm = () => {
             <FormField
               label="Sobrenome"
               icon={faExclamationTriangle}
-              caption={nameError}
-              value={name}
-              onChange={setName}
-              error={!!nameError}
+              caption={lastNameError}
+              value={lastName}
+              onChange={setLastName}
+              error={!!lastNameError}
               expand
             />
           </div>
 
           <FormField
-            label="Crie Sua Senha"
+            label="Crie sua senha"
             password
             icon={faExclamationTriangle}
-            caption={senhaError}
+            caption={passwordError}
             minLength={6}
-            value={senha}
-            onChange={setSenha}
-            error={!!senhaError}
+            value={password}
+            onChange={setPassword}
+            error={!!passwordError}
             expand
           />
-          
+
           <FormField
-            label="Confirmar Senha"
+            label="Confirmação de senha"
             password
             icon={faExclamationTriangle}
-            caption={confirmarSenhaError}
+            caption={confirmarPasswordError}
             minLength={6}
-            value={confirmarSenha}
-            onChange={setConfirmarSenha}
-            error={!!confirmarSenhaError}
+            value={confirmarPassword}
+            onChange={setConfirmarPassword}
+            error={!!confirmarPasswordError}
             expand
           />
-          <Separator size='XSmall' />
         </div>
       </div>
 
       <div className='terms-button-container'>
         <div className='terms-registration'>
-          <DT weight='bold'><FontAwesomeIcon icon={faCircleCheck} color='#2E9CA3' size='lg' className='icon-form' />Eu aceito todos os termos e condições</DT>
+          <Body2 weight='bold'><FontAwesomeIcon icon={faCircleCheck} color='#2E9CA3' size='lg' className='icon-form' />Eu aceito todos os termos e condições</Body2>
         </div>
 
         <Separator size='XLarge' />
@@ -148,7 +155,6 @@ export const RegisterForm = () => {
           <Button variant="primary" expand onClick={handleSubmit}>Cadastrar</Button>
         </div>
       </div>
-
       <div className='register-image'>
         <ImageForm />
       </div>
