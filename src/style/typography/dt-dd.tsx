@@ -12,7 +12,7 @@ export const DT = ({ children, weight, }: DTProps) => {
         fontFamily: components.family.primary,
         fontSize: components.fontSize.medium,
         fontWeight: weight === "bold" ? components.fontWeight.bold : components.fontWeight.regular,
-        color: colors.neutral.neutralXDark,
+        color: colors.neutral.neutralMedium,
       }}
     >
       {children}

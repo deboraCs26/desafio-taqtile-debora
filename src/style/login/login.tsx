@@ -6,6 +6,7 @@ import { H1 } from "../typography/h1";
 import { Body2 } from "../typography/body2";
 import { Button } from "../button/button";
 import { ImageForm } from '../images-form/img';
+import { Separator } from '../separator/separator';
 
 export const Login = () => {
 
@@ -72,6 +73,8 @@ export const Login = () => {
               expand
             />
           </div>
+
+          <Separator size='large' />
           <div className='button-login-container'>
             <Button variant="primary" expand onClick={handleSubmit}>Entrar</Button>
           </div>

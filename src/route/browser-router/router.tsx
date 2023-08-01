@@ -4,6 +4,7 @@ import { AboutUs } from '../pages/about-us';
 import { Contact } from '../pages/contact';
 import { HomePage } from '../pages/home-page';
 import { Logar } from '../pages/login';
+import { Register } from '../pages/register-page';
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
     path: '/logar',
     element: <Logar />,
   },
+  {
+    path: '/register',
+    element: <Register />,
+  }
 ]);
 
 export { RouterProvider, router }

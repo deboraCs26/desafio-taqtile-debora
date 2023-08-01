@@ -3,6 +3,8 @@ import { Description } from "./description";
 import { Separator } from "../separator/separator";
 import { PropertyItems } from "../property-items/items";
 import { ProximitySection } from "../proximity-section/proximity-section";
+import { VisitingCard } from "../visiting-card/visiting-card";
+import imageDoCard from "../property-description/image-do-card/Img.png"
 import { colors } from "../colors";
 import { PropertyMap } from "../location-map/location";
 import { faUtensils, faLeaf, faGraduationCap, faHospital, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
@@ -34,21 +36,37 @@ export const PropertyCard = () => {
 
   return (
     <div className="description-section-container">
-      <Description propertyCard={propertyData} />
-  
+      <div className="description-container">
+        <Description propertyCard={propertyData} />
+        <div className="visiting-card">
+          <VisitingCard
+            image={imageDoCard}
+            bigPrice="R$250.000"
+            condominiumPrice="Condomínio"
+            locationText="1450,00"
+            iptuText="IPTU"
+            price="450,00"
+            description="Jonathan Marques"
+            captions={["Imobilar Corretora Imobiliária", "CRECI-SP J22.004"]}
+            icon
+          />
+        </div>
+      </div>
+
+
       <Separator size="XLarge" />
       <PropertyItems />
-  
+
       <Separator size="XLarge" />
 
       <div className="location-container">
 
-      <div className="proximity-container">
-        <div className="proximity-list">
+        <div className="proximity-container">
+          <div className="proximity-list">
+          </div>
+          <ProximitySection title="Proximidades" proximityIcons={proximityIcon} />
         </div>
-        <ProximitySection title="Proximidades" proximityIcons={proximityIcon} />
-      </div>
-      
+
         <div className="map-container">
           <PropertyMap />
         </div>

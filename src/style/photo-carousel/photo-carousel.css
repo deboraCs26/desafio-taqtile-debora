@@ -1,7 +1,6 @@
 .carousel-item{
   display: flex;
   justify-content: center;
-  text-align: center;
 }
 .react-multi-carousel-list {
   padding: 32px 8px;

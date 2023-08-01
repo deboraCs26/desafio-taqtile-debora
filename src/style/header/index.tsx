@@ -4,7 +4,7 @@ import imageHeader from './image/LOGO.svg'
 import { Button } from '../button/button';
 import { Separator } from '../separator/separator';
 import { MenuItem } from './menu';
-import { useLocation, Link} from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 
 export const Menu = () => {
   const location = useLocation();
@@ -25,12 +25,15 @@ export const Menu = () => {
 
         <div className='menu-button-container'>
           <Link to='/Logar' style={{ textDecoration: "none" }}>
-          <Button compact variant='secondary' >
-            Logar
-          </Button>
+            <Button compact variant='secondary' >
+              Logar
+            </Button>
           </Link>
+
           <Separator size='small' horizontal />
-          <Button compact variant='primary'>Cadastrar</Button>
+          <Link to="/Register" style={{ textDecoration: "none" }}>
+            <Button compact variant='primary'>Cadastrar</Button>
+          </Link>
         </div>
       </div>
 
