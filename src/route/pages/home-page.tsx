@@ -15,9 +15,8 @@ export function HomePage() {
 
       <Separator size="XLarge" />
       <Separator size="XLarge" />
-      
-      <Footer />
 
+      <Footer />
     </>
   );
 };

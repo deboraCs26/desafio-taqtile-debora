@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './style-form.css';
+import "./style-form.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
@@ -14,16 +14,13 @@ interface FormProps {
   icon?: IconDefinition;
   password?: boolean;
   minLength?: number;
+  value: string;
+  onChange: (value: string) => void;
+  expand?: boolean
 }
 
-export const FormField = ({ error, label, icon, password, caption}: FormProps) => {
+export const FormField = ({ error, label, icon, password, caption, value, onChange, expand }: FormProps) => {
   const [focused, setFocused] = useState(false);
-  const [inputValue, setInputValue] = useState('');
-
-  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const value = event.target.value;
-    setInputValue(value);
-  };
 
   let border;
 
@@ -31,7 +28,7 @@ export const FormField = ({ error, label, icon, password, caption}: FormProps) =
     border = `2px solid ${colors.neutral.neutralLight}`;
   } else if (error) {
     border = `1px solid ${colors.feedback.feedbackError}`;
-  } else if (inputValue) {
+  } else if (value) {
     border = `1px solid ${colors.neutral.neutralLight}`;
   } else {
     border = `1px solid`;
@@ -39,6 +36,7 @@ export const FormField = ({ error, label, icon, password, caption}: FormProps) =
 
   const inputStyle = {
     border,
+    width: expand ? "100%" : "",
   };
 
   const handleInputFocus = () => {
@@ -58,7 +56,8 @@ export const FormField = ({ error, label, icon, password, caption}: FormProps) =
           className="input-style"
           type={password ? 'password' : 'text'}
           placeholder={label}
-          onChange={handleInputChange}
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
           onFocus={handleInputFocus}
           onBlur={handleInputBlur}
           required={true}
@@ -67,7 +66,7 @@ export const FormField = ({ error, label, icon, password, caption}: FormProps) =
       <div className="caption">
         {error && (
           <Caption color='dark'>
-            {!!icon && <FontAwesomeIcon icon={faExclamationTriangle} size="lg" className="icon" />}
+            {!!icon && <FontAwesomeIcon icon={faExclamationTriangle} size="lg" className="icon-form" />}
             {caption}
           </Caption>
         )}
